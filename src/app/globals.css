@@ -13,8 +13,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 10%;
 
-    --primary: 145 60% 50%; /* Vibrant Green */
-    --primary-foreground: 0 0% 100%; /* White text on green */
+    --primary: 180 60% 50%; /* Aqua */
+    --primary-foreground: 0 0% 100%; /* White text on aqua */
 
     --secondary: 240 20% 90%; /* A lighter grey for secondary UI elements */
     --secondary-foreground: 240 10% 10%; /* Dark text on light grey secondary */
@@ -23,14 +23,14 @@
     --muted-foreground: 240 7% 50%; /* Muted text color */
 
     --accent: 240 67% 94.1%; /* Soft lavender #E6E6FA - for other highlights */
-    --accent-foreground: 145 60% 30%; /* Darker green for text on lavender, for contrast */
+    --accent-foreground: 180 60% 30%; /* Darker aqua for text on lavender, for contrast */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 240 10% 85%; /* Border color */
     --input: 240 10% 80%;  /* Input border color */
-    --ring: 145 60% 55%; /* Ring color, related to primary (green) */
+    --ring: 180 60% 55%; /* Ring color, related to primary (aqua) */
 
     --radius: 0.5rem;
 
@@ -59,8 +59,8 @@
     --popover: 220 15% 10%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 145 60% 50%; /* Vibrant Green */
-    --primary-foreground: 0 0% 100%; /* White text on green */
+    --primary: 180 60% 50%; /* Aqua */
+    --primary-foreground: 0 0% 100%; /* White text on aqua */
 
     --secondary: 220 15% 25%; 
     --secondary-foreground: 210 40% 98%;
@@ -68,7 +68,7 @@
     --muted: 220 15% 20%;
     --muted-foreground: 210 20% 65%;
 
-    --accent: 145 50% 30%; /* Darker green for dark mode accent */
+    --accent: 180 50% 30%; /* Darker aqua for dark mode accent */
     --accent-foreground: 210 40% 95%; 
 
     --destructive: 0 70% 50%;
@@ -76,7 +76,7 @@
 
     --border: 220 15% 35%; /* Slightly lighter border for dark mode for subtle lines */
     --input: 220 15% 30%;
-    --ring: 145 60% 55%; /* Ring color related to primary (green) */
+    --ring: 180 60% 55%; /* Ring color related to primary (aqua) */
     
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
