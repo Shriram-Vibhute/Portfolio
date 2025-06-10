@@ -11,7 +11,7 @@ interface Project {
   id: string;
   title: string;
   description: string;
-  imageUrl: string; // Will be used as video poster
+  imageUrl: string;
   videoUrl: string;
   liveLink?: string;
   codeLink?: string;
@@ -137,9 +137,9 @@ export default function ProjectsSection() {
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-0 py-0" // Reset padding for button styling
+                      className="px-0 py-0"
                     >
-                      <Button variant="link" className="text-primary p-0 h-auto">
+                      <Button variant="link" className="text-primary p-0 h-auto font-[450] text-[0.84rem]">
                         <ExternalLink className="mr-2 h-4 w-4" /> View Live
                       </Button>
                     </CardItem>
@@ -151,9 +151,9 @@ export default function ProjectsSection() {
                       href={project.codeLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-0 py-0" // Reset padding for button styling
+                      className="px-0 py-0"
                     >
-                      <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 hover:text-primary">
+                      <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 hover:text-primary font-[450] text-[0.84rem]">
                         <Github className="mr-2 h-4 w-4" /> View Code
                       </Button>
                     </CardItem>
