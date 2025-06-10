@@ -25,10 +25,10 @@ interface Skill {
 }
 
 interface SkillCategory {
-  categoryName: string; // Used for internal logic, not displayed directly as a heading anymore
+  categoryName: string; // Internal logic, not displayed as heading
   skills: Skill[];
   themeClasses: {
-    text: string; 
+    text: string;
   };
 }
 
@@ -48,7 +48,7 @@ const skillsData: SkillCategory[] = [
       { name: 'Tensorflow', icon: Layers },
     ],
     themeClasses: {
-      text: 'text-yellow-300', 
+      text: 'text-yellow-300', // Light Yellow
     },
   },
   {
@@ -67,7 +67,7 @@ const skillsData: SkillCategory[] = [
       { name: 'Naive Bayes' },
     ],
     themeClasses: {
-      text: 'text-pink-400', 
+      text: 'text-pink-400', // Pink
     },
   },
   {
@@ -177,7 +177,8 @@ export default function SkillsSection() {
                     "font-[450] text-[0.84rem] shadow-md transition-all duration-200 ease-out",
                     "bg-black/60 backdrop-blur-md", 
                     "border border-white/30",      
-                    category.themeClasses.text  
+                    category.themeClasses.text,
+                    "hover:bg-black/90 hover:border-white/50" // Added hover effect for darker background and border
                   )}
                   size="lg"
                 >
