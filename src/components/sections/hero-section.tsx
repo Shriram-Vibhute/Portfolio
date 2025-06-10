@@ -17,9 +17,9 @@ export default function HeroSection() {
 
   const introText = "Hi, my name is";
   const name = "Shriram Vibhute";
-  const tagline = "Machine Learning Engineer";
+  const tagline = "Machine Learning Engineer"; // Text for animation (25 characters)
   const description = "Data Science | Machine Learning | Deep Learning | MLOps | Gen AI";
-  const email = "darshanbhuva57@gmail.com"; // This email is used in the mailto link, can be updated if needed
+  const email = "darshanbhuva57@gmail.com"; 
 
   if (!isMounted) {
     // Fallback for SSR or pre-hydration to avoid layout shifts or hydration errors.
@@ -35,7 +35,11 @@ export default function HeroSection() {
             {introText}
           </p>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-100 mb-2 sm:mb-3">{name}</h1>
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-slate-400 mb-6 sm:mb-8">{tagline}</h2>
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-slate-400 mb-6 sm:mb-8">
+            <span className="animate-typewriter inline-block align-bottom overflow-hidden whitespace-nowrap border-r-2 md:border-r-4 border-r-transparent motion-reduce:animate-none">
+              {tagline}
+            </span>
+          </h2>
           <p className="text-slate-400 text-base sm:text-lg mb-8 sm:mb-10 max-w-xl">
             {description}
           </p>
@@ -45,11 +49,11 @@ export default function HeroSection() {
               size="lg"
               className="border-primary text-primary hover:bg-background hover:text-primary px-8 py-4 sm:px-10 font-[450] text-[0.84rem] shadow-lg shadow-primary/30"
               onClick={() => {
-                const projectsSection = document.getElementById('projects'); // Assuming you'll have a section with id="projects"
+                const projectsSection = document.getElementById('projects'); 
                 if (projectsSection) {
                   projectsSection.scrollIntoView({ behavior: 'smooth' });
                 } else {
-                  window.location.href = '#projects'; // Fallback if section not found
+                  window.location.href = '#projects'; 
                 }
               }}
             >
@@ -71,4 +75,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
