@@ -43,7 +43,7 @@ export default function HeroSection() {
             <Button
               variant="outline"
               size="lg"
-              className="border-primary text-primary hover:bg-background hover:text-primary px-8 py-3 sm:px-10 text-lg sm:text-xl font-mono shadow-lg shadow-primary/30"
+              className="border-primary text-primary hover:bg-background hover:text-primary px-8 py-4 sm:px-10 text-base shadow-lg shadow-primary/30"
               onClick={() => {
                 const projectsSection = document.getElementById('projects'); // Assuming you'll have a section with id="projects"
                 if (projectsSection) {
@@ -59,7 +59,7 @@ export default function HeroSection() {
               asChild
               variant="outline"
               size="lg"
-              className="border-primary text-primary hover:bg-background hover:text-primary px-8 py-3 sm:px-10 text-lg sm:text-xl font-mono shadow-lg shadow-primary/30"
+              className="border-primary text-primary hover:bg-background hover:text-primary px-8 py-4 sm:px-10 text-base shadow-lg shadow-primary/30"
             >
               <a href="/resume_darshan_bhuva.pdf" download="Darshan_Bhuva_Resume.pdf">
                 Download Resume
