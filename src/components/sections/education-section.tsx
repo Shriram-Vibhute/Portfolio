@@ -18,7 +18,7 @@ interface EducationItemData {
 const educationData: EducationItemData[] = [
   {
     id: "1",
-    logoUrl: "https://placehold.co/80x80.png",
+    logoUrl: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0ZWNoJTIwYm9vdGNhbXB8ZW58MHx8fHwxNzQ5NTY5MTYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
     logoAlt: "100xDevs Logo",
     institution: "100xDevs",
     degree: "Full Stack Dev + Web3 + DevOps",
@@ -27,7 +27,7 @@ const educationData: EducationItemData[] = [
   },
   {
     id: "2",
-    logoUrl: "https://placehold.co/80x80.png",
+    logoUrl: "https://images.unsplash.com/photo-1543193158-07c01963e800?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx1bml2ZXJzaXR5JTIwY3Jlc3R8ZW58MHx8fHwxNzQ5NTY5MTYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
     logoAlt: "Sikkim Manipal University Logo",
     institution: "Sikkim Manipal University",
     degree: "Master's Degree of Computer Applications (MCA)",
@@ -36,7 +36,7 @@ const educationData: EducationItemData[] = [
   },
   {
     id: "3",
-    logoUrl: "https://placehold.co/80x80.png",
+    logoUrl: "https://images.unsplash.com/photo-1519452575417-564c1401ecc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx1bml2ZXJzaXR5JTIwZW1ibGVtfGVufDB8fHx8MTc0OTU2OTE2MHww&ixlib=rb-4.1.0&q=80&w=1080",
     logoAlt: "Maharshi Dayanand Saraswati University, Ajmer Logo",
     institution: "Maharshi Dayanand Saraswati University, Ajmer",
     degree: "Bachelor's Degree of Computer Applications (BCA)",
