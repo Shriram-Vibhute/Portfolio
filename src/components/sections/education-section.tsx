@@ -34,15 +34,6 @@ const educationData: EducationItemData[] = [
     dates: "2025 - 2026",
     logoHint: "university crest",
   },
-  {
-    id: "3",
-    logoUrl: "https://images.unsplash.com/photo-1519452575417-564c1401ecc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx1bml2ZXJzaXR5JTIwZW1ibGVtfGVufDB8fHx8MTc0OTU2OTE2MHww&ixlib=rb-4.1.0&q=80&w=1080",
-    logoAlt: "Maharshi Dayanand Saraswati University, Ajmer Logo",
-    institution: "Maharshi Dayanand Saraswati University, Ajmer",
-    degree: "Bachelor's Degree of Computer Applications (BCA)",
-    dates: "2021 - 2024",
-    logoHint: "university emblem",
-  },
 ];
 
 const titleVariants = {
