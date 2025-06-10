@@ -16,10 +16,10 @@ export default function HeroSection() {
   }, []);
 
   const introText = "Hi, my name is";
-  const name = "Darshan Bhuva";
-  const tagline = "Building the web, better.";
-  const description = "Innovating the web with purpose and precision. As a full-stack engineer, I create accessible, user-friendly digital experiences that leave a lasting impact.";
-  const email = "darshanbhuva57@gmail.com";
+  const name = "Shriram Vibhute";
+  const tagline = "Machine Learning Engineer";
+  const description = "Data Science | Machine Learning | Deep Learning | MLOps | Gen AI";
+  const email = "darshanbhuva57@gmail.com"; // This email is used in the mailto link, can be updated if needed
 
   if (!isMounted) {
     // Fallback for SSR or pre-hydration to avoid layout shifts or hydration errors.
@@ -71,3 +71,4 @@ export default function HeroSection() {
     </section>
   );
 }
+
