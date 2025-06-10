@@ -17,7 +17,7 @@ export default function HeroSection() {
 
   const introText = "Hi, my name is";
   const name = "Shriram Vibhute";
-  const tagline = "Machine Learning Engineer"; // Text for animation (25 characters)
+  const tagline = "Machine Learning Engineer";
   const description = "Data Science | Machine Learning | Deep Learning | MLOps | Gen AI";
   const email = "darshanbhuva57@gmail.com"; 
 
@@ -35,10 +35,8 @@ export default function HeroSection() {
             {introText}
           </p>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-100 mb-2 sm:mb-3">{name}</h1>
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-slate-400 mb-6 sm:mb-8">
-            <span className="animate-typewriter inline-block align-bottom overflow-hidden whitespace-nowrap border-r-2 md:border-r-4 border-r-transparent motion-reduce:animate-none">
-              {tagline}
-            </span>
+          <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-slate-400 mb-6 sm:mb-8">
+            {tagline}
           </h2>
           <p className="text-slate-400 text-base sm:text-lg mb-8 sm:mb-10 max-w-xl">
             {description}

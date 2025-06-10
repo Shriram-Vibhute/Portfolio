@@ -1,3 +1,4 @@
+
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -88,23 +89,10 @@ export default {
             height: '0',
           },
         },
-        typing: {
-          '0%': { width: '0ch', visibility: 'hidden' },
-          '1%': { visibility: 'visible' },
-          '100%': { width: '25ch' } // "Machine Learning Engineer" is 25 chars
-        },
-        blink: {
-          '0%': { borderColor: 'hsl(var(--primary))' },
-          '50%': { borderColor: 'transparent' },
-          '100%': { borderColor: 'hsl(var(--primary))' }
-        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        // Typing: 2.5s duration (25 chars * 0.1s/char), 1s delay. steps(25, end) for char-by-char. forwards to keep final state.
-        // Blink: 0.75s per cycle. step-end timing. 5 iterations. 1s delay. forwards to keep cursor visible.
-        typewriter: 'typing 2.5s steps(25, end) 1s forwards, blink 0.75s step-end 5 1s forwards',
       },
     },
   },
