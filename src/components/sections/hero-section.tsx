@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react'; // Added import for loading spinner
 
 export default function HeroSection() {
   const [isMounted, setIsMounted] = useState(false);
@@ -15,11 +16,18 @@ export default function HeroSection() {
   const name = "Shriram Vibhute";
   const tagline = "Machine Learning Engineer";
   const description = "From uncovering insights with Data Science and  Machine Learning to building intelligent solutions with Deep Learning, MLOps, and Gen AI";
-  const email = "darshanbhuva57@gmail.com"; 
+  const email = "darshanbhuva57@gmail.com";
 
   if (!isMounted) {
-    // Fallback for SSR or pre-hydration to avoid layout shifts or hydration errors.
-    return <section className="min-h-screen bg-background"></section>;
+    // Display loading animation
+    return (
+      <section className="min-h-screen bg-background flex items-center justify-center">
+        <div className="flex flex-col items-center text-foreground">
+          <Loader2 className="h-12 w-12 animate-spin text-primary mb-4" />
+          <p className="text-lg font-body">Loading Hero Section...</p>
+        </div>
+      </section>
+    );
   }
 
   return (
@@ -44,11 +52,11 @@ export default function HeroSection() {
               size="lg"
               className="border-primary text-primary hover:bg-background hover:text-primary px-8 py-4 font-[450] text-[0.84rem] shadow-lg shadow-primary/30"
               onClick={() => {
-                const projectsSection = document.getElementById('projects'); 
+                const projectsSection = document.getElementById('projects');
                 if (projectsSection) {
                   projectsSection.scrollIntoView({ behavior: 'smooth' });
                 } else {
-                  window.location.href = '#projects'; 
+                  window.location.href = '#projects';
                 }
               }}
             >
