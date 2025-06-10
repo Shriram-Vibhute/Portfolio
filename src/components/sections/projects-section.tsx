@@ -121,7 +121,7 @@ const AnimatedProjectCard: React.FC<{ project: Project; index: number }> = ({ pr
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-0 py-0"
+                className="px-0 py-0" 
               >
                 <Button variant="link" className="text-primary p-0 h-auto font-[450] text-[0.84rem]">
                   <ExternalLink className="mr-2 h-4 w-4" /> View Live
