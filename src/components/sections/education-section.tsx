@@ -4,7 +4,7 @@
 import type React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Meteors } from '@/components/ui/meteors'; 
+import { Meteors } from '@/components/ui/meteors';
 
 interface EducationItemData {
   id: string;
@@ -35,7 +35,7 @@ const educationData: EducationItemData[] = [
   },
   {
     id: "3",
-    logoUrl: "REPLACE_WITH_ACTUAL_LOGO_URL_PCCOE.png", 
+    logoUrl: "REPLACE_WITH_ACTUAL_LOGO_URL_PCCOE.png",
     logoAlt: "Pimpri Chnichwad College of Engineering, Pune Logo",
     institution: "Pimpri Chnichwad College of Engineering, Pune",
     degree: "Minor Degree - Software Development",
@@ -48,34 +48,19 @@ const titleVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-const listVariants = {
-  visible: {
-    transition: {
-      staggerChildren: 0.2, 
-    },
-  },
-  hidden: {},
-};
-
-const itemVariants = { 
-  hidden: { opacity: 0, y: 30, scale: 0.95 },
-  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, ease: "easeOut" } },
-};
-
 const EducationItem: React.FC<EducationItemData> = ({ logoUrl, logoAlt, institution, degree, dates }) => {
   const actualLogoUrl = logoUrl.startsWith('REPLACE_WITH') ? `https://placehold.co/80x80.png?text=Logo` : logoUrl;
   // Determine data-ai-hint based on placeholder status
   const logoAiHint = logoUrl.startsWith('REPLACE_WITH') ? (logoAlt.toLowerCase().includes('data science') ? 'data science abstract' : 'university logo') : undefined;
 
   return (
-    <motion.div 
-      className="relative w-full max-w-lg flex flex-col" 
-      variants={itemVariants} 
+    <div
+      className="relative flex flex-col flex-grow items-center justify-center group max-w-lg w-full"
     >
       <div className="absolute inset-0 h-full w-full scale-[0.85] transform rounded-full bg-gradient-to-r from-primary via-purple-500 to-pink-500 blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
-      
-      <div 
-        className="relative flex flex-col flex-grow items-start justify-center overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/80 backdrop-blur-sm px-6 py-8 shadow-xl"
+
+      <div
+        className="relative flex flex-col flex-grow items-start justify-center overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/80 backdrop-blur-sm px-6 py-8 shadow-xl w-full"
       >
         <div className="flex flex-col sm:flex-row items-center w-full gap-4">
           <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-white/90 rounded-full p-1 flex items-center justify-center overflow-hidden shadow-md">
@@ -94,9 +79,9 @@ const EducationItem: React.FC<EducationItemData> = ({ logoUrl, logoAlt, institut
           </div>
           <p className="text-xs sm:text-sm text-slate-400 whitespace-nowrap mt-2 sm:mt-0 sm:ml-auto">{dates}</p>
         </div>
-        <Meteors number={10} /> 
+        <Meteors number={10} />
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -104,10 +89,10 @@ export default function EducationSection() {
   return (
     <motion.section
       id="education"
-      className="py-20 md:py-32 bg-background text-foreground" 
+      className="py-20 md:py-32 bg-background text-foreground"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.1 }} 
+      viewport={{ once: true, amount: 0.1 }}
     >
       <div className="container mx-auto px-6">
         <motion.h2
@@ -116,14 +101,13 @@ export default function EducationSection() {
         >
           Education
         </motion.h2>
-        <motion.div 
+        <div
           className="flex flex-wrap justify-center items-stretch gap-8 md:gap-12"
-          variants={listVariants} 
         >
           {educationData.map((edu) => (
             <EducationItem key={edu.id} {...edu} />
           ))}
-        </motion.div>
+        </div>
       </div>
     </motion.section>
   );
