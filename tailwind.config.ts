@@ -101,6 +101,11 @@ export default {
           '0%': { opacity: '0', transform: 'translateX(20px)' },
           '100%': { opacity: '1', transform: 'translateX(0)' },
         },
+        "meteor-effect": {
+          "0%": { transform: "translateY(0) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": { transform: "translateY(300px) translateX(300px)", opacity: "0" },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -108,6 +113,7 @@ export default {
         'fade-in': 'fade-in 0.5s ease-out forwards',
         'fade-in-left': 'fade-in-left 0.5s ease-out forwards',
         'fade-in-right': 'fade-in-right 0.5s ease-out forwards',
+        "meteor-effect": "meteor-effect linear infinite",
       },
     },
   },
