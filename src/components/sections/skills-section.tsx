@@ -3,31 +3,34 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Separator } from '@/components/ui/separator';
+import { Button } from '@/components/ui/button';
 import {
-  BrainCircuit,
   Code,
-  Cpu,
-  Share2,
-  Sigma,
-  Database, // Example, assuming you might want an icon for SQL or Databases
-  Cloud, // Example for AWS
-  GitMerge, // Example for Git/GitHub Actions
-  BarChart // Example for Matplotlib/Seaborn
+  Cpu, // Kept for ML general, though not directly used as category icon
+  BrainCircuit, // Kept for DL general
+  Share2, // Kept for MLOps general
+  Sigma, // Kept for Math general
+  Database,
+  Cloud,
+  GitMerge,
+  BarChart,
+  Layers, // For Keras/Tensorflow
+  Box // For Transformers
 } from 'lucide-react';
 
-interface SkillCategory {
+interface Skill {
   name: string;
-  icon: React.ElementType;
-  skills: Array<{ name: string; icon?: React.ElementType }>;
+  icon?: React.ElementType;
 }
 
-const skillsData: SkillCategory[] = [
+const skillsData: Array<{
+  categoryName: string; // For internal reference, not displayed
+  skills: Skill[];
+}> = [
   {
-    name: 'Programming Languages and Libraries',
-    icon: Code,
+    categoryName: 'Programming Languages and Libraries',
     skills: [
-      { name: 'Python' },
+      { name: 'Python', icon: Code },
       { name: 'C/C++' },
       { name: 'SQL', icon: Database },
       { name: 'Scikit-learn' },
@@ -35,13 +38,12 @@ const skillsData: SkillCategory[] = [
       { name: 'NumPy' },
       { name: 'Matplotlib', icon: BarChart },
       { name: 'Seaborn' },
-      { name: 'Keras' },
-      { name: 'Tensorflow' },
+      { name: 'Keras', icon: Layers },
+      { name: 'Tensorflow', icon: Layers },
     ],
   },
   {
-    name: 'Machine Learning',
-    icon: Cpu,
+    categoryName: 'Machine Learning',
     skills: [
       { name: 'Regression' },
       { name: 'Classification' },
@@ -57,34 +59,31 @@ const skillsData: SkillCategory[] = [
     ],
   },
   {
-    name: 'Deep Learning',
-    icon: BrainCircuit,
+    categoryName: 'Deep Learning',
     skills: [
       { name: 'ANN' },
       { name: 'CNN' },
       { name: 'RNN' },
-      { name: 'Transformers' },
+      { name: 'Transformers', icon: Box },
       { name: 'Bert' },
       { name: 'GPT' },
       { name: 'Auto Encoders' },
     ],
   },
   {
-    name: 'MLOps',
-    icon: Share2,
+    categoryName: 'MLOps',
     skills: [
-      { name: 'AWS (Amazon Web Services)', icon: Cloud },
-      { name: 'DVC (Data Version Control)' },
+      { name: 'AWS', icon: Cloud },
+      { name: 'DVC' },
       { name: 'MLflow' },
-      { name: 'Docker (Basics)' },
-      { name: 'CI/CD (Continuous Integration/Continuous Delivery)' },
+      { name: 'Docker (Basics)'},
+      { name: 'CI/CD'},
       { name: 'GitHub Actions', icon: GitMerge },
       { name: 'Git', icon: GitMerge },
     ],
   },
   {
-    name: 'Mathematics',
-    icon: Sigma,
+    categoryName: 'Mathematics',
     skills: [
       { name: 'Statistics' },
       { name: 'Probability' },
@@ -93,19 +92,37 @@ const skillsData: SkillCategory[] = [
   },
 ];
 
+const allSkills: Skill[] = skillsData.flatMap(category => category.skills);
+
 const sectionVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.1, // Stagger title and then button container
     },
   },
 };
 
-const categoryItemVariants = {
+const titleVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+}
+
+const buttonContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.07, // Stagger for each button
+      delayChildren: 0.2, // Delay after title animation
+    },
+  },
+};
+
+const buttonItemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
 };
 
 export default function SkillsSection() {
@@ -121,35 +138,30 @@ export default function SkillsSection() {
       <div className="container mx-auto px-6">
         <motion.h2
           className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16 font-headline tracking-tight"
-          variants={categoryItemVariants}
+          variants={titleVariants}
         >
           My Skills
         </motion.h2>
-        <div className="space-y-10">
-          {skillsData.map((category) => (
+        <motion.div
+          className="flex flex-wrap justify-center gap-3 md:gap-4"
+          variants={buttonContainerVariants}
+        >
+          {allSkills.map((skill, index) => (
             <motion.div
-              key={category.name}
-              variants={categoryItemVariants}
-              className="text-left"
+              key={skill.name + '-' + index}
+              variants={buttonItemVariants}
             >
-              <div className="flex items-center mb-4">
-                <category.icon className="h-7 w-7 sm:h-8 sm:w-8 text-primary mr-3 sm:mr-4 flex-shrink-0" />
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold font-headline text-slate-100">
-                  {category.name}
-                </h3>
-              </div>
-              <div className="flex flex-wrap gap-x-4 gap-y-2 mt-4 mb-6 pl-10 sm:pl-12">
-                {category.skills.map((skill) => (
-                  <div key={skill.name} className="flex items-center">
-                    {skill.icon && <skill.icon className="h-4 w-4 text-primary/80 mr-2" />}
-                    <span className="text-slate-300 text-sm">{skill.name}</span>
-                  </div>
-                ))}
-              </div>
-              <Separator className="bg-neutral-700/50" />
+              <Button
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary/10 hover:text-primary font-[450] text-[0.84rem] shadow-md hover:shadow-primary/20 transition-all duration-200 ease-out"
+                size="lg" // Make buttons a bit larger for better tap targets and visual balance
+              >
+                {skill.icon && <skill.icon className="mr-2 h-4 w-4" />}
+                {skill.name}
+              </Button>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );
