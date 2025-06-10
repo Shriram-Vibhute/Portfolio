@@ -19,9 +19,9 @@ const educationData: EducationItemData[] = [
   {
     id: "1",
     logoUrl: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0ZWNoJTIwYm9vdGNhbXB8ZW58MHx8fHwxNzQ5NTY5MTYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    logoAlt: "100xDevs Logo",
-    institution: "100xDevs",
-    degree: "Full Stack Dev + Web3 + DevOps",
+    logoAlt: "Data Science Mentorship Program Logo",
+    institution: "Data Science Mentorship Program 2.0",
+    degree: "Machine Learning + Deep Learning + MLOps",
     dates: "June 2024 - Present",
     logoHint: "tech bootcamp",
   },
