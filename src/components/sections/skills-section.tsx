@@ -32,7 +32,7 @@ import {
   Workflow, // For MLflow
   RefreshCw, // For CI/CD
   Dices, // For Probability
-  Table2, // Alternative for Pandas if Sheet is not preferred
+  Table2, // Alternative for Pandas if Sheet is not preferred, or for SQL variant
 } from 'lucide-react';
 
 interface Skill {
@@ -41,7 +41,7 @@ interface Skill {
 }
 
 interface SkillCategory {
-  categoryName: string; // Internal logic, not displayed as heading
+  categoryName: string; 
   skills: Skill[];
   themeClasses: {
     text: string;
@@ -64,7 +64,7 @@ const skillsData: SkillCategory[] = [
       { name: 'Tensorflow', icon: Layers },
     ],
     themeClasses: {
-      text: 'text-indigo-400', // Changed from yellow to indigo
+      text: 'text-indigo-400', 
     },
   },
   {
@@ -73,17 +73,17 @@ const skillsData: SkillCategory[] = [
       { name: 'Regression', icon: LineChart },
       { name: 'Classification', icon: Tags },
       { name: 'Supervised Learning', icon: Cpu },
-      { name: 'Unsupervised Learning', icon: Cpu },
+      { name: 'Unsupervised Learning', icon: Share2 }, // Changed icon for variety
       { name: 'Decision Trees', icon: GitFork },
       { name: 'Ensemble Methods', icon: Combine },
       { name: 'Boosting', icon: TrendingUp },
-      { name: 'Clustering', icon: Share2 },
+      { name: 'Clustering', icon: Users }, // Changed icon
       { name: 'Dimensionality Reduction', icon: Minimize2 },
       { name: 'K-Nearest Neighbors (KNN)', icon: Users },
       { name: 'Naive Bayes', icon: Sigma },
     ],
     themeClasses: {
-      text: 'text-pink-400', // Stays Pink
+      text: 'text-pink-400', 
     },
   },
   {
@@ -124,7 +124,7 @@ const skillsData: SkillCategory[] = [
       { name: 'Linear Algebra', icon: Sigma },
     ],
     themeClasses: {
-      text: 'text-yellow-300', // Changed from indigo to yellow
+      text: 'text-yellow-300',
     },
   },
 ];
@@ -181,7 +181,7 @@ export default function SkillsSection() {
           className="flex flex-wrap justify-center gap-3 md:gap-4"
           variants={buttonContainerVariants}
         >
-          {skillsData.flatMap((category, categoryIndex) =>
+          {skillsData.flatMap((category) =>
             category.skills.map((skill, skillIndex) => (
               <motion.div
                 key={`${category.categoryName}-${skill.name}-${skillIndex}`}
@@ -193,8 +193,7 @@ export default function SkillsSection() {
                     "font-[450] text-[0.84rem] shadow-md transition-all duration-200 ease-out",
                     "bg-black/60 backdrop-blur-md",
                     "border border-white/30",
-                    category.themeClasses.text,
-                    "hover:bg-black/90 hover:border-white/50"
+                    category.themeClasses.text
                   )}
                   size="lg"
                 >
