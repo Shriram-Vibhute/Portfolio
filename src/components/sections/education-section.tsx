@@ -71,7 +71,9 @@ const EducationItem: React.FC<EducationItemData> = ({ logoUrl, logoAlt, institut
     >
       <div className="absolute inset-0 h-full w-full scale-[0.85] transform rounded-full bg-gradient-to-r from-primary via-purple-500 to-pink-500 blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
       
-      <div className="relative flex flex-col flex-grow items-start overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/80 backdrop-blur-sm px-6 py-8 shadow-xl">
+      <div 
+        className="relative flex flex-col flex-grow items-start overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/80 backdrop-blur-sm px-6 py-8 shadow-xl"
+      >
         <div className="flex flex-col sm:flex-row items-center w-full gap-4">
           <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-white/90 rounded-full p-1 flex items-center justify-center overflow-hidden shadow-md">
             <Image
@@ -111,7 +113,7 @@ export default function EducationSection() {
           Education
         </motion.h2>
         <motion.div 
-          className="flex flex-wrap justify-center items-start gap-8 md:gap-12"
+          className="flex flex-wrap justify-center items-stretch gap-8 md:gap-12"
           variants={listVariants} 
         >
           {educationData.map((edu) => (
