@@ -29,9 +29,11 @@ export default function HeroSection() {
   return (
     <section className="min-h-screen flex flex-col bg-background text-foreground relative overflow-x-hidden">
       {/* Main Content Area */}
-      <main className="flex-grow flex items-center justify-start pr-4 sm:pr-6 lg:pr-8 pl-8 sm:pl-12 lg:pl-16">
+      <main className="flex-grow flex items-center justify-start pr-4 sm:pr-6 lg:pr-8 pl-12 sm:pl-20 lg:pl-24"> {/* Increased left padding */}
         <div className="text-left max-w-3xl w-full z-10 mt-10 sm:mt-0">
-          <p className="text-primary text-lg sm:text-xl mb-3 sm:mb-4 [text-shadow:0_0_10px_hsl(var(--primary))]">{introText}</p>
+          <p className="font-mono text-primary text-lg sm:text-xl mb-3 sm:mb-4 [text-shadow:0_0_10px_hsl(var(--primary))]"> {/* Added font-mono */}
+            {introText}
+          </p>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-100 mb-2 sm:mb-3">{name}</h1>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-slate-400 mb-6 sm:mb-8">{tagline}</h2>
           <p className="text-slate-400 text-base sm:text-lg mb-8 sm:mb-10 max-w-xl">
