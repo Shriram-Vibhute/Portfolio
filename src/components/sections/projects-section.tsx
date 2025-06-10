@@ -3,9 +3,9 @@
 
 import React from 'react';
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import { Button }
-from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { Github, ExternalLink } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 interface Project {
   id: string;
@@ -92,9 +92,15 @@ export default function ProjectsSection() {
           My Projects
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-12">
-          {displayedProjects.map((project) => (
-            <CardContainer key={project.id} className="inter-var w-full">
-              <CardBody className="bg-neutral-900/70 backdrop-blur-lg relative group/card hover:shadow-2xl border-white/10 w-full h-auto rounded-xl p-6 border">
+          {displayedProjects.map((project, index) => (
+            <CardContainer 
+              key={project.id} 
+              className={cn(
+                "inter-var w-full",
+                index % 2 === 0 ? "animate-fade-in-left" : "animate-fade-in-right"
+              )}
+            >
+              <CardBody className="bg-neutral-900/70 backdrop-blur-lg relative group/card  border-white/10 w-full h-auto rounded-xl p-6 border">
                 <CardItem
                   translateZ="50"
                   className="text-xl font-bold text-neutral-100"
@@ -168,4 +174,3 @@ export default function ProjectsSection() {
     </section>
   );
 }
-
