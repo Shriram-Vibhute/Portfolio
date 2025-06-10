@@ -2,7 +2,6 @@
 "use client";
 
 import React from 'react';
-import Image from 'next/image';
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { Button }
 from '@/components/ui/button';
@@ -12,12 +11,14 @@ interface Project {
   id: string;
   title: string;
   description: string;
-  imageUrl: string;
-  imageHint: string;
+  imageUrl: string; // Will be used as video poster
+  videoUrl: string;
   liveLink?: string;
   codeLink?: string;
   tags: string[];
 }
+
+const placeholderVideoUrl = "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4";
 
 const projectsData: Project[] = [
   {
@@ -25,7 +26,7 @@ const projectsData: Project[] = [
     title: 'E-commerce Platform',
     description: 'A full-featured e-commerce platform with user authentication, product listings, cart functionality, and payment integration. Built with Next.js and Stripe.',
     imageUrl: 'https://images.unsplash.com/photo-1634973357973-f2ed2657db3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxvbmxpbmUlMjBzdG9yZXxlbnwwfHx8fDE3NDk1NjQyNTJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    imageHint: 'online store',
+    videoUrl: placeholderVideoUrl,
     liveLink: '#',
     codeLink: '#',
     tags: ['Next.js', 'TypeScript', 'Stripe', 'Tailwind CSS'],
@@ -35,7 +36,7 @@ const projectsData: Project[] = [
     title: 'AI Article Summarizer',
     description: 'An application that uses Genkit AI to summarize long articles into concise overviews. Features a clean interface and quick processing.',
     imageUrl: 'https://images.unsplash.com/photo-1496942299866-9e7ab403e614?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlfGVufDB8fHx8MTc0OTU2NDI1Mnww&ixlib=rb-4.1.0&q=80&w=1080',
-    imageHint: 'artificial intelligence',
+    videoUrl: placeholderVideoUrl,
     liveLink: '#',
     codeLink: '#',
     tags: ['Genkit', 'React', 'AI/ML', 'Node.js'],
@@ -45,7 +46,7 @@ const projectsData: Project[] = [
     title: 'Portfolio Website V2',
     description: 'The very website you are browsing! A personal portfolio showcasing projects and skills, built with Next.js and ShadCN UI components.',
     imageUrl: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkZXZlbG9wZXIlMjBwb3J0Zm9saW98ZW58MHx8fHwxNzQ5NTY0MjUyfDA&ixlib=rb-4.1.0&q=80&w=1080',
-    imageHint: 'developer portfolio',
+    videoUrl: placeholderVideoUrl,
     liveLink: '#',
     codeLink: '#',
     tags: ['Next.js', 'ShadCN UI', 'Tailwind CSS', 'Vercel'],
@@ -55,7 +56,7 @@ const projectsData: Project[] = [
     title: 'Interactive Data Dashboard',
     description: 'A web application for visualizing complex datasets with interactive charts and filters. Built using React and Recharts.',
     imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'data charts',
+    videoUrl: placeholderVideoUrl,
     liveLink: '#',
     codeLink: '#',
     tags: ['React', 'Recharts', 'Data Visualization', 'JavaScript'],
@@ -65,7 +66,7 @@ const projectsData: Project[] = [
     title: 'Task Management App',
     description: 'A collaborative task management tool with features like boards, lists, and cards, similar to Trello. Firebase backend.',
     imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'task board',
+    videoUrl: placeholderVideoUrl,
     liveLink: '#',
     codeLink: '#',
     tags: ['React', 'Firebase', 'Productivity', 'Real-time'],
@@ -75,7 +76,7 @@ const projectsData: Project[] = [
     title: 'Weather Forecast App',
     description: 'A clean and simple weather application that provides current weather and forecasts using a third-party API.',
     imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'weather forecast',
+    videoUrl: placeholderVideoUrl,
     liveLink: '#',
     codeLink: '#',
     tags: ['JavaScript', 'API Integration', 'Weather', 'UI/UX'],
@@ -107,13 +108,16 @@ export default function ProjectsSection() {
                   {project.description}
                 </CardItem>
                 <CardItem translateZ="80" className="w-full mt-4">
-                  <Image
-                    src={project.imageUrl}
-                    height={400}
+                  <video
+                    src={project.videoUrl}
+                    poster={project.imageUrl}
                     width={600}
+                    height={400}
                     className="h-48 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                    alt={project.title}
-                    data-ai-hint={project.imageHint}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                   />
                 </CardItem>
                  <CardItem 
@@ -163,4 +167,3 @@ export default function ProjectsSection() {
     </section>
   );
 }
-
