@@ -31,7 +31,7 @@ export default function HeroSection() {
       {/* Main Content Area */}
       <main className="flex-grow flex items-center justify-start pr-4 sm:pr-6 lg:pr-8 pl-12 sm:pl-20 lg:pl-24"> {/* Increased left padding */}
         <div className="text-left max-w-3xl w-full z-10 mt-10 sm:mt-0">
-          <p className="font-mono font-[450] text-primary text-[0.84rem] mb-3 sm:mb-4 [text-shadow:0_0_10px_hsl(var(--primary))]">
+          <p className="font-mono font-[450] text-primary text-[0.95rem] mb-8 [text-shadow:0_0_10px_hsl(var(--primary))]">
             {introText}
           </p>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-100 mb-2 sm:mb-3">{name}</h1>
@@ -45,7 +45,7 @@ export default function HeroSection() {
             <Button
               variant="outline"
               size="lg"
-              className="border-primary text-primary hover:bg-background hover:text-primary px-8 py-4 sm:px-10 font-[450] text-[0.84rem] shadow-lg shadow-primary/30"
+              className="border-primary text-primary hover:bg-background hover:text-primary px-8 py-4 font-[450] text-[0.84rem] shadow-lg shadow-primary/30"
               onClick={() => {
                 const projectsSection = document.getElementById('projects'); 
                 if (projectsSection) {
@@ -61,7 +61,7 @@ export default function HeroSection() {
               asChild
               variant="outline"
               size="lg"
-              className="border-primary text-primary hover:bg-background hover:text-primary px-8 py-4 sm:px-10 font-[450] text-[0.84rem] shadow-lg shadow-primary/30"
+              className="border-primary text-primary hover:bg-background hover:text-primary px-8 py-4 font-[450] text-[0.84rem] shadow-lg shadow-primary/30"
             >
               <a href="/resume_darshan_bhuva.pdf" download="Darshan_Bhuva_Resume.pdf">
                 Download Resume
@@ -73,3 +73,4 @@ export default function HeroSection() {
     </section>
   );
 }
+
