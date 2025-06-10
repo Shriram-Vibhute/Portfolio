@@ -28,7 +28,7 @@ interface SkillCategory {
   categoryName: string; // Used for internal logic, not displayed directly as a heading anymore
   skills: Skill[];
   themeClasses: {
-    text: string; // e.g., 'text-pink-400' for light pink text
+    text: string; 
   };
 }
 
@@ -48,7 +48,7 @@ const skillsData: SkillCategory[] = [
       { name: 'Tensorflow', icon: Layers },
     ],
     themeClasses: {
-      text: 'text-yellow-300', // Changed from text-orange-400
+      text: 'text-yellow-300', 
     },
   },
   {
@@ -67,7 +67,7 @@ const skillsData: SkillCategory[] = [
       { name: 'Naive Bayes' },
     ],
     themeClasses: {
-      text: 'text-pink-400', // Changed from text-yellow-400
+      text: 'text-pink-400', 
     },
   },
   {
@@ -172,13 +172,12 @@ export default function SkillsSection() {
                 variants={buttonItemVariants}
               >
                 <Button
-                  variant="outline" // Base variant, visual styles overridden
+                  variant="outline" 
                   className={cn(
-                    "font-[450] text-[0.84rem] shadow-md transition-all duration-200 ease-out", // Base structure, font, and animation
-                    "bg-black/60 backdrop-blur-md", // Glassmorphism background
-                    "border border-white/30",       // Light white border
-                    "hover:bg-black/80 hover:border-white/50", // Hover effect for glassmorphism
-                    category.themeClasses.text       // Category-specific text color
+                    "font-[450] text-[0.84rem] shadow-md transition-all duration-200 ease-out",
+                    "bg-black/60 backdrop-blur-md", 
+                    "border border-white/30",      
+                    category.themeClasses.text  
                   )}
                   size="lg"
                 >
