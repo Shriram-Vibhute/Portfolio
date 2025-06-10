@@ -38,7 +38,7 @@ export default function HeroSection() {
           <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-slate-400 mb-6 sm:mb-8">
             {tagline}
           </h2>
-          <p className="text-slate-400 text-base sm:text-lg mb-8 sm:mb-10 max-w-xl">
+          <p className="text-slate-400 text-base sm:text-lg mb-8 sm:mb-10 max-w-2xl">
             {description}
           </p>
           <div className="flex flex-wrap gap-4">
