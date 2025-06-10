@@ -3,6 +3,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Download } from 'lucide-react'; // Import the Download icon
 
 export default function HeroSection() {
   const introText = "Hi, my name is";
@@ -24,7 +25,7 @@ export default function HeroSection() {
             {introText}
           </p>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-100 mb-2 sm:mb-3">{name}</h1>
-          <h2 className="text-lg sm:text-xl font-bold text-slate-400 mb-6 sm:mb-8">
+          <h2 className="text-base sm:text-lg font-bold text-slate-400 mb-6 sm:mb-8">
             {tagline}
           </h2>
           <p className="text-slate-400 text-base sm:text-lg mb-8 sm:mb-10 max-w-2xl">
@@ -53,6 +54,7 @@ export default function HeroSection() {
               className="border-primary text-primary hover:bg-background hover:text-primary px-8 py-4 font-[450] text-[0.84rem] shadow-lg shadow-primary/30"
             >
               <a href="/resume_darshan_bhuva.pdf" download="Darshan_Bhuva_Resume.pdf">
+                <Download className="mr-2 h-4 w-4" /> {/* Added icon here */}
                 Download Resume
               </a>
             </Button>
