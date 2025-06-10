@@ -1,3 +1,4 @@
+
 // @ts-nocheck
 "use client";
 import { cn } from "@/lib/utils";
@@ -101,7 +102,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden h-16 items-end gap-4 rounded-2xl bg-gray-50 px-4 pb-3 md:flex dark:bg-neutral-900",
+        "mx-auto hidden h-16 items-end gap-4 rounded-2xl bg-black/50 backdrop-blur-lg border border-neutral-700/50 px-4 pb-3 md:flex",
         className,
       )}
     >
@@ -176,7 +177,7 @@ function IconContainer({
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="relative flex aspect-square items-center justify-center rounded-full bg-gray-200 dark:bg-neutral-800"
+        className="relative flex aspect-square items-center justify-center rounded-full bg-transparent"
       >
         <AnimatePresence>
           {hovered && (
@@ -200,3 +201,4 @@ function IconContainer({
     </a>
   );
 }
+
