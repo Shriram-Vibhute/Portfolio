@@ -1,5 +1,6 @@
 
 import HeroSection from "@/components/sections/hero-section";
+import ProjectsSection from "@/components/sections/projects-section"; // Import the new section
 
 export default function HomePage() {
   const currentYear = new Date().getFullYear();
@@ -7,6 +8,7 @@ export default function HomePage() {
     <>
       <main className="min-h-screen bg-background text-foreground">
         <HeroSection />
+        <ProjectsSection /> {/* Add the new section here */}
       </main>
 
       <footer className="py-8 bg-background text-muted-foreground border-t border-gray-800">
