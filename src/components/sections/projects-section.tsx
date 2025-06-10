@@ -1,7 +1,8 @@
 
 "use client";
 
-import React from 'react';
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { Button } from '@/components/ui/button';
 import { Github, ExternalLink } from 'lucide-react';
@@ -55,33 +56,98 @@ const projectsData: Project[] = [
     id: '4',
     title: 'Interactive Data Dashboard',
     description: 'A web application for visualizing complex datasets with interactive charts and filters. Built using React and Recharts.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://placehold.co/600x400.png', // Placeholder for the 4th card
     videoUrl: placeholderVideoUrl,
     liveLink: '#',
     codeLink: '#',
     tags: ['React', 'Recharts', 'Data Visualization', 'JavaScript'],
   },
-  {
-    id: '5',
-    title: 'Task Management App',
-    description: 'A collaborative task management tool with features like boards, lists, and cards, similar to Trello. Firebase backend.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    videoUrl: placeholderVideoUrl,
-    liveLink: '#',
-    codeLink: '#',
-    tags: ['React', 'Firebase', 'Productivity', 'Real-time'],
-  },
-  {
-    id: '6',
-    title: 'Weather Forecast App',
-    description: 'A clean and simple weather application that provides current weather and forecasts using a third-party API.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    videoUrl: placeholderVideoUrl,
-    liveLink: '#',
-    codeLink: '#',
-    tags: ['JavaScript', 'API Integration', 'Weather', 'UI/UX'],
-  },
 ];
+
+const AnimatedProjectCard: React.FC<{ project: Project; index: number }> = ({ project, index }) => {
+  const cardRef = useRef(null);
+  const isInView = useInView(cardRef, { once: true, amount: 0.3 });
+
+  return (
+    <motion.div
+      ref={cardRef}
+      initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+      animate={isInView ? { opacity: 1, x: 0 } : {}}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="w-full"
+    >
+      <CardContainer className="inter-var w-full">
+        <CardBody className="bg-neutral-900/70 backdrop-blur-lg relative group/card border-white/10 w-full h-auto rounded-xl p-6 border">
+          <CardItem
+            translateZ="50"
+            className="text-xl font-bold text-neutral-100"
+          >
+            {project.title}
+          </CardItem>
+          <CardItem
+            as="p"
+            translateZ="60"
+            className="text-neutral-300 text-sm max-w-sm mt-2"
+          >
+            {project.description}
+          </CardItem>
+          <CardItem translateZ="80" className="w-full mt-4">
+            <video
+              src={project.videoUrl}
+              poster={project.imageUrl}
+              width={600}
+              height={400}
+              className="h-48 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          </CardItem>
+           <CardItem
+              translateZ="70"
+              className="w-full mt-4 flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
+                  <span key={tag} className="text-xs bg-neutral-700/80 text-neutral-200 px-2 py-1 rounded-full">
+                      {tag}
+                  </span>
+              ))}
+          </CardItem>
+          <div className="flex justify-between items-center mt-10">
+            {project.liveLink && (
+              <CardItem
+                translateZ={20}
+                as="a"
+                href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-0 py-0"
+              >
+                <Button variant="link" className="text-primary p-0 h-auto font-[450] text-[0.84rem]">
+                  <ExternalLink className="mr-2 h-4 w-4" /> View Live
+                </Button>
+              </CardItem>
+            )}
+            {project.codeLink && (
+               <CardItem
+                translateZ={20}
+                as="a"
+                href={project.codeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-0 py-0"
+              >
+                <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 hover:text-primary font-[450] text-[0.84rem]">
+                  <Github className="mr-2 h-4 w-4" /> View Code
+                </Button>
+              </CardItem>
+            )}
+          </div>
+        </CardBody>
+      </CardContainer>
+    </motion.div>
+  );
+};
 
 export default function ProjectsSection() {
   const displayedProjects = projectsData.slice(0, 4);
@@ -93,84 +159,11 @@ export default function ProjectsSection() {
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-12">
           {displayedProjects.map((project, index) => (
-            <CardContainer 
-              key={project.id} 
-              className={cn(
-                "inter-var w-full",
-                index % 2 === 0 ? "animate-fade-in-left" : "animate-fade-in-right"
-              )}
-            >
-              <CardBody className="bg-neutral-900/70 backdrop-blur-lg relative group/card  border-white/10 w-full h-auto rounded-xl p-6 border">
-                <CardItem
-                  translateZ="50"
-                  className="text-xl font-bold text-neutral-100"
-                >
-                  {project.title}
-                </CardItem>
-                <CardItem
-                  as="p"
-                  translateZ="60"
-                  className="text-neutral-300 text-sm max-w-sm mt-2"
-                >
-                  {project.description}
-                </CardItem>
-                <CardItem translateZ="80" className="w-full mt-4">
-                  <video
-                    src={project.videoUrl}
-                    poster={project.imageUrl}
-                    width={600}
-                    height={400}
-                    className="h-48 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  />
-                </CardItem>
-                 <CardItem 
-                    translateZ="70"
-                    className="w-full mt-4 flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                        <span key={tag} className="text-xs bg-neutral-700/80 text-neutral-200 px-2 py-1 rounded-full">
-                            {tag}
-                        </span>
-                    ))}
-                </CardItem>
-                <div className="flex justify-between items-center mt-10">
-                  {project.liveLink && (
-                    <CardItem
-                      translateZ={20}
-                      as="a"
-                      href={project.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-0 py-0"
-                    >
-                      <Button variant="link" className="text-primary p-0 h-auto font-[450] text-[0.84rem]">
-                        <ExternalLink className="mr-2 h-4 w-4" /> View Live
-                      </Button>
-                    </CardItem>
-                  )}
-                  {project.codeLink && (
-                     <CardItem
-                      translateZ={20}
-                      as="a"
-                      href={project.codeLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-0 py-0"
-                    >
-                      <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 hover:text-primary font-[450] text-[0.84rem]">
-                        <Github className="mr-2 h-4 w-4" /> View Code
-                      </Button>
-                    </CardItem>
-                  )}
-                </div>
-              </CardBody>
-            </CardContainer>
+            <AnimatedProjectCard project={project} index={index} key={project.id} />
           ))}
         </div>
       </div>
     </section>
   );
 }
+
