@@ -3,12 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  @property --grid-line-hue {
-    syntax: '<angle>';
-    inherits: false;
-    initial-value: 180deg;
-  }
-
   :root {
     --background: 0 0% 0%; /* Pure black */
     --foreground: 0 0% 98%; /* White text for readability on black background */
@@ -106,27 +100,5 @@
   }
   body {
     @apply bg-background text-foreground;
-  }
-}
-
-@layer utilities {
-  @keyframes flow-grid-color {
-    0% {
-      --grid-line-hue: 180deg; /* Start with primary hue (Aqua) */
-    }
-    100% {
-      --grid-line-hue: 540deg; /* End one full cycle (180 + 360) */
-    }
-  }
-
-  .animated-grid-background {
-    background-color: hsl(var(--background)); /* Ensure base is black */
-    --line-color: hsl(var(--grid-line-hue) 60% 50% / 0.15); /* Use animated hue, 15% opacity */
-    background-image:
-      repeating-linear-gradient(0deg, var(--line-color), var(--line-color) 1px, transparent 1px, transparent 100px),
-      repeating-linear-gradient(90deg, var(--line-color), var(--line-color) 1px, transparent 1px, transparent 100px);
-    background-size: 100px 100px; /* Grid spacing */
-    animation:
-      flow-grid-color 5s linear infinite; /* Color flow animation */
   }
 }

@@ -13,7 +13,10 @@ export default function HeroSection() {
 
   return (
     <section className="min-h-screen flex flex-col bg-background text-foreground relative overflow-x-hidden animate-fade-in">
-      <div className="absolute inset-0 -z-10 animated-grid-background"></div>
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 [background-size:40px_40px] [background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]" />
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+      </div>
       {/* Main Content Area */}
       <main className="flex-grow flex items-center justify-start pr-4 sm:pr-6 lg:pr-8 pl-12 sm:pl-20 lg:pl-24"> {/* Increased left padding */}
         <div className="text-left max-w-3xl w-full z-10 mt-10 sm:mt-0">
