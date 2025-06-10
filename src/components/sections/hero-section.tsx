@@ -5,6 +5,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Download, Briefcase } from 'lucide-react';
 import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
+import { cn } from '@/lib/utils';
 
 
 export default function HeroSection() {
@@ -30,7 +31,17 @@ export default function HeroSection() {
 
   return (
     <section className="min-h-screen flex flex-col bg-background text-foreground relative overflow-x-hidden animate-fade-in">
-      {/* Grid background and radial fade removed */}
+      {/* Static grid background */}
+      <div
+        className={cn(
+          "absolute inset-0",
+          "[background-size:40px_40px]",
+          // For dark mode, using the dark version of the grid directly
+          "[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]",
+        )}
+      />
+      {/* Radial gradient for the container to give a faded look */}
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       
       <main className="flex-grow flex items-center justify-start pr-4 sm:pr-6 lg:pr-8 pl-12 sm:pl-20 lg:pl-24">
         <div className="text-left max-w-3xl w-full z-10 mt-10 sm:mt-0">
