@@ -1,37 +1,18 @@
 
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Loader2 } from 'lucide-react'; // Added import for loading spinner
 
 export default function HeroSection() {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
   const introText = "Hi, my name is";
   const name = "Shriram Vibhute";
   const tagline = "Machine Learning Engineer";
   const description = "From uncovering insights with Data Science and  Machine Learning to building intelligent solutions with Deep Learning, MLOps, and Gen AI";
   const email = "darshanbhuva57@gmail.com";
 
-  if (!isMounted) {
-    // Display loading animation
-    return (
-      <section className="min-h-screen bg-background flex items-center justify-center">
-        <div className="flex flex-col items-center text-foreground">
-          <Loader2 className="h-12 w-12 animate-spin text-primary mb-4" />
-          <p className="text-lg font-body">Loading Hero Section...</p>
-        </div>
-      </section>
-    );
-  }
-
   return (
-    <section className="min-h-screen flex flex-col bg-background text-foreground relative overflow-x-hidden">
+    <section className="min-h-screen flex flex-col bg-background text-foreground relative overflow-x-hidden animate-fade-in">
       <div className="absolute inset-0 -z-10 animated-grid-background"></div>
       {/* Main Content Area */}
       <main className="flex-grow flex items-center justify-start pr-4 sm:pr-6 lg:pr-8 pl-12 sm:pl-20 lg:pl-24"> {/* Increased left padding */}
@@ -40,7 +21,7 @@ export default function HeroSection() {
             {introText}
           </p>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-100 mb-2 sm:mb-3">{name}</h1>
-          <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-slate-400 mb-6 sm:mb-8">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-400 mb-6 sm:mb-8">
             {tagline}
           </h2>
           <p className="text-slate-400 text-base sm:text-lg mb-8 sm:mb-10 max-w-2xl">
