@@ -10,12 +10,16 @@ import {
   Cpu,
   Share2,
   Sigma,
+  Database, // Example, assuming you might want an icon for SQL or Databases
+  Cloud, // Example for AWS
+  GitMerge, // Example for Git/GitHub Actions
+  BarChart // Example for Matplotlib/Seaborn
 } from 'lucide-react';
 
 interface SkillCategory {
   name: string;
   icon: React.ElementType;
-  skills: Array<{ name: string; icon?: React.ElementType }>; // Kept for data structure, but not rendered as buttons
+  skills: Array<{ name: string; icon?: React.ElementType }>;
 }
 
 const skillsData: SkillCategory[] = [
@@ -25,11 +29,11 @@ const skillsData: SkillCategory[] = [
     skills: [
       { name: 'Python' },
       { name: 'C/C++' },
-      { name: 'SQL' },
+      { name: 'SQL', icon: Database },
       { name: 'Scikit-learn' },
       { name: 'Pandas' },
       { name: 'NumPy' },
-      { name: 'Matplotlib' },
+      { name: 'Matplotlib', icon: BarChart },
       { name: 'Seaborn' },
       { name: 'Keras' },
       { name: 'Tensorflow' },
@@ -69,13 +73,13 @@ const skillsData: SkillCategory[] = [
     name: 'MLOps',
     icon: Share2,
     skills: [
-      { name: 'AWS (Amazon Web Services)' },
+      { name: 'AWS (Amazon Web Services)', icon: Cloud },
       { name: 'DVC (Data Version Control)' },
       { name: 'MLflow' },
       { name: 'Docker (Basics)' },
       { name: 'CI/CD (Continuous Integration/Continuous Delivery)' },
-      { name: 'GitHub Actions' },
-      { name: 'Git' },
+      { name: 'GitHub Actions', icon: GitMerge },
+      { name: 'Git', icon: GitMerge },
     ],
   },
   {
@@ -117,7 +121,7 @@ export default function SkillsSection() {
       <div className="container mx-auto px-6">
         <motion.h2
           className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16 font-headline tracking-tight"
-          variants={categoryItemVariants} // Use categoryItemVariants for the main heading as well
+          variants={categoryItemVariants}
         >
           My Skills
         </motion.h2>
@@ -126,13 +130,21 @@ export default function SkillsSection() {
             <motion.div
               key={category.name}
               variants={categoryItemVariants}
-              className="text-left" // Ensure text alignment is left for category titles
+              className="text-left"
             >
               <div className="flex items-center mb-4">
                 <category.icon className="h-7 w-7 sm:h-8 sm:w-8 text-primary mr-3 sm:mr-4 flex-shrink-0" />
                 <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold font-headline text-slate-100">
                   {category.name}
                 </h3>
+              </div>
+              <div className="flex flex-wrap gap-x-4 gap-y-2 mt-4 mb-6 pl-10 sm:pl-12">
+                {category.skills.map((skill) => (
+                  <div key={skill.name} className="flex items-center">
+                    {skill.icon && <skill.icon className="h-4 w-4 text-primary/80 mr-2" />}
+                    <span className="text-slate-300 text-sm">{skill.name}</span>
+                  </div>
+                ))}
               </div>
               <Separator className="bg-neutral-700/50" />
             </motion.div>
