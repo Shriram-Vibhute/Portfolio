@@ -28,9 +28,9 @@ const educationData: EducationItemData[] = [
   {
     id: "2",
     logoUrl: "https://images.unsplash.com/photo-1543193158-07c01963e800?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx1bml2ZXJzaXR5JTIwY3Jlc3R8ZW58MHx8fHwxNzQ5NTY5MTYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    logoAlt: "Sikkim Manipal University Logo",
-    institution: "Sikkim Manipal University",
-    degree: "Master's Degree of Computer Applications (MCA)",
+    logoAlt: "Pimpri Chnichwad College of Engineering, Pune Logo",
+    institution: "Pimpri Chnichwad College of Engineering, Pune",
+    degree: "Bachelor of Technology (B.Tech) Mechanical Engineering",
     dates: "2025 - 2026",
     logoHint: "university crest",
   },
