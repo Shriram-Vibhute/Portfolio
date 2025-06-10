@@ -5,13 +5,6 @@ import { Separator } from "@/components/ui/separator";
 export default function HomePage() {
   return (
     <>
-      <header className="py-4 bg-background/80 backdrop-blur-md shadow-sm sticky top-0 z-40 border-b">
-        <div className="container mx-auto px-6 flex justify-between items-center">
-          <h1 className="font-headline text-3xl font-bold text-primary">Sectionize</h1>
-          {/* Future navigation links can go here */}
-        </div>
-      </header>
-
       <main className="min-h-screen bg-background text-foreground">
         <HeroSection />
         <Separator className="my-0" />
