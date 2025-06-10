@@ -22,7 +22,7 @@ export default function HomePage() {
       <footer className="py-8 bg-background text-muted-foreground border-t border-gray-800">
         <div className="container mx-auto px-6 text-center">
           <p className="font-mono text-xs text-slate-500">
-            Designed & Built by Darshan Bhuva
+            Designed and built with 🩷 Shriram
           </p>
           <p className="text-xs text-slate-600 mt-1">&copy; {currentYear} All rights reserved.</p>
         </div>
@@ -30,3 +30,4 @@ export default function HomePage() {
     </>
   );
 }
+
