@@ -25,13 +25,10 @@ interface Skill {
 }
 
 interface SkillCategory {
-  categoryName: string; // Used for theming, not displayed
+  categoryName: string; // Used for internal logic, not displayed directly as a heading anymore
   skills: Skill[];
   themeClasses: {
-    text: string;
-    border: string;
-    hoverBg: string;
-    shadow?: string; // Optional custom shadow if needed
+    text: string; // e.g., 'text-orange-400' for light orange text
   };
 }
 
@@ -51,10 +48,7 @@ const skillsData: SkillCategory[] = [
       { name: 'Tensorflow', icon: Layers },
     ],
     themeClasses: {
-      text: 'text-orange-600 dark:text-orange-400',
-      border: 'border-orange-500/70 dark:border-orange-400/60',
-      hoverBg: 'hover:bg-orange-500/10',
-      shadow: 'hover:shadow-orange-500/20',
+      text: 'text-orange-400',
     },
   },
   {
@@ -73,10 +67,7 @@ const skillsData: SkillCategory[] = [
       { name: 'Naive Bayes' },
     ],
     themeClasses: {
-      text: 'text-yellow-600 dark:text-yellow-400',
-      border: 'border-yellow-500/70 dark:border-yellow-400/60',
-      hoverBg: 'hover:bg-yellow-500/10',
-      shadow: 'hover:shadow-yellow-500/20',
+      text: 'text-yellow-400',
     },
   },
   {
@@ -91,10 +82,7 @@ const skillsData: SkillCategory[] = [
       { name: 'Auto Encoders' },
     ],
     themeClasses: {
-      text: 'text-cyan-600 dark:text-cyan-400',
-      border: 'border-cyan-500/70 dark:border-cyan-400/60',
-      hoverBg: 'hover:bg-cyan-500/10',
-      shadow: 'hover:shadow-cyan-500/20',
+      text: 'text-cyan-400',
     },
   },
   {
@@ -109,10 +97,7 @@ const skillsData: SkillCategory[] = [
       { name: 'Git', icon: GitMerge },
     ],
     themeClasses: {
-      text: 'text-green-600 dark:text-green-400',
-      border: 'border-green-500/70 dark:border-green-400/60',
-      hoverBg: 'hover:bg-green-500/10',
-      shadow: 'hover:shadow-green-500/20',
+      text: 'text-green-400',
     },
   },
   {
@@ -123,10 +108,7 @@ const skillsData: SkillCategory[] = [
       { name: 'Linear Algebra' },
     ],
     themeClasses: {
-      text: 'text-indigo-600 dark:text-indigo-400',
-      border: 'border-indigo-500/70 dark:border-indigo-400/60',
-      hoverBg: 'hover:bg-indigo-500/10',
-      shadow: 'hover:shadow-indigo-500/20',
+      text: 'text-indigo-400',
     },
   },
 ];
@@ -190,13 +172,13 @@ export default function SkillsSection() {
                 variants={buttonItemVariants}
               >
                 <Button
-                  variant="outline"
+                  variant="outline" // Base variant, visual styles overridden
                   className={cn(
-                    "font-[450] text-[0.84rem] shadow-md transition-all duration-200 ease-out",
-                    category.themeClasses.text,
-                    category.themeClasses.border,
-                    category.themeClasses.hoverBg,
-                    category.themeClasses.shadow || 'hover:shadow-primary/20' // Fallback to primary shadow if not specified
+                    "font-[450] text-[0.84rem] shadow-md transition-all duration-200 ease-out", // Base structure, font, and animation
+                    "bg-black/60 backdrop-blur-md", // Glassmorphism background
+                    "border border-white/30",       // Light white border
+                    "hover:bg-black/80 hover:border-white/50", // Hover effect for glassmorphism
+                    category.themeClasses.text       // Category-specific text color
                   )}
                   size="lg"
                 >
