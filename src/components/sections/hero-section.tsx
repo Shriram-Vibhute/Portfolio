@@ -3,10 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-// Icons like Github, Linkedin, etc. are no longer used directly here.
-// import { Github, Linkedin, Twitter, Instagram, Codepen } from 'lucide-react';
-// Link component is no longer used directly here.
-// import Link from 'next/link';
 
 export default function HeroSection() {
   const [isMounted, setIsMounted] = useState(false);
@@ -28,6 +24,7 @@ export default function HeroSection() {
 
   return (
     <section className="min-h-screen flex flex-col bg-background text-foreground relative overflow-x-hidden">
+      <div className="absolute inset-0 -z-10 animated-grid-background"></div>
       {/* Main Content Area */}
       <main className="flex-grow flex items-center justify-start pr-4 sm:pr-6 lg:pr-8 pl-12 sm:pl-20 lg:pl-24"> {/* Increased left padding */}
         <div className="text-left max-w-3xl w-full z-10 mt-10 sm:mt-0">
@@ -73,4 +70,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
