@@ -18,7 +18,7 @@ export default function HeroSection() {
   const introText = "Hi, my name is";
   const name = "Shriram Vibhute";
   const tagline = "Machine Learning Engineer";
-  const description = "Data Science | Machine Learning | Deep Learning | MLOps | Gen AI";
+  const description = "From uncovering insights with Data Science and  Machine Learning to building intelligent solutions with Deep Learning, MLOps, and Gen AI";
   const email = "darshanbhuva57@gmail.com"; 
 
   if (!isMounted) {
