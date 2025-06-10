@@ -66,7 +66,7 @@ const EducationItem: React.FC<EducationItemData> = ({ logoUrl, logoAlt, institut
   const actualLogoUrl = logoUrl.startsWith('REPLACE_WITH') ? `https://placehold.co/80x80.png?text=Logo` : logoUrl;
   return (
     <motion.div 
-      className="relative w-full max-w-md flex flex-col" 
+      className="relative w-full max-w-lg flex flex-col" 
       variants={itemVariants} 
     >
       <div className="absolute inset-0 h-full w-full scale-[0.85] transform rounded-full bg-gradient-to-r from-primary via-purple-500 to-pink-500 blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
