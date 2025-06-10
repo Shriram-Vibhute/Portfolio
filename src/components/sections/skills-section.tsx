@@ -16,7 +16,23 @@ import {
   GitMerge,
   BarChart,
   Layers,
-  Box
+  Box,
+  Sheet, // For Pandas
+  LineChart, // For Regression
+  Tags, // For Classification
+  GitFork, // For Decision Trees
+  Combine, // For Ensemble Methods
+  TrendingUp, // For Boosting
+  Minimize2, // For Dimensionality Reduction
+  Users, // For KNN & Clustering
+  Scan, // For CNN
+  Repeat, // For RNN
+  MessageSquareText, // For Bert, GPT
+  Container, // For Docker
+  Workflow, // For MLflow
+  RefreshCw, // For CI/CD
+  Dices, // For Probability
+  Table2, // Alternative for Pandas if Sheet is not preferred
 } from 'lucide-react';
 
 interface Skill {
@@ -37,49 +53,49 @@ const skillsData: SkillCategory[] = [
     categoryName: 'Programming Languages and Libraries',
     skills: [
       { name: 'Python', icon: Code },
-      { name: 'C/C++' },
+      { name: 'C/C++', icon: Code },
       { name: 'SQL', icon: Database },
-      { name: 'Scikit-learn' },
-      { name: 'Pandas' },
-      { name: 'NumPy' },
+      { name: 'Scikit-learn', icon: BrainCircuit },
+      { name: 'Pandas', icon: Sheet },
+      { name: 'NumPy', icon: Sigma },
       { name: 'Matplotlib', icon: BarChart },
-      { name: 'Seaborn' },
+      { name: 'Seaborn', icon: BarChart },
       { name: 'Keras', icon: Layers },
       { name: 'Tensorflow', icon: Layers },
     ],
     themeClasses: {
-      text: 'text-yellow-300', // Light Yellow
+      text: 'text-indigo-400', // Changed from yellow to indigo
     },
   },
   {
     categoryName: 'Machine Learning',
     skills: [
-      { name: 'Regression' },
-      { name: 'Classification' },
-      { name: 'Supervised Learning' },
-      { name: 'Unsupervised Learning' },
-      { name: 'Decision Trees' },
-      { name: 'Ensemble Methods' },
-      { name: 'Boosting' },
-      { name: 'Clustering' },
-      { name: 'Dimensionality Reduction' },
-      { name: 'K-Nearest Neighbors (KNN)' },
-      { name: 'Naive Bayes' },
+      { name: 'Regression', icon: LineChart },
+      { name: 'Classification', icon: Tags },
+      { name: 'Supervised Learning', icon: Cpu },
+      { name: 'Unsupervised Learning', icon: Cpu },
+      { name: 'Decision Trees', icon: GitFork },
+      { name: 'Ensemble Methods', icon: Combine },
+      { name: 'Boosting', icon: TrendingUp },
+      { name: 'Clustering', icon: Share2 },
+      { name: 'Dimensionality Reduction', icon: Minimize2 },
+      { name: 'K-Nearest Neighbors (KNN)', icon: Users },
+      { name: 'Naive Bayes', icon: Sigma },
     ],
     themeClasses: {
-      text: 'text-pink-400', // Pink
+      text: 'text-pink-400', // Stays Pink
     },
   },
   {
     categoryName: 'Deep Learning',
     skills: [
-      { name: 'ANN' },
-      { name: 'CNN' },
-      { name: 'RNN' },
+      { name: 'ANN', icon: BrainCircuit },
+      { name: 'CNN', icon: Scan },
+      { name: 'RNN', icon: Repeat },
       { name: 'Transformers', icon: Box },
-      { name: 'Bert' },
-      { name: 'GPT' },
-      { name: 'Auto Encoders' },
+      { name: 'Bert', icon: MessageSquareText },
+      { name: 'GPT', icon: MessageSquareText },
+      { name: 'Auto Encoders', icon: Layers },
     ],
     themeClasses: {
       text: 'text-cyan-400',
@@ -89,10 +105,10 @@ const skillsData: SkillCategory[] = [
     categoryName: 'MLOps',
     skills: [
       { name: 'AWS', icon: Cloud },
-      { name: 'DVC' },
-      { name: 'MLflow' },
-      { name: 'Docker (Basics)'},
-      { name: 'CI/CD'},
+      { name: 'DVC', icon: GitMerge },
+      { name: 'MLflow', icon: Workflow },
+      { name: 'Docker (Basics)', icon: Container },
+      { name: 'CI/CD', icon: RefreshCw },
       { name: 'GitHub Actions', icon: GitMerge },
       { name: 'Git', icon: GitMerge },
     ],
@@ -103,12 +119,12 @@ const skillsData: SkillCategory[] = [
   {
     categoryName: 'Mathematics',
     skills: [
-      { name: 'Statistics' },
-      { name: 'Probability' },
-      { name: 'Linear Algebra' },
+      { name: 'Statistics', icon: BarChart },
+      { name: 'Probability', icon: Dices },
+      { name: 'Linear Algebra', icon: Sigma },
     ],
     themeClasses: {
-      text: 'text-indigo-400',
+      text: 'text-yellow-300', // Changed from indigo to yellow
     },
   },
 ];
@@ -172,13 +188,13 @@ export default function SkillsSection() {
                 variants={buttonItemVariants}
               >
                 <Button
-                  variant="outline" 
+                  variant="outline"
                   className={cn(
                     "font-[450] text-[0.84rem] shadow-md transition-all duration-200 ease-out",
-                    "bg-black/60 backdrop-blur-md", 
-                    "border border-white/30",      
+                    "bg-black/60 backdrop-blur-md",
+                    "border border-white/30",
                     category.themeClasses.text,
-                    "hover:bg-black/90 hover:border-white/50" // Added hover effect for darker background and border
+                    "hover:bg-black/90 hover:border-white/50"
                   )}
                   size="lg"
                 >
