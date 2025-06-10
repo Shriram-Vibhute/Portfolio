@@ -5,6 +5,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Download, Briefcase } from 'lucide-react';
 import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
+import { cn } from "@/lib/utils";
 
 
 export default function HeroSection() {
@@ -30,12 +31,20 @@ export default function HeroSection() {
 
   return (
     <section className="min-h-screen flex flex-col bg-background text-foreground relative overflow-x-hidden animate-fade-in">
-      <div className="absolute inset-0 -z-10">
-        <div 
-          className="absolute inset-0 [background-size:40px_40px] dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
-        />
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black" />
-      </div>
+      {/* Grid background START */}
+      <div
+        className={cn(
+          "absolute inset-0 -z-10",
+          "[background-size:40px_40px]",
+          // Light mode grid lines
+          "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
+          // Dark mode grid lines - using --border for better visibility
+          "dark:[background-image:linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)]"
+        )}
+      />
+      {/* Radial gradient for the container to give a faded look */}
+      <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black" />
+      {/* Grid background END */}
       
       <main className="flex-grow flex items-center justify-start pr-4 sm:pr-6 lg:pr-8 pl-12 sm:pl-20 lg:pl-24">
         <div className="text-left max-w-3xl w-full z-10 mt-10 sm:mt-0">
@@ -46,7 +55,7 @@ export default function HeroSection() {
           
           <TypewriterEffectSmooth 
             words={taglineWords} 
-            className="mb-6 sm:mb-8 justify-start" 
+            className="mb-6 sm:mb-8 justify-start text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
             cursorClassName="bg-primary" 
           />
           
