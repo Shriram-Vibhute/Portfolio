@@ -119,24 +119,14 @@
     }
   }
 
-  @keyframes scroll-grid {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 100px 100px; /* Matches new grid spacing for seamless loop */
-    }
-  }
-
   .animated-grid-background {
     background-color: hsl(var(--background)); /* Ensure base is black */
     --line-color: hsl(var(--grid-line-hue) 60% 50% / 0.15); /* Use animated hue, 15% opacity */
     background-image:
       repeating-linear-gradient(0deg, var(--line-color), var(--line-color) 1px, transparent 1px, transparent 100px),
       repeating-linear-gradient(90deg, var(--line-color), var(--line-color) 1px, transparent 1px, transparent 100px);
-    background-size: 100px 100px; /* New grid spacing */
+    background-size: 100px 100px; /* Grid spacing */
     animation:
-      flow-grid-color 5s linear infinite, /* Faster color flow */
-      scroll-grid 10s linear infinite; /* Faster grid scroll */
+      flow-grid-color 5s linear infinite; /* Color flow animation */
   }
 }
