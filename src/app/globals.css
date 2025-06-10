@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --background: 0 0% 96.1%; /* Off-white #F5F5F5 */
-    --foreground: 240 10% 10%; /* Dark grey, for general text */
+    --background: 0 0% 0%; /* Pure black */
+    --foreground: 0 0% 98%; /* White text for readability on black background */
 
     --card: 0 0% 100%; /* White for cards */
     --card-foreground: 240 10% 10%;
@@ -50,7 +50,7 @@
   }
 
   .dark {
-    --background: 220 15% 10%; 
+    --background: 0 0% 0%; /* Pure black */
     --foreground: 210 40% 98%; 
 
     --card: 220 15% 15%; 
