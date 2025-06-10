@@ -31,7 +31,7 @@ const educationData: EducationItemData[] = [
     logoAlt: "Pimpri Chnichwad College of Engineering, Pune Logo",
     institution: "Pimpri Chnichwad College of Engineering, Pune",
     degree: "Bachelor of Technology (B.Tech) Mechanical Engineering",
-    dates: "2025 - 2026",
+    dates: "2020 - 2024",
     logoHint: "university crest",
   },
 ];
