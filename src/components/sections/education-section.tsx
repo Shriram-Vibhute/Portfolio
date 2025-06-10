@@ -4,7 +4,7 @@
 import type React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Meteors } from '@/components/ui/meteors'; // Import the Meteors component
+import { Meteors } from '@/components/ui/meteors'; 
 
 interface EducationItemData {
   id: string;
@@ -35,7 +35,7 @@ const educationData: EducationItemData[] = [
   },
   {
     id: "3",
-    logoUrl: "REPLACE_WITH_ACTUAL_LOGO_URL_PCCOE.png", // Assuming same logo for the same institution
+    logoUrl: "REPLACE_WITH_ACTUAL_LOGO_URL_PCCOE.png", 
     logoAlt: "Pimpri Chnichwad College of Engineering, Pune Logo",
     institution: "Pimpri Chnichwad College of Engineering, Pune",
     degree: "Minor Degree - Software Development",
@@ -51,36 +51,34 @@ const titleVariants = {
 const listVariants = {
   visible: {
     transition: {
-      staggerChildren: 0.2, // Stagger for the list itself
+      staggerChildren: 0.2, 
     },
   },
   hidden: {},
 };
 
-const itemVariants = { // These variants will apply to each card
+const itemVariants = { 
   hidden: { opacity: 0, y: 30, scale: 0.95 },
   visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
 const EducationItem: React.FC<EducationItemData> = ({ logoUrl, logoAlt, institution, degree, dates }) => {
+  const actualLogoUrl = logoUrl.startsWith('REPLACE_WITH') ? `https://placehold.co/80x80.png?text=Logo` : logoUrl;
   return (
-    // Root container for the card, applying motion variants here
     <motion.div 
-      className="relative w-full" // Each card is relative for positioning the blur effect
-      variants={itemVariants} // Apply item animation here
+      className="relative w-full max-w-md flex flex-col" 
+      variants={itemVariants} 
     >
-      {/* Blurred background gradient effect */}
       <div className="absolute inset-0 h-full w-full scale-[0.85] transform rounded-full bg-gradient-to-r from-primary via-purple-500 to-pink-500 blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
       
-      {/* Main card content box */}
-      <div className="relative flex flex-col h-full items-start overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/80 backdrop-blur-sm px-6 py-8 shadow-xl">
+      <div className="relative flex flex-col flex-grow items-start overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/80 backdrop-blur-sm px-6 py-8 shadow-xl">
         <div className="flex flex-col sm:flex-row items-center w-full gap-4">
           <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-white/90 rounded-full p-1 flex items-center justify-center overflow-hidden shadow-md">
             <Image
-              src={logoUrl.startsWith('REPLACE_WITH') ? `https://placehold.co/80x80.png?text=Logo` : logoUrl}
+              src={actualLogoUrl}
               alt={logoAlt}
-              width={72}
-              height={72}
+              width={actualLogoUrl.includes('placehold.co') ? 80 : 72}
+              height={actualLogoUrl.includes('placehold.co') ? 80 : 72}
               className="rounded-full object-contain"
             />
           </div>
@@ -100,10 +98,10 @@ export default function EducationSection() {
   return (
     <motion.section
       id="education"
-      className="py-20 md:py-32 bg-background text-foreground" // Ensure background is suitable for cards
+      className="py-20 md:py-32 bg-background text-foreground" 
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.1 }} // Viewport for the whole section
+      viewport={{ once: true, amount: 0.1 }} 
     >
       <div className="container mx-auto px-6">
         <motion.h2
@@ -112,10 +110,9 @@ export default function EducationSection() {
         >
           Education
         </motion.h2>
-        {/* Apply list variants to the container of education items */}
         <motion.div 
-          className="max-w-3xl mx-auto space-y-8" // Increased space between cards
-          variants={listVariants} // Apply stagger to children (EducationItem cards)
+          className="flex flex-wrap justify-center items-start gap-8 md:gap-12"
+          variants={listVariants} 
         >
           {educationData.map((edu) => (
             <EducationItem key={edu.id} {...edu} />
