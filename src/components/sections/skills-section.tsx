@@ -28,7 +28,7 @@ interface SkillCategory {
   categoryName: string; // Used for internal logic, not displayed directly as a heading anymore
   skills: Skill[];
   themeClasses: {
-    text: string; // e.g., 'text-orange-400' for light orange text
+    text: string; // e.g., 'text-pink-400' for light pink text
   };
 }
 
@@ -48,7 +48,7 @@ const skillsData: SkillCategory[] = [
       { name: 'Tensorflow', icon: Layers },
     ],
     themeClasses: {
-      text: 'text-orange-400',
+      text: 'text-yellow-300', // Changed from text-orange-400
     },
   },
   {
@@ -67,7 +67,7 @@ const skillsData: SkillCategory[] = [
       { name: 'Naive Bayes' },
     ],
     themeClasses: {
-      text: 'text-yellow-400',
+      text: 'text-pink-400', // Changed from text-yellow-400
     },
   },
   {
