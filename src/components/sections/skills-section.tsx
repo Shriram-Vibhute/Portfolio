@@ -4,18 +4,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import {
   Code,
-  Cpu, // Kept for ML general, though not directly used as category icon
-  BrainCircuit, // Kept for DL general
-  Share2, // Kept for MLOps general
-  Sigma, // Kept for Math general
+  Cpu,
+  BrainCircuit,
+  Share2,
+  Sigma,
   Database,
   Cloud,
   GitMerge,
   BarChart,
-  Layers, // For Keras/Tensorflow
-  Box // For Transformers
+  Layers,
+  Box
 } from 'lucide-react';
 
 interface Skill {
@@ -23,10 +24,18 @@ interface Skill {
   icon?: React.ElementType;
 }
 
-const skillsData: Array<{
-  categoryName: string; // For internal reference, not displayed
+interface SkillCategory {
+  categoryName: string; // Used for theming, not displayed
   skills: Skill[];
-}> = [
+  themeClasses: {
+    text: string;
+    border: string;
+    hoverBg: string;
+    shadow?: string; // Optional custom shadow if needed
+  };
+}
+
+const skillsData: SkillCategory[] = [
   {
     categoryName: 'Programming Languages and Libraries',
     skills: [
@@ -41,6 +50,12 @@ const skillsData: Array<{
       { name: 'Keras', icon: Layers },
       { name: 'Tensorflow', icon: Layers },
     ],
+    themeClasses: {
+      text: 'text-orange-600 dark:text-orange-400',
+      border: 'border-orange-500/70 dark:border-orange-400/60',
+      hoverBg: 'hover:bg-orange-500/10',
+      shadow: 'hover:shadow-orange-500/20',
+    },
   },
   {
     categoryName: 'Machine Learning',
@@ -57,6 +72,12 @@ const skillsData: Array<{
       { name: 'K-Nearest Neighbors (KNN)' },
       { name: 'Naive Bayes' },
     ],
+    themeClasses: {
+      text: 'text-yellow-600 dark:text-yellow-400',
+      border: 'border-yellow-500/70 dark:border-yellow-400/60',
+      hoverBg: 'hover:bg-yellow-500/10',
+      shadow: 'hover:shadow-yellow-500/20',
+    },
   },
   {
     categoryName: 'Deep Learning',
@@ -69,6 +90,12 @@ const skillsData: Array<{
       { name: 'GPT' },
       { name: 'Auto Encoders' },
     ],
+    themeClasses: {
+      text: 'text-cyan-600 dark:text-cyan-400',
+      border: 'border-cyan-500/70 dark:border-cyan-400/60',
+      hoverBg: 'hover:bg-cyan-500/10',
+      shadow: 'hover:shadow-cyan-500/20',
+    },
   },
   {
     categoryName: 'MLOps',
@@ -81,6 +108,12 @@ const skillsData: Array<{
       { name: 'GitHub Actions', icon: GitMerge },
       { name: 'Git', icon: GitMerge },
     ],
+    themeClasses: {
+      text: 'text-green-600 dark:text-green-400',
+      border: 'border-green-500/70 dark:border-green-400/60',
+      hoverBg: 'hover:bg-green-500/10',
+      shadow: 'hover:shadow-green-500/20',
+    },
   },
   {
     categoryName: 'Mathematics',
@@ -89,17 +122,21 @@ const skillsData: Array<{
       { name: 'Probability' },
       { name: 'Linear Algebra' },
     ],
+    themeClasses: {
+      text: 'text-indigo-600 dark:text-indigo-400',
+      border: 'border-indigo-500/70 dark:border-indigo-400/60',
+      hoverBg: 'hover:bg-indigo-500/10',
+      shadow: 'hover:shadow-indigo-500/20',
+    },
   },
 ];
-
-const allSkills: Skill[] = skillsData.flatMap(category => category.skills);
 
 const sectionVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1, // Stagger title and then button container
+      staggerChildren: 0.1,
     },
   },
 };
@@ -114,8 +151,8 @@ const buttonContainerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.07, // Stagger for each button
-      delayChildren: 0.2, // Delay after title animation
+      staggerChildren: 0.07,
+      delayChildren: 0.2,
     },
   },
 };
@@ -146,21 +183,29 @@ export default function SkillsSection() {
           className="flex flex-wrap justify-center gap-3 md:gap-4"
           variants={buttonContainerVariants}
         >
-          {allSkills.map((skill, index) => (
-            <motion.div
-              key={skill.name + '-' + index}
-              variants={buttonItemVariants}
-            >
-              <Button
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary/10 hover:text-primary font-[450] text-[0.84rem] shadow-md hover:shadow-primary/20 transition-all duration-200 ease-out"
-                size="lg" // Make buttons a bit larger for better tap targets and visual balance
+          {skillsData.flatMap((category, categoryIndex) =>
+            category.skills.map((skill, skillIndex) => (
+              <motion.div
+                key={`${category.categoryName}-${skill.name}-${skillIndex}`}
+                variants={buttonItemVariants}
               >
-                {skill.icon && <skill.icon className="mr-2 h-4 w-4" />}
-                {skill.name}
-              </Button>
-            </motion.div>
-          ))}
+                <Button
+                  variant="outline"
+                  className={cn(
+                    "font-[450] text-[0.84rem] shadow-md transition-all duration-200 ease-out",
+                    category.themeClasses.text,
+                    category.themeClasses.border,
+                    category.themeClasses.hoverBg,
+                    category.themeClasses.shadow || 'hover:shadow-primary/20' // Fallback to primary shadow if not specified
+                  )}
+                  size="lg"
+                >
+                  {skill.icon && <skill.icon className={cn("mr-2 h-4 w-4", category.themeClasses.text)} />}
+                  {skill.name}
+                </Button>
+              </motion.div>
+            ))
+          )}
         </motion.div>
       </div>
     </motion.section>
