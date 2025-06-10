@@ -29,7 +29,7 @@ export default function HeroSection() {
   return (
     <section className="min-h-screen flex flex-col bg-background text-foreground relative overflow-x-hidden">
       {/* Main Content Area */}
-      <main className="flex-grow flex items-center justify-start px-4 sm:px-6 lg:px-8"> {/* Changed justify-center to justify-start */}
+      <main className="flex-grow flex items-center justify-start pr-4 sm:pr-6 lg:pr-8 pl-8 sm:pl-12 lg:pl-16"> {/* Changed px-* to pr-* and pl-* with increased left padding */}
         <div className="text-left max-w-3xl w-full z-10 mt-10 sm:mt-0">
           <p className="text-primary font-mono text-base sm:text-lg mb-3 sm:mb-4">{introText}</p>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-100 mb-2 sm:mb-3">{name}</h1>
@@ -47,8 +47,7 @@ export default function HeroSection() {
           </Button>
         </div>
       </main>
-
-      {/* Left Social Icons and Right Email have been removed */}
     </section>
   );
 }
+
