@@ -38,8 +38,8 @@ export default function HeroSection() {
           "[background-size:40px_40px]",
           // Light mode grid lines
           "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
-          // Dark mode grid lines - using --border for better visibility
-          "dark:[background-image:linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)]"
+          // Dark mode grid lines - using a more subtle dark grey
+          "dark:[background-image:linear-gradient(to_right,#404040_1px,transparent_1px),linear-gradient(to_bottom,#404040_1px,transparent_1px)]"
         )}
       />
       {/* Radial gradient for the container to give a faded look */}
