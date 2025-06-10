@@ -47,6 +47,8 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --neon-blue: 200 100% 50%;
   }
 
   .dark {
@@ -91,6 +93,8 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --neon-blue: 200 100% 55%; /* Brighter neon blue for dark mode */
   }
 }
 
@@ -98,7 +102,37 @@
   * {
     @apply border-border;
   }
+  html {
+    /* Custom cursor */
+    cursor: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='19' viewBox='0 0 12 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0 0L0 13.2865L3.69208 9.91053L6.63076 14.0355L8.39623 12.5845L5.45755 8.45948L9.88301 8.45948L0 0Z' fill='%23007FFF'/%3e%3c/svg%3e") 0 0, auto;
+    
+    /* Firefox scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--neon-blue)) transparent;
+  }
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* WebKit scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--neon-blue));
+    border-radius: 10px;
+    border: 2px solid transparent; /* Adds a small gap if needed, or remove for solid thumb */
+    background-clip: content-box; /* Ensures border doesn't make thumb smaller */
+    box-shadow: 0 0 6px hsl(var(--neon-blue));
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--neon-blue)); /* Can make it slightly brighter on hover if desired */
+  }
+  ::-webkit-scrollbar-corner {
+    background: transparent;
   }
 }
