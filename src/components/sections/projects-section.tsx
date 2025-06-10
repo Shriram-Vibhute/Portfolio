@@ -50,6 +50,36 @@ const projectsData: Project[] = [
     codeLink: '#',
     tags: ['Next.js', 'ShadCN UI', 'Tailwind CSS', 'Vercel'],
   },
+  {
+    id: '4',
+    title: 'Interactive Data Dashboard',
+    description: 'A web application for visualizing complex datasets with interactive charts and filters. Built using React and Recharts.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'data charts',
+    liveLink: '#',
+    codeLink: '#',
+    tags: ['React', 'Recharts', 'Data Visualization', 'JavaScript'],
+  },
+  {
+    id: '5',
+    title: 'Task Management App',
+    description: 'A collaborative task management tool with features like boards, lists, and cards, similar to Trello. Firebase backend.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'task board',
+    liveLink: '#',
+    codeLink: '#',
+    tags: ['React', 'Firebase', 'Productivity', 'Real-time'],
+  },
+  {
+    id: '6',
+    title: 'Weather Forecast App',
+    description: 'A clean and simple weather application that provides current weather and forecasts using a third-party API.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'weather forecast',
+    liveLink: '#',
+    codeLink: '#',
+    tags: ['JavaScript', 'API Integration', 'Weather', 'UI/UX'],
+  },
 ];
 
 export default function ProjectsSection() {
@@ -62,7 +92,7 @@ export default function ProjectsSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {projectsData.map((project) => (
             <CardContainer key={project.id} className="inter-var w-full">
-              <CardBody className="bg-card relative group/card hover:shadow-2xl hover:shadow-primary/20 dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-border w-full h-auto rounded-xl p-6 border">
+              <CardBody className="bg-black/70 backdrop-blur-md relative group/card hover:shadow-2xl hover:shadow-primary/50 dark:hover:shadow-emerald-500/[0.1] border-neutral-700/50 w-full h-auto rounded-xl p-6 border">
                 <CardItem
                   translateZ="50"
                   className="text-xl font-bold text-foreground"
