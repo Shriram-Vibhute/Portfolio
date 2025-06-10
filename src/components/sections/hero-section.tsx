@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Download } from 'lucide-react'; // Import the Download icon
+import { Download, Briefcase } from 'lucide-react'; // Import the Briefcase icon
 
 export default function HeroSection() {
   const introText = "Hi, my name is";
@@ -15,8 +15,8 @@ export default function HeroSection() {
   return (
     <section className="min-h-screen flex flex-col bg-background text-foreground relative overflow-x-hidden animate-fade-in">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 [background-size:40px_40px] [background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]" />
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+        <div className="absolute inset-0 [background-size:40px_40px] [background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)] dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]" />
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black" />
       </div>
       {/* Main Content Area */}
       <main className="flex-grow flex items-center justify-start pr-4 sm:pr-6 lg:pr-8 pl-12 sm:pl-20 lg:pl-24"> {/* Increased left padding */}
@@ -45,6 +45,7 @@ export default function HeroSection() {
                 }
               }}
             >
+              <Briefcase className="mr-2 h-4 w-4" /> {/* Added icon here */}
               View Projects
             </Button>
             <Button
@@ -54,7 +55,7 @@ export default function HeroSection() {
               className="border-primary text-primary hover:bg-background hover:text-primary px-8 py-4 font-[450] text-[0.84rem] shadow-lg shadow-primary/30"
             >
               <a href="/resume_darshan_bhuva.pdf" download="Darshan_Bhuva_Resume.pdf">
-                <Download className="mr-2 h-4 w-4" /> {/* Added icon here */}
+                <Download className="mr-2 h-4 w-4" />
                 Download Resume
               </a>
             </Button>
