@@ -1,6 +1,8 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import StickyBottomNav from '@/components/layout/StickyBottomNav'; // Added import
 
 export const metadata: Metadata = {
   title: 'Sectionize',
@@ -21,6 +23,7 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         {children}
+        <StickyBottomNav /> {/* Added component */}
         <Toaster />
       </body>
     </html>
