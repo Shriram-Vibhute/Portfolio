@@ -4,7 +4,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { motion, useInView } from 'framer-motion';
-import { Cpu, Brain, GitFork, Sigma, FileCode2, Database, Cloud, Container, Github, Settings, Calculator, Activity, Palette } from 'lucide-react'; // Added more icons
+import { Cpu, Brain, GitFork, Sigma, FileCode2, Database, Cloud, Container, Github, Settings, Calculator, Activity, Palette, BrainCircuit, Layers, Box } from 'lucide-react';
 
 interface Skill {
   name: string;
@@ -29,6 +29,8 @@ const skillsData: SkillCategory[] = [
       { name: 'NumPy' },
       { name: 'Matplotlib', icon: <Activity className="inline-block h-4 w-4" /> },
       { name: 'Seaborn', icon: <Palette className="inline-block h-4 w-4" /> },
+      { name: 'Keras', icon: <Layers className="inline-block h-4 w-4" /> },
+      { name: 'Tensorflow', icon: <Layers className="inline-block h-4 w-4" /> },
     ],
     icon: <Cpu className="mr-3 h-6 w-6 text-primary" />,
   },
@@ -50,6 +52,19 @@ const skillsData: SkillCategory[] = [
     icon: <Brain className="mr-3 h-6 w-6 text-primary" />,
   },
   {
+    name: 'Deep Learning',
+    skills: [
+      { name: 'ANN' },
+      { name: 'CNN' },
+      { name: 'RNN' },
+      { name: 'Transformers', icon: <Box className="inline-block h-4 w-4" /> },
+      { name: 'Bert' },
+      { name: 'GPT' },
+      { name: 'Auto Encoders' },
+    ],
+    icon: <BrainCircuit className="mr-3 h-6 w-6 text-primary" />,
+  },
+  {
     name: 'MLOps',
     skills: [
       { name: 'AWS (Amazon Web Services)', icon: <Cloud className="inline-block h-4 w-4" /> },
@@ -65,9 +80,9 @@ const skillsData: SkillCategory[] = [
   {
     name: 'Mathematics',
     skills: [
-      { name: 'Statistics', icon: <Activity className="inline-block h-4 w-4" /> }, // Re-using Activity as a generic chart/stats icon
+      { name: 'Statistics', icon: <Activity className="inline-block h-4 w-4" /> },
       { name: 'Probability' },
-      { name: 'Linear Algebra', icon: <Calculator className="inline-block h-4 w-4" /> }, // Using Calculator as a generic math icon
+      { name: 'Linear Algebra', icon: <Calculator className="inline-block h-4 w-4" /> },
     ],
     icon: <Sigma className="mr-3 h-6 w-6 text-primary" />,
   },
@@ -116,7 +131,7 @@ export default function SkillsSection() {
               key={category.name}
               initial={{ opacity: 0, x: categoryIndex % 2 === 0 ? -50 : 50 }}
               animate={isSectionInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.5, delay: categoryIndex * 0.2 }}
+              transition={{ duration: 0.5, delay: categoryIndex * 0.15 }} // Adjusted delay for better staggering
             >
               <h3 className="flex items-center text-2xl font-semibold text-primary mb-6 font-headline">
                 {category.icon}
