@@ -1,7 +1,7 @@
 
 import HeroSection from "@/components/sections/hero-section";
 import ProjectsSection from "@/components/sections/projects-section";
-import SkillsSection from "@/components/sections/skills-section"; // Import the new section
+import GlowingEffectDemo from "@/components/glowing-effect-demo"; // Import the new section
 
 export default function HomePage() {
   const currentYear = new Date().getFullYear();
@@ -10,7 +10,7 @@ export default function HomePage() {
       <main className="min-h-screen bg-background text-foreground">
         <HeroSection />
         <ProjectsSection />
-        <SkillsSection /> {/* Add the new section here */}
+        <GlowingEffectDemo /> {/* Add the new section here */}
       </main>
 
       <footer className="py-8 bg-background text-muted-foreground border-t border-gray-800">
