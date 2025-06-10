@@ -124,7 +124,7 @@
       background-position: 0 0;
     }
     100% {
-      background-position: 50px 50px; /* Matches grid spacing for seamless loop */
+      background-position: 100px 100px; /* Matches new grid spacing for seamless loop */
     }
   }
 
@@ -132,11 +132,11 @@
     background-color: hsl(var(--background)); /* Ensure base is black */
     --line-color: hsl(var(--grid-line-hue) 60% 50% / 0.15); /* Use animated hue, 15% opacity */
     background-image:
-      repeating-linear-gradient(0deg, var(--line-color), var(--line-color) 1px, transparent 1px, transparent 50px),
-      repeating-linear-gradient(90deg, var(--line-color), var(--line-color) 1px, transparent 1px, transparent 50px);
-    background-size: 50px 50px; /* Grid spacing */
+      repeating-linear-gradient(0deg, var(--line-color), var(--line-color) 1px, transparent 1px, transparent 100px),
+      repeating-linear-gradient(90deg, var(--line-color), var(--line-color) 1px, transparent 1px, transparent 100px);
+    background-size: 100px 100px; /* New grid spacing */
     animation:
-      flow-grid-color 15s linear infinite,
-      scroll-grid 25s linear infinite;
+      flow-grid-color 5s linear infinite, /* Faster color flow */
+      scroll-grid 10s linear infinite; /* Faster grid scroll */
   }
 }
