@@ -92,7 +92,7 @@ export default function ProjectsSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {projectsData.map((project) => (
             <CardContainer key={project.id} className="inter-var w-full">
-              <CardBody className="bg-black/70 backdrop-blur-md relative group/card hover:shadow-2xl hover:shadow-primary/50 dark:hover:shadow-emerald-500/[0.1] border-neutral-700/50 w-full h-auto rounded-xl p-6 border">
+              <CardBody className="bg-black/70 backdrop-blur-md relative group/card hover:shadow-2xl border-white/20 w-full h-auto rounded-xl p-6 border">
                 <CardItem
                   translateZ="50"
                   className="text-xl font-bold text-foreground"
