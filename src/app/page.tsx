@@ -7,7 +7,6 @@ import CertificationSection from "@/components/sections/certification-section";
 import ContactSection from "@/components/sections/contact-section";
 
 export default function HomePage() {
-  const currentYear = new Date().getFullYear();
   return (
     <>
       <main className="min-h-screen bg-background text-foreground">
@@ -18,15 +17,6 @@ export default function HomePage() {
         <CertificationSection />
         <ContactSection />
       </main>
-
-      <footer className="py-8 bg-background text-muted-foreground border-t border-gray-800">
-        <div className="container mx-auto px-6 text-center">
-          <p className="font-mono text-xs text-slate-500">
-            Designed and built with 🩷 Shriram
-          </p>
-          <p className="text-xs text-slate-600 mt-1">&copy; {currentYear} All rights reserved.</p>
-        </div>
-      </footer>
     </>
   );
 }
