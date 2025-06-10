@@ -1,4 +1,4 @@
-import AboutSection from "@/components/sections/about-section";
+
 import HeroSection from "@/components/sections/hero-section";
 import { Separator } from "@/components/ui/separator";
 
@@ -8,7 +8,6 @@ export default function HomePage() {
       <main className="min-h-screen bg-background text-foreground">
         <HeroSection />
         <Separator className="my-0" />
-        <AboutSection />
       </main>
 
       <footer className="py-10 bg-muted text-muted-foreground border-t">
