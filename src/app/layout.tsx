@@ -8,9 +8,10 @@ import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconBrandX,
-  IconBrandCodepen,
   IconMail,
   IconFileText,
+  IconBrain, // Added for Kaggle
+  IconCode,   // Added for LeetCode
 } from "@tabler/icons-react";
 
 
@@ -29,15 +30,15 @@ export default function RootLayout({
     { href: "https://github.com/darshanbhuva", icon: <IconBrandGithub className="h-full w-full text-neutral-200 dark:text-white" />, title: "GitHub" },
     { href: "https://linkedin.com/in/darshanbhuva", icon: <IconBrandLinkedin className="h-full w-full text-neutral-200 dark:text-white" />, title: "LinkedIn" },
     { href: "https://x.com/darshanbhuva", icon: <IconBrandX className="h-full w-full text-neutral-200 dark:text-white" />, title: "X" },
-    { href: "https://codepen.io/darshanbhuva", icon: <IconBrandCodepen className="h-full w-full text-neutral-200 dark:text-white" />, title: "CodePen" },
-    {
-      href: "#", 
-      icon: (
-        <span className="flex items-center justify-center h-full w-full text-xs font-semibold text-neutral-200 dark:text-white">
-          Up
-        </span>
-      ),
-      title: "Upwork",
+    { 
+      href: "https://www.kaggle.com/darshanbhuva", 
+      icon: <IconBrain className="h-full w-full text-neutral-200 dark:text-white" />, 
+      title: "Kaggle" 
+    },
+    { 
+      href: "https://leetcode.com/darshanbhuva", 
+      icon: <IconCode className="h-full w-full text-neutral-200 dark:text-white" />, 
+      title: "LeetCode" 
     },
     { href: "mailto:darshanbhuva57@gmail.com", icon: <IconMail className="h-full w-full text-neutral-200 dark:text-white" />, title: "Email" },
     {
