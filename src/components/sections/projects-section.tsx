@@ -94,17 +94,17 @@ export default function ProjectsSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-12">
           {displayedProjects.map((project) => (
             <CardContainer key={project.id} className="inter-var w-full">
-              <CardBody className="bg-white/60 dark:bg-neutral-900/70 backdrop-blur-lg relative group/card hover:shadow-2xl border-neutral-200/30 dark:border-white/10 w-full h-auto rounded-xl p-6 border">
+              <CardBody className="bg-neutral-900/70 backdrop-blur-lg relative group/card hover:shadow-2xl border-white/10 w-full h-auto rounded-xl p-6 border">
                 <CardItem
                   translateZ="50"
-                  className="text-xl font-bold text-neutral-800 dark:text-neutral-100"
+                  className="text-xl font-bold text-neutral-100"
                 >
                   {project.title}
                 </CardItem>
                 <CardItem
                   as="p"
                   translateZ="60"
-                  className="text-neutral-600 dark:text-neutral-300 text-sm max-w-sm mt-2"
+                  className="text-neutral-300 text-sm max-w-sm mt-2"
                 >
                   {project.description}
                 </CardItem>
@@ -125,7 +125,7 @@ export default function ProjectsSection() {
                     translateZ="70"
                     className="w-full mt-4 flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
-                        <span key={tag} className="text-xs bg-neutral-200/80 text-neutral-700 dark:bg-neutral-700/80 dark:text-neutral-200 px-2 py-1 rounded-full">
+                        <span key={tag} className="text-xs bg-neutral-700/80 text-neutral-200 px-2 py-1 rounded-full">
                             {tag}
                         </span>
                     ))}
