@@ -24,7 +24,7 @@ const projectsData: Project[] = [
     id: '1',
     title: 'E-commerce Platform',
     description: 'A full-featured e-commerce platform with user authentication, product listings, cart functionality, and payment integration. Built with Next.js and Stripe.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://images.unsplash.com/photo-1634973357973-f2ed2657db3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxvbmxpbmUlMjBzdG9yZXxlbnwwfHx8fDE3NDk1NjQyNTJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
     imageHint: 'online store',
     liveLink: '#',
     codeLink: '#',
@@ -34,7 +34,7 @@ const projectsData: Project[] = [
     id: '2',
     title: 'AI Article Summarizer',
     description: 'An application that uses Genkit AI to summarize long articles into concise overviews. Features a clean interface and quick processing.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://images.unsplash.com/photo-1496942299866-9e7ab403e614?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlfGVufDB8fHx8MTc0OTU2NDI1Mnww&ixlib=rb-4.1.0&q=80&w=1080',
     imageHint: 'artificial intelligence',
     liveLink: '#',
     codeLink: '#',
@@ -44,7 +44,7 @@ const projectsData: Project[] = [
     id: '3',
     title: 'Portfolio Website V2',
     description: 'The very website you are browsing! A personal portfolio showcasing projects and skills, built with Next.js and ShadCN UI components.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkZXZlbG9wZXIlMjBwb3J0Zm9saW98ZW58MHx8fHwxNzQ5NTY0MjUyfDA&ixlib=rb-4.1.0&q=80&w=1080',
     imageHint: 'developer portfolio',
     liveLink: '#',
     codeLink: '#',
@@ -133,3 +133,4 @@ export default function ProjectsSection() {
     </section>
   );
 }
+
