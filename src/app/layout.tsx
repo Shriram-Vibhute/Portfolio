@@ -25,24 +25,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const navLinks = [
-    { href: "/", icon: <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />, title: "Home" },
-    { href: "https://github.com/darshanbhuva", icon: <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />, title: "GitHub" },
-    { href: "https://linkedin.com/in/darshanbhuva", icon: <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />, title: "LinkedIn" },
-    { href: "https://x.com/darshanbhuva", icon: <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />, title: "X" },
-    { href: "https://codepen.io/darshanbhuva", icon: <IconBrandCodepen className="h-full w-full text-neutral-500 dark:text-neutral-300" />, title: "CodePen" },
+    { href: "/", icon: <IconHome className="h-full w-full text-neutral-200 dark:text-white" />, title: "Home" },
+    { href: "https://github.com/darshanbhuva", icon: <IconBrandGithub className="h-full w-full text-neutral-200 dark:text-white" />, title: "GitHub" },
+    { href: "https://linkedin.com/in/darshanbhuva", icon: <IconBrandLinkedin className="h-full w-full text-neutral-200 dark:text-white" />, title: "LinkedIn" },
+    { href: "https://x.com/darshanbhuva", icon: <IconBrandX className="h-full w-full text-neutral-200 dark:text-white" />, title: "X" },
+    { href: "https://codepen.io/darshanbhuva", icon: <IconBrandCodepen className="h-full w-full text-neutral-200 dark:text-white" />, title: "CodePen" },
     {
       href: "#", 
       icon: (
-        <span className="flex items-center justify-center h-full w-full text-xs font-semibold text-neutral-500 dark:text-neutral-300">
+        <span className="flex items-center justify-center h-full w-full text-xs font-semibold text-neutral-200 dark:text-white">
           Up
         </span>
       ),
       title: "Upwork",
     },
-    { href: "mailto:darshanbhuva57@gmail.com", icon: <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />, title: "Email" },
+    { href: "mailto:darshanbhuva57@gmail.com", icon: <IconMail className="h-full w-full text-neutral-200 dark:text-white" />, title: "Email" },
     {
       href: "/resume_darshan_bhuva.pdf",
-      icon: <IconFileText className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+      icon: <IconFileText className="h-full w-full text-neutral-200 dark:text-white" />,
       title: "Resume",
     },
   ];
