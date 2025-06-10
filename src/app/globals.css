@@ -120,5 +120,35 @@
   ::-webkit-scrollbar {
     display: none;
   }
-}
 
+  /* Ensure custom cursor is maintained on interactive elements */
+  a,
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  select, /* Added select elements */
+  label[for], /* Added labels associated with inputs */
+  [role="button"],
+  [role="link"],
+  [role="checkbox"],
+  [role="radio"],
+  [role="tab"],
+  [role="switch"],
+  .cursor-pointer /* Catchall for elements explicitly styled with Tailwind's cursor-pointer */
+   {
+    cursor: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='24' viewBox='0 0 15 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0 0L0 24L8 18L15 18L0 0Z' fill='%2300FFFF'/%3e%3c/svg%3e") 0 0, auto !important;
+  }
+
+  /* For text input fields, maintain the text selection cursor */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  textarea {
+    cursor: text !important;
+  }
+}
