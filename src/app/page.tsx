@@ -4,6 +4,7 @@ import ProjectsSection from "@/components/sections/projects-section";
 import SkillsSection from "@/components/sections/skills-section";
 import EducationSection from "@/components/sections/education-section";
 import CertificationSection from "@/components/sections/certification-section";
+import ContactSection from "@/components/sections/contact-section";
 
 export default function HomePage() {
   const currentYear = new Date().getFullYear();
@@ -15,6 +16,7 @@ export default function HomePage() {
         <SkillsSection />
         <EducationSection />
         <CertificationSection />
+        <ContactSection />
       </main>
 
       <footer className="py-8 bg-background text-muted-foreground border-t border-gray-800">
