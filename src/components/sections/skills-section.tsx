@@ -4,50 +4,76 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { motion, useInView } from 'framer-motion';
-import { Cpu, Brain, GitFork, Sigma } from 'lucide-react'; // Icons for categories
+import { Cpu, Brain, GitFork, Sigma, FileCode2, Database, Cloud, Container, Github, Settings, Calculator, Activity, Palette } from 'lucide-react'; // Added more icons
+
+interface Skill {
+  name: string;
+  icon?: React.ReactNode;
+}
 
 interface SkillCategory {
   name: string;
-  skills: string[];
+  skills: Skill[];
   icon: React.ReactNode;
 }
 
 const skillsData: SkillCategory[] = [
   {
     name: 'Programming Languages and Libraries',
-    skills: ['Python', 'C/C++', 'SQL', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn'],
+    skills: [
+      { name: 'Python', icon: <FileCode2 className="inline-block h-4 w-4" /> },
+      { name: 'C/C++' },
+      { name: 'SQL', icon: <Database className="inline-block h-4 w-4" /> },
+      { name: 'Scikit-learn', icon: <Settings className="inline-block h-4 w-4" /> },
+      { name: 'Pandas' },
+      { name: 'NumPy' },
+      { name: 'Matplotlib', icon: <Activity className="inline-block h-4 w-4" /> },
+      { name: 'Seaborn', icon: <Palette className="inline-block h-4 w-4" /> },
+    ],
     icon: <Cpu className="mr-3 h-6 w-6 text-primary" />,
   },
   {
     name: 'Machine Learning',
     skills: [
-      'Regression',
-      'Classification',
-      'Supervised Learning',
-      'Unsupervised Learning',
-      'Decision Trees',
-      'Ensemble Methods',
-      'Boosting',
-      'Clustering',
-      'Dimensionality Reduction',
-      'K-Nearest Neighbors (KNN)',
-      'Naive Bayes',
+      { name: 'Regression' },
+      { name: 'Classification' },
+      { name: 'Supervised Learning' },
+      { name: 'Unsupervised Learning' },
+      { name: 'Decision Trees' },
+      { name: 'Ensemble Methods' },
+      { name: 'Boosting' },
+      { name: 'Clustering' },
+      { name: 'Dimensionality Reduction' },
+      { name: 'K-Nearest Neighbors (KNN)' },
+      { name: 'Naive Bayes' },
     ],
     icon: <Brain className="mr-3 h-6 w-6 text-primary" />,
   },
   {
     name: 'MLOps',
-    skills: ['AWS (Amazon Web Services)', 'DVC (Data Version Control)', 'MLflow', 'Docker (Basics)', 'CI/CD (Continuous Integration/Continuous Delivery)', 'GitHub Actions', 'Git'],
+    skills: [
+      { name: 'AWS (Amazon Web Services)', icon: <Cloud className="inline-block h-4 w-4" /> },
+      { name: 'DVC (Data Version Control)' },
+      { name: 'MLflow' },
+      { name: 'Docker (Basics)', icon: <Container className="inline-block h-4 w-4" /> },
+      { name: 'CI/CD (Continuous Integration/Continuous Delivery)', icon: <GitFork className="inline-block h-4 w-4" /> },
+      { name: 'GitHub Actions', icon: <Github className="inline-block h-4 w-4" /> },
+      { name: 'Git', icon: <Github className="inline-block h-4 w-4" /> },
+    ],
     icon: <GitFork className="mr-3 h-6 w-6 text-primary" />,
   },
   {
     name: 'Mathematics',
-    skills: ['Statistics', 'Probability', 'Linear Algebra'],
+    skills: [
+      { name: 'Statistics', icon: <Activity className="inline-block h-4 w-4" /> }, // Re-using Activity as a generic chart/stats icon
+      { name: 'Probability' },
+      { name: 'Linear Algebra', icon: <Calculator className="inline-block h-4 w-4" /> }, // Using Calculator as a generic math icon
+    ],
     icon: <Sigma className="mr-3 h-6 w-6 text-primary" />,
   },
 ];
 
-const SkillButton: React.FC<{ skill: string; index: number }> = ({ skill, index }) => {
+const SkillButton: React.FC<{ skill: Skill; index: number }> = ({ skill, index }) => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 
@@ -62,7 +88,8 @@ const SkillButton: React.FC<{ skill: string; index: number }> = ({ skill, index 
         variant="outline"
         className="border-primary text-primary hover:bg-primary/10 hover:text-primary m-1 shadow-md transition-all hover:shadow-lg hover:scale-105 font-[450] text-[0.84rem]"
       >
-        {skill}
+        {skill.icon && <span className="mr-2">{skill.icon}</span>}
+        {skill.name}
       </Button>
     </motion.div>
   );
@@ -97,7 +124,7 @@ export default function SkillsSection() {
               </h3>
               <div className="flex flex-wrap">
                 {category.skills.map((skill, skillIndex) => (
-                  <SkillButton key={skill} skill={skill} index={skillIndex} />
+                  <SkillButton key={skill.name} skill={skill} index={skillIndex} />
                 ))}
               </div>
             </motion.div>
