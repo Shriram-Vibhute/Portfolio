@@ -13,7 +13,7 @@ export default function Home() {
         namePart1Color="text-pink-500"
         namePart2Color="text-yellow-500"
         availabilityText="Available for new projects"
-        introParagraph="I'm a Full Stack web developer and Open Source Contributor, with a focus on JavaScript, React, and UI/UX design. Enthusiastic about Three.js, driven by a keen eye for design."
+        introParagraph="From uncovering insights with Data Science and Machine Learning to building intelligent and scaleble applications with Deep Learning and MLOps."
         profileImageUrl="https://placehold.co/288x288.png"
         profileImageAlt="Shriram Vibhute Profile Picture"
       />
