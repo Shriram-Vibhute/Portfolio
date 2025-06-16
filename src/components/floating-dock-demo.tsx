@@ -42,9 +42,26 @@ export default function FloatingDockDemo() {
     {
       title: "Kaggle",
       icon: (
-        <span className="font-bold text-xl flex items-center justify-center h-full w-full text-neutral-500 dark:text-neutral-300">
-          K
-        </span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="h-full w-full text-neutral-500 dark:text-neutral-300"
+        >
+          <path d="m13.11 7.664 1.78 2.672" />
+          <path d="m14.162 12.788-3.324 1.424" />
+          <path d="m20 4-6.06 1.515" />
+          <path d="M3 3v16a2 2 0 0 0 2 2h16" />
+          <circle cx="12" cy="6" r="2" />
+          <circle cx="16" cy="12" r="2" />
+          <circle cx="9" cy="15" r="2" />
+        </svg>
       ),
       href: "#",
     },
@@ -60,7 +77,7 @@ export default function FloatingDockDemo() {
     <div className="fixed inset-x-0 bottom-0 z-50 flex justify-center p-4 pointer-events-none">
       <div className="pointer-events-auto">
         <FloatingDock
-          mobileClassName="translate-y-0" 
+          mobileClassName="translate-y-0"
           items={links}
         />
       </div>
