@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -141,8 +142,8 @@
     font-weight: 600;
     justify-content: center;
     line-height: 1.25;
-    min-height: 3rem;
-    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    min-height: 2.5rem; /* Changed from 3rem */
+    padding: calc(0.5rem - 1px) calc(1rem - 1px); /* Changed from calc(.875rem - 1px) calc(1.5rem - 1px) */
     text-decoration: none;
     transition: all 250ms;
     user-select: none;
