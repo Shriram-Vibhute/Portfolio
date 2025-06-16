@@ -36,10 +36,10 @@ export default function HeroSection({
         <div className="w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-8 md:gap-12">
           {/* Left Part: Text (Badge, Greeting, Name, Availability) */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-5 order-2 md:order-1 md:flex-grow">
-            <div className="inline-block py-1 px-3 text-sm text-cyan-500 dark:text-cyan-400 border-b-2 border-cyan-500 dark:border-cyan-400">
+            <div className="inline-block text-cyan-500 dark:text-cyan-400 border-b-2 border-cyan-500 dark:border-cyan-400 text-sm py-1 px-3 pb-1">
               {badgeText}
             </div>
-
+            
             <h1 className="font-headline text-foreground">
               <div className="text-5xl">{greeting}</div>
               <div className="text-4xl sm:text-5xl md:text-6xl" style={{ whiteSpace: 'nowrap' }}>
@@ -123,18 +123,18 @@ export default function HeroSection({
             Technical Skills
           </h2>
           <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">Python</span>
-            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">JavaScript</span>
-            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">TypeScript</span>
-            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">React</span>
-            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">Next.js</span>
-            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">Node.js</span>
-            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">TensorFlow</span>
-            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">PyTorch</span>
-            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">Scikit-learn</span>
-            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">Genkit</span>
-            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">Tailwind CSS</span>
-            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">Docker</span>
+            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">Python</span>
+            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">JavaScript</span>
+            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">TypeScript</span>
+            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">React</span>
+            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">Next.js</span>
+            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">Node.js</span>
+            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">TensorFlow</span>
+            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">PyTorch</span>
+            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">Scikit-learn</span>
+            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">Genkit</span>
+            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">Tailwind CSS</span>
+            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">Docker</span>
           </div>
         </div>
 
