@@ -4,7 +4,6 @@
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Code, Palette } from 'lucide-react';
 
 interface HeroSectionProps {
   badgeText: string;
@@ -206,118 +205,45 @@ export default function HeroSection({
           </div>
         </div>
 
-        {/* Row 6: Work Experience Section */}
+        {/* Row 6: Blogs Section */}
         <div className="w-full mt-10 md:mt-12">
-          <h2 className="text-2xl font-headline font-semibold text-foreground mb-8 text-center md:text-left">
-            Work Experience
+          <h2 className="text-2xl font-headline font-semibold text-foreground mb-6 text-center md:text-left">
+            Blogs
           </h2>
-          <div className="flow-root">
-            <ul className="-mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Blog Card 1 */}
+            <div className="bg-card border border-border rounded-lg p-4 shadow-md flex flex-col">
+              <div className="relative w-full h-40 mb-3 rounded-md overflow-hidden">
+                <Image 
+                  src="https://placehold.co/600x400.png" 
+                  alt="Blog Post 1 Placeholder" 
+                  layout="fill" 
+                  objectFit="cover"
+                  data-ai-hint="writing desk"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-1">Deep Dive into LLMs</h3>
+              <p className="text-sm text-muted-foreground flex-grow">
+                Exploring the architecture and capabilities of modern Large Language Models and their impact on AI.
+              </p>
+            </div>
 
-              {/* Experience 1: Web Developer */}
-              <li>
-                <div className="relative pb-8">
-                  <span className="absolute left-5 top-5 -ml-px h-full w-0.5 bg-border" aria-hidden="true"></span>
-                  <div className="relative flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground ring-4 ring-background">
-                        <Code className="h-5 w-5" />
-                      </span>
-                    </div>
-                    <div className="min-w-0 flex-1 bg-card border border-border rounded-lg p-6 shadow-md">
-                      <div>
-                        <h3 className="text-xl font-semibold text-foreground">Web Developer</h3>
-                        <p className="text-md text-accent">Tung Tung JSC</p>
-                        <p className="text-sm text-muted-foreground mt-1">Full-time | 2020 – 2022</p>
-                      </div>
-                      <ul className="list-disc list-inside text-muted-foreground space-y-1.5 mt-4 mb-4 text-sm">
-                        <li>Built a scalable design system for consistency and efficiency.</li>
-                        <li>Built a complex rich-text editor based on ProseMirror and Slate for customizable content creation.</li>
-                        <li>Integrated APIs with the Backend Team to enhance functionality.</li>
-                      </ul>
-                      <div className="flex flex-wrap gap-2">
-                        <Badge variant="secondary">React</Badge>
-                        <Badge variant="secondary">Redux</Badge>
-                        <Badge variant="secondary">Storybook</Badge>
-                        <Badge variant="secondary">Lerna</Badge>
-                        <Badge variant="secondary">Agile</Badge>
-                        <Badge variant="secondary">Teamwork</Badge>
-                        <Badge variant="secondary">Research</Badge>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
-              {/* Experience 2: Mobile Developer */}
-              <li>
-                <div className="relative pb-8">
-                  <span className="absolute left-5 top-5 -ml-px h-full w-0.5 bg-border" aria-hidden="true"></span>
-                  <div className="relative flex items-start space-x-4">
-                     <div className="flex-shrink-0">
-                      <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground ring-4 ring-background">
-                        <Code className="h-5 w-5" />
-                      </span>
-                    </div>
-                    <div className="min-w-0 flex-1 bg-card border border-border rounded-lg p-6 shadow-md">
-                       <div>
-                        <h3 className="text-xl font-semibold text-foreground">Mobile Developer</h3>
-                        <p className="text-md text-accent">Tung Tung JSC</p>
-                        <p className="text-sm text-muted-foreground mt-1">Full-time | 2019 – 2020</p>
-                      </div>
-                      <ul className="list-disc list-inside text-muted-foreground space-y-1.5 mt-4 mb-4 text-sm">
-                        <li>Rebuilt the app with React Native for better UX and performance.</li>
-                        <li>Integrated MoMo and in-app purchases for seamless payments.</li>
-                        <li>Optimized deployment for staging and production.</li>
-                        <li>Published on App Store and Google Play, ensuring compliance.</li>
-                      </ul>
-                      <div className="flex flex-wrap gap-2">
-                        <Badge variant="secondary">React Native</Badge>
-                        <Badge variant="secondary">Redux</Badge>
-                        <Badge variant="secondary">MoMo Payment API</Badge>
-                        <Badge variant="secondary">App Store</Badge>
-                        <Badge variant="secondary">Google Play Store</Badge>
-                        <Badge variant="secondary">App Center</Badge>
-                        <Badge variant="secondary">Agile</Badge>
-                        <Badge variant="secondary">Teamwork</Badge>
-                        <Badge variant="secondary">Research</Badge>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
-              {/* Experience 3: UI/UX Designer */}
-              <li>
-                <div className="relative"> {/* Removed pb-8 for the last item */}
-                  {/* No connecting line span for the last item */}
-                  <div className="relative flex items-start space-x-4">
-                     <div className="flex-shrink-0">
-                      <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground ring-4 ring-background">
-                        <Palette className="h-5 w-5" />
-                      </span>
-                    </div>
-                    <div className="min-w-0 flex-1 bg-card border border-border rounded-lg p-6 shadow-md">
-                      <div>
-                        <h3 className="text-xl font-semibold text-foreground">UI/UX Designer</h3>
-                        <p className="text-md text-accent">Tung Tung JSC</p>
-                        <p className="text-sm text-muted-foreground mt-1">Full-time | 2018 – 2019</p>
-                      </div>
-                      <ul className="list-disc list-inside text-muted-foreground space-y-1.5 mt-4 mb-4 text-sm">
-                        <li>Designed a Landing Page for enterprise clients.</li>
-                        <li>Redesigned the Online Quiz Platform for a modern look on web and mobile.</li>
-                        <li>Redesigned the Pricing interface for individual customers.</li>
-                        <li>Enhanced UX by improving usability, navigation, and user flow.</li>
-                      </ul>
-                      <div className="flex flex-wrap gap-2">
-                        <Badge variant="secondary">UI/UX Design</Badge>
-                        <Badge variant="secondary">Sketch</Badge>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
+            {/* Blog Card 2 */}
+            <div className="bg-card border border-border rounded-lg p-4 shadow-md flex flex-col">
+              <div className="relative w-full h-40 mb-3 rounded-md overflow-hidden">
+                <Image 
+                  src="https://placehold.co/600x400.png" 
+                  alt="Blog Post 2 Placeholder" 
+                  layout="fill" 
+                  objectFit="cover"
+                  data-ai-hint="code editor"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-1">Frontend Frameworks Compared</h3>
+              <p className="text-sm text-muted-foreground flex-grow">
+                A comparative analysis of React, Vue, and Next.js for building interactive web applications.
+              </p>
+            </div>
           </div>
         </div>
       </div>
