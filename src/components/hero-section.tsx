@@ -76,8 +76,8 @@ export default function HeroSection({
             <Image
               src={profileImageUrl}
               alt={profileImageAlt}
-              width={192} 
-              height={192}
+              width={128}
+              height={128}
               className="rounded-full object-cover shadow-xl"
               priority
               data-ai-hint="anime people"
