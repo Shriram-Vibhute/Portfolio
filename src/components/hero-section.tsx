@@ -60,7 +60,7 @@ export default function HeroSection({
             <span>{availabilityText}</span>
           </div>
 
-          <p className="font-body text-base sm:text-lg text-foreground/70 leading-relaxed hero-intro-text-animation">
+          <p className="font-body text-xl text-muted-foreground leading-relaxed hero-intro-text-animation">
             {introParagraph}
           </p>
         </div>
