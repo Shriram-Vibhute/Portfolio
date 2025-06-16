@@ -24,7 +24,7 @@ export default function HeroSection({
   namePart1,
   namePart1Color = 'text-pink-500',
   namePart2,
-  namePart2Color = 'text-yellow-500', // Updated to match user context
+  namePart2Color = 'text-yellow-500',
   availabilityText,
   introParagraph,
   profileImageUrl,
@@ -41,24 +41,22 @@ export default function HeroSection({
 
           <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-foreground">
             <div>{greeting}</div>
-            <div>
+            <div style={{ whiteSpace: 'nowrap' }}>
               <span className={namePart1Color}>{namePart1}</span>{' '}
-              <span style={{ whiteSpace: 'nowrap' }}>
-                <span className={namePart2Color}>{namePart2}</span>
-                <motion.span
-                  className="ml-1 inline-block" // Adjusted margin
-                  aria-label="waving hand"
-                  animate={{ rotate: [0, 15, -10, 15, 0, 0] }}
-                  transition={{
-                    duration: 1.5,
-                    repeat: Infinity,
-                    repeatDelay: 3.5,
-                    ease: "easeInOut",
-                  }}
-                >
-                  👋🏻
-                </motion.span>
-              </span>
+              <span className={namePart2Color}>{namePart2}</span>
+              <motion.span
+                className="ml-1 inline-block"
+                aria-label="waving hand"
+                animate={{ rotate: [0, 15, -10, 15, 0, 0] }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatDelay: 3.5,
+                  ease: "easeInOut",
+                }}
+              >
+                👋🏻
+              </motion.span>
             </div>
           </h1>
 
