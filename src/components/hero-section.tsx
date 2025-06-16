@@ -72,13 +72,13 @@ export default function HeroSection({
 
         {/* Image Column */}
         <div className="md:w-2/5 lg:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
-          <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72">
+          <div className="relative w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-48 lg:h-48">
             <Image
               src={profileImageUrl}
               alt={profileImageAlt}
-              width={288}
-              height={288}
-              className="rounded-lg object-contain shadow-xl"
+              width={192} 
+              height={192}
+              className="rounded-full object-cover shadow-xl"
               priority
               data-ai-hint="pixel art avatar"
             />
