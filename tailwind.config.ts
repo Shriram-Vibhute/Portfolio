@@ -10,9 +10,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Fira Code', 'monospace'],
-        headline: ['Fira Code', 'monospace'],
-        code: ['Fira Code', 'monospace'],
+        body: ['Open Sans', 'sans-serif'],
+        headline: ['Open Sans', 'sans-serif'],
+        code: ['Open Sans', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
