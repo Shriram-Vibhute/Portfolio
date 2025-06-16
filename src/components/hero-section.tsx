@@ -42,9 +42,9 @@ export default function HeroSection({
         <div className="w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-8 md:gap-12">
           {/* Left Part: Text (Badge, Greeting, Name, Availability) */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-5 order-2 md:order-1 md:flex-grow">
-            <Badge className="bg-transparent text-purple-600 dark:text-purple-400 shadow-lg text-sm py-1 px-3 relative overflow-hidden">
+            <Badge className="bg-transparent text-cyan-500 dark:text-cyan-400 shadow-lg text-sm py-1 px-3 relative overflow-hidden">
               {badgeText}
-              <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-purple-500 to-pink-500 -z-10"></div>
+              <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-cyan-500 to-teal-500 -z-10"></div>
             </Badge>
 
             <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-foreground">
