@@ -4,7 +4,7 @@
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Code, Palette } from 'lucide-react';
+import { Code2, GitFork } from 'lucide-react';
 
 interface HeroSectionProps {
   badgeText: string;
@@ -205,87 +205,38 @@ export default function HeroSection({
             </div>
           </div>
         </div>
-
-        {/* Row 6: Work Experience Section */}
+        
+        {/* Row 6: Experience Section */}
         <div className="w-full mt-10 md:mt-12">
           <h2 className="text-2xl font-headline font-semibold text-foreground mb-8 text-center md:text-left">
-            Work Experience
+            Experience
           </h2>
-          <div className="flow-root">
-            <ul className="-mb-8">
-              {[
-                {
-                  role: "Web Developer",
-                  company: "Tung Tung JSC",
-                  duration: "May 2021 - April 2022",
-                  icon: Code,
-                  responsibilities: [
-                    "Developed responsive and user-friendly web applications using React, Vue.js, and Node.js.",
-                    "Collaborated with cross-functional teams to define, design, and ship new features.",
-                    "Ensured the technical feasibility of UI/UX designs.",
-                    "Optimized applications for maximum speed and scalability.",
-                  ],
-                  skills: ["React", "Vue.js", "Node.js", "JavaScript", "HTML", "CSS", "Git"],
-                },
-                {
-                  role: "Mobile Developer",
-                  company: "Tung Tung JSC",
-                  duration: "January 2020 - May 2021",
-                  icon: Code,
-                  responsibilities: [
-                    "Designed and built advanced applications for the Android and iOS platforms using React Native.",
-                    "Worked with external data sources and APIs.",
-                    "Unit-tested code for robustness, including edge cases, usability, and general reliability.",
-                    "Continuously discovered, evaluated, and implemented new technologies to maximize development efficiency.",
-                  ],
-                  skills: ["React Native", "JavaScript", "iOS", "Android", "Firebase", "REST APIs"],
-                },
-                {
-                  role: "UI/UX Designer",
-                  company: "Tung Tung JSC",
-                  duration: "July 2019 - December 2019",
-                  icon: Palette,
-                  responsibilities: [
-                    "Created user-centered designs by understanding business requirements, and user feedback.",
-                    "Designed UI elements and tools such as navigation menus, search boxes, tabs, and widgets.",
-                    "Developed wireframes, prototypes, and mockups for web and mobile applications.",
-                    "Conducted usability testing and iterated on design solutions.",
-                  ],
-                  skills: ["Figma", "Adobe XD", "Sketch", "User Research", "Prototyping", "Wireframing"],
-                },
-              ].map((experience, index, arr) => (
-                <li key={index}>
-                  <div className="relative pb-8">
-                    {index !== arr.length - 1 ? (
-                      <span className="absolute left-5 top-5 -ml-px h-full w-0.5 bg-border" aria-hidden="true" />
-                    ) : null}
-                    <div className="relative flex items-start space-x-4">
-                      <div>
-                        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary ring-4 ring-background">
-                          <experience.icon className="h-5 w-5 text-primary-foreground" aria-hidden="true" />
-                        </span>
-                      </div>
-                      <div className="min-w-0 flex-1 bg-card border border-border rounded-lg p-4 shadow-md">
-                        <div>
-                          <h3 className="text-lg font-semibold text-foreground">{experience.role}</h3>
-                          <p className="text-sm text-muted-foreground">{experience.company} &middot; {experience.duration}</p>
-                        </div>
-                        <ul className="mt-3 list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                          {experience.responsibilities.map((resp, i) => (
-                            <li key={i}>{resp}</li>
-                          ))}
-                        </ul>
-                        <div className="mt-4 flex flex-wrap gap-2">
-                          {experience.skills.map((skill, i) => (
-                            <Badge key={i} variant="secondary" className="text-xs">{skill}</Badge>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
+          <div className="space-y-6">
+            {/* Skill & technology Card */}
+            <div className="bg-card border border-border rounded-xl p-5 shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-start gap-5 cursor-pointer">
+              <div className="flex-shrink-0 bg-primary/10 text-primary p-3 rounded-lg">
+                <Code2 className="h-7 w-7" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-foreground mb-1">Skill & technology</h3>
+                <p className="text-sm text-muted-foreground">
+                  The knowledge I've gained through years of experience in technology.
+                </p>
+              </div>
+            </div>
+
+            {/* Journey Card */}
+            <div className="bg-card border border-border rounded-xl p-5 shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-start gap-5 cursor-pointer">
+              <div className="flex-shrink-0 bg-primary/10 text-primary p-3 rounded-lg">
+                <GitFork className="h-7 w-7" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-foreground mb-1">Journey</h3>
+                <p className="text-sm text-muted-foreground">
+                  My path to becoming a software engineer. Experiences and Learnings
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         
@@ -334,4 +285,3 @@ export default function HeroSection({
     </section>
   );
 }
-
