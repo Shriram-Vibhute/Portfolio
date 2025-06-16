@@ -44,7 +44,7 @@ export default function HeroSection({
             <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-foreground">
               <div>{greeting}</div>
               <div style={{ whiteSpace: 'nowrap' }}>
-                <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-purple-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-pink-400 via-purple-400 via-yellow-300 to-cyan-400 bg-clip-text text-transparent">
                   {namePart1} {namePart2}
                 </span>
                 <motion.span
