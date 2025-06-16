@@ -4,7 +4,8 @@
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Code2, GitFork } from 'lucide-react';
+import { Code2, GitFork, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 interface HeroSectionProps {
   badgeText: string;
@@ -281,7 +282,36 @@ export default function HeroSection({
             </div>
           </div>
         </div>
+
+        {/* Row 8: Contact Me Section */}
+        <div className="w-full mt-10 md:mt-12 pb-10"> {/* Added pb-10 for bottom padding */}
+          <h2 className="text-2xl font-headline font-semibold text-foreground mb-6 text-center md:text-left">
+            Contact Me
+          </h2>
+          <div className="flex flex-wrap justify-center md:justify-start gap-4">
+            <Button asChild variant="outline" size="lg">
+              <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                <Linkedin className="h-5 w-5" /> 
+                <span className="ml-2">LinkedIn</span>
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                <Twitter className="h-5 w-5" />
+                <span className="ml-2">Twitter</span>
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <a href="mailto:your.email@example.com" className="flex items-center">
+                <Mail className="h-5 w-5" />
+                <span className="ml-2">Email</span>
+              </a>
+            </Button>
+          </div>
+        </div>
+
       </div>
     </section>
   );
 }
+
