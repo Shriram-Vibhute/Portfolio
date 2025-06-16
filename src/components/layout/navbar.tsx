@@ -2,141 +2,86 @@
 'use client';
 
 import Link from 'next/link';
-import { Moon, Search, ShoppingCart, Menu } from 'lucide-react';
+import { Home, Info, Briefcase, PenSquare, Mail, Menu, type LucideIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+
+const iconComponents: Record<string, LucideIcon> = {
+  Home,
+  Info,
+  Briefcase,
+  PenSquare,
+  Mail,
+};
 
 export default function Navbar() {
-  const [isMounted, setIsMounted] = useState(false);
-  const [darkMode, setDarkMode] = useState(true); // Default to dark mode
-
-  useEffect(() => {
-    setIsMounted(true);
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setDarkMode(savedTheme === 'dark');
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!isMounted) return;
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  }, [darkMode, isMounted]);
-
-  const toggleTheme = () => {
-    setDarkMode(!darkMode);
-  };
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: '#', label: 'Component Packs' },
-    { href: '#', label: 'Templates' },
-    { href: '#', label: 'Pricing' },
+    { href: '#home', label: 'Home', iconName: 'Home' },
+    { href: '#about', label: 'About', iconName: 'Info' },
+    { href: '#projects', label: 'Projects', iconName: 'Briefcase' },
+    { href: '#blogs', label: 'Blogs', iconName: 'PenSquare' },
+    { href: '#contact', label: 'Contact', iconName: 'Mail' },
   ];
-
-  if (!isMounted) {
-    return <div className="h-14"></div>;
-  }
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-      <div className="container flex h-14 max-w-screen-xl items-center px-4 md:px-8"> {/* Changed max-w-screen-2xl to max-w-screen-xl */}
-        {/* Desktop Logo and Nav */}
-        <div className="mr-4 hidden md:flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7 text-foreground">
-              <path d="M12 2L2 7V17L12 22L22 17V7L12 2ZM4 8.5L12 13L20 8.5V15.5L12 20L4 15.5V8.5Z" />
-            </svg>
-            <span className="font-bold text-lg text-foreground">Aceternity UI</span>
-            <Badge variant="default" className="bg-primary text-primary-foreground h-5 text-xs">pro</Badge>
-          </Link>
-          <nav className="flex items-center gap-6 text-sm">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="text-foreground/70 transition-colors hover:text-foreground"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-
-        {/* Mobile Nav Trigger & Mobile Logo */}
-        <div className="flex flex-1 items-center justify-start space-x-2 md:hidden">
-           <Sheet>
+      <div className="container flex h-14 max-w-screen-xl items-center justify-between px-4 md:justify-center md:px-8">
+        
+        <div className="md:hidden">
+          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" className="px-1.5 text-base hover:bg-accent focus-visible:bg-accent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden text-foreground">
+              <Button variant="ghost" size="icon" className="text-foreground/70 hover:text-accent focus-visible:bg-accent">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="pr-0 bg-background text-foreground w-[280px] sm:w-[320px]">
-              <Link href="/" className="mb-6 flex items-center space-x-2 pl-5 pt-2">
-                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7 text-primary">
-                    <path d="M12 2L2 7V17L12 22L22 17V7L12 2ZM4 8.5L12 13L20 8.5V15.5L12 20L4 15.5V8.5Z" />
-                </svg>
-                <span className="font-bold text-lg text-primary">Aceternity UI</span>
-                 <Badge variant="default" className="bg-primary text-primary-foreground h-5 text-xs">pro</Badge>
-              </Link>
-              <div className="space-y-2 pl-5 pr-4">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    className="block rounded-md px-3 py-2 text-base font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-                 <Link
-                    href="#"
-                    className="block rounded-md px-3 py-2 text-base font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground"
-                  >
-                    Login
-                  </Link>
-                  <Button className="w-full bg-foreground text-background hover:bg-foreground/90 mt-2">Get All-Access</Button>
+            <SheetContent side="left" className="w-[280px] bg-background p-6 text-foreground sm:w-[320px]">
+              <div className="mb-6 flex items-center space-x-2">
+                <span className="text-lg font-semibold text-primary">Navigation</span>
               </div>
+              <nav className="flex flex-col space-y-2">
+                {navLinks.map((link) => {
+                  const IconComponent = iconComponents[link.iconName];
+                  return (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      className="flex items-center gap-x-3 rounded-md p-3 text-base font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {IconComponent && <IconComponent className="h-5 w-5" />}
+                      <span>{link.label}</span>
+                    </Link>
+                  );
+                })}
+              </nav>
             </SheetContent>
           </Sheet>
-           <Link href="/" className="flex items-center space-x-2 md:hidden -ml-2">
-             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7 text-foreground">
-               <path d="M12 2L2 7V17L12 22L22 17V7L12 2ZM4 8.5L12 13L20 8.5V15.5L12 20L4 15.5V8.5Z" />
-            </svg>
-            <span className="font-bold text-lg text-foreground">Aceternity UI</span>
-           </Link>
         </div>
 
-        {/* Right side icons and buttons */}
-        <div className="flex flex-1 items-center justify-end space-x-1.5 sm:space-x-3">
-          <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle theme" className="text-foreground/70 hover:text-foreground hover:bg-accent/80">
-            <Moon className="h-5 w-5" />
-          </Button>
-          <Button variant="ghost" size="icon" aria-label="Search" className="text-foreground/70 hover:text-foreground hover:bg-accent/80">
-            <Search className="h-5 w-5" />
-          </Button>
-          <Button variant="ghost" size="icon" aria-label="Shopping Cart" className="text-foreground/70 hover:text-foreground hover:bg-accent/80">
-            <ShoppingCart className="h-5 w-5" />
-          </Button>
-          <Link
-            href="#"
-            className="hidden sm:inline-block text-sm font-medium text-foreground/70 transition-colors hover:text-foreground px-2"
-          >
-            Login
-          </Link>
-          <Button className="bg-foreground text-background hover:bg-foreground/90 rounded-lg text-sm px-3 sm:px-4 py-1.5 h-auto">
-            Get All-Access
-          </Button>
-        </div>
+        <nav className="hidden items-center gap-x-4 md:flex lg:gap-x-6">
+          {navLinks.map((link) => {
+            const IconComponent = iconComponents[link.iconName];
+            return (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="flex items-center gap-x-2 rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-accent hover:bg-accent/10"
+              >
+                {IconComponent && <IconComponent className="h-5 w-5" />}
+                <span>{link.label}</span>
+              </Link>
+            );
+          })}
+        </nav>
+        
+        <div className="w-10 md:hidden" aria-hidden="true" />
+
       </div>
     </nav>
   );
 }
+
