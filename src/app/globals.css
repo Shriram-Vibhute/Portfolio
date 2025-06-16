@@ -11,7 +11,7 @@
     scrollbar-color: hsl(var(--border)) black;
   }
   :root {
-    --background: 225 100% 97%; /* #F0F4FF */
+    --background: 0 0% 100%; /* #FFFFFF */
     --foreground: 220 10% 20%;
 
     --card: 0 0% 100%;
@@ -185,3 +185,4 @@
     }
   }
 }
+
