@@ -14,6 +14,8 @@ export default function Home() {
         namePart2Color="text-yellow-500"
         availabilityText="Available for new projects"
         introParagraph="From uncovering insights with Data Science and Machine Learning to building intelligent and scaleble applications with Deep Learning and MLOps."
+        profileImageUrl="https://placehold.co/400x400.png"
+        profileImageAlt="Shriram Vibhute profile photo"
       />
       <FloatingDockDemo />
     </main>

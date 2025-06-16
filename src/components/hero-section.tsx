@@ -3,6 +3,7 @@
 
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 interface HeroSectionProps {
   badgeText: string;
@@ -13,6 +14,8 @@ interface HeroSectionProps {
   namePart2Color?: string;
   availabilityText: string;
   introParagraph: string;
+  profileImageUrl: string;
+  profileImageAlt: string;
 }
 
 export default function HeroSection({
@@ -24,12 +27,14 @@ export default function HeroSection({
   namePart2Color = 'text-yellow-500',
   availabilityText,
   introParagraph,
+  profileImageUrl,
+  profileImageAlt,
 }: HeroSectionProps) {
   return (
     <section className="min-h-screen w-full flex items-center justify-center bg-background p-4 sm:p-8 selection:bg-accent selection:text-accent-foreground">
-      <div className="max-w-5xl w-full mx-auto flex flex-col items-center justify-center gap-6 md:gap-8">
+      <div className="max-w-5xl w-full mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-8 md:gap-12">
         {/* Text Content Column */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-5 md:w-full">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-5 md:w-2/3 order-2 md:order-1">
           <Badge variant="secondary" className="text-sm py-1 px-3">
             {badgeText}
           </Badge>
@@ -84,7 +89,21 @@ export default function HeroSection({
               <Badge variant="secondary">Docker</Badge>
             </div>
           </div>
+        </div>
 
+        {/* Image Column */}
+        <div className="w-full max-w-xs sm:max-w-sm md:w-1/3 order-1 md:order-2 flex justify-center md:justify-end items-start pt-0 md:pt-8">
+          <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80">
+            <Image
+              src={profileImageUrl}
+              alt={profileImageAlt}
+              layout="fill"
+              objectFit="cover"
+              className="rounded-full shadow-2xl border-4 border-background"
+              data-ai-hint="profile portrait"
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>
