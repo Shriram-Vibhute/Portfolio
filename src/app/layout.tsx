@@ -20,7 +20,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased bg-background relative selection:bg-accent selection:text-accent-foreground">
+      <body className="font-body antialiased bg-white dark:bg-black relative selection:bg-accent selection:text-accent-foreground">
         {/* Dot pattern layer */}
         <div
           className={cn(
@@ -34,7 +34,7 @@ export default function RootLayout({
         <div
           className={cn(
             "pointer-events-none absolute inset-0 -z-10",
-            "bg-background", 
+            "bg-white dark:bg-black", 
             "[mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
           )}
         />
