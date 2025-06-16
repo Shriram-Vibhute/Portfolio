@@ -1,22 +1,25 @@
+
 import HeroSection from '@/components/hero-section';
 import FloatingDockDemo from '@/components/floating-dock-demo';
 
 export default function Home() {
-  const socialLinks = [
-    { name: 'GitHub', url: 'https://github.com', iconName: 'Github' },
-    { name: 'LinkedIn', url: 'https://linkedin.com', iconName: 'Linkedin' },
-    { name: 'Twitter', url: 'https://twitter.com', iconName: 'Twitter' },
-  ];
-
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen">
+    <main className="flex flex-col items-center justify-center">
       <HeroSection
-        name="Jamie Developer"
-        title="Innovative Full-Stack Engineer & Creative Thinker"
-        defaultIntro="Passionate about crafting elegant and impactful digital solutions. I thrive on turning complex challenges into user-friendly experiences with modern technologies."
-        projectKeywords="React, Next.js, TypeScript, Node.js, AI Integration, UI/UX"
-        socialLinks={socialLinks}
-        contactLink="mailto:jamie.developer@example.com"
+        badgeText="Full Stack Developer"
+        greeting="Hello, I'm"
+        namePart1="Ramkrishna"
+        namePart2="Swarnkar"
+        namePart1Color="text-pink-500"
+        namePart2Color="text-yellow-500"
+        availabilityText="Available for new projects"
+        introParagraph="I'm a Full Stack web developer and Open Source Contributor, with a focus on JavaScript, React, and UI/UX design. Enthusiastic about Three.js, driven by a keen eye for design."
+        primaryButtonText="Let's work together"
+        primaryButtonLink="mailto:ramkrishna.swarnkar@example.com"
+        secondaryButtonText="Message on"
+        secondaryButtonLink="https://linkedin.com/in/ramkrishnaswarnkar" // Replace with actual LinkedIn profile
+        profileImageUrl="https://placehold.co/384x384.png" // Replace with actual image URL
+        profileImageAlt="Ramkrishna Swarnkar Profile Picture"
       />
       <FloatingDockDemo />
     </main>

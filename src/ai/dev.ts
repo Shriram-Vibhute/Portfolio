@@ -1,4 +1,5 @@
+
 import { config } from 'dotenv';
 config();
 
-import '@/ai/flows/dynamic-hero-text.ts';
+// Removed import for dynamic-hero-text.ts as it's no longer used.
