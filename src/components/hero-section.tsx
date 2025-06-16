@@ -162,6 +162,48 @@ export default function HeroSection({
             </div>
           </div>
         </div>
+
+        {/* Row 5: Certifications Section (Wider) */}
+        <div className="w-full mt-10 md:mt-12">
+          <h2 className="text-2xl font-headline font-semibold text-foreground mb-6 text-center md:text-left">
+            Certifications
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Certification Card 1 */}
+            <div className="bg-card border border-border rounded-lg p-4 shadow-md flex flex-col">
+              <div className="relative w-full h-40 mb-3 rounded-md overflow-hidden">
+                <Image 
+                  src="https://placehold.co/600x400.png" 
+                  alt="Certification 1 Placeholder" 
+                  layout="fill" 
+                  objectFit="cover"
+                  data-ai-hint="certificate document"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-1">Advanced AI Specialization</h3>
+              <p className="text-sm text-muted-foreground flex-grow">
+                Issued by Coursera
+              </p>
+            </div>
+
+            {/* Certification Card 2 */}
+            <div className="bg-card border border-border rounded-lg p-4 shadow-md flex flex-col">
+              <div className="relative w-full h-40 mb-3 rounded-md overflow-hidden">
+                <Image 
+                  src="https://placehold.co/600x400.png" 
+                  alt="Certification 2 Placeholder" 
+                  layout="fill" 
+                  objectFit="cover"
+                  data-ai-hint="tech achievement"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-1">Cloud Certified Professional</h3>
+              <p className="text-sm text-muted-foreground flex-grow">
+                Issued by Google Cloud
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
