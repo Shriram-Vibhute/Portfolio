@@ -4,7 +4,7 @@
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { MoveRight, MoveLeft, MoveDown } from 'lucide-react';
+import { Code, Palette } from 'lucide-react';
 
 interface HeroSectionProps {
   badgeText: string;
@@ -206,72 +206,91 @@ export default function HeroSection({
           </div>
         </div>
 
-        {/* Row 6: My Data Science Journey Section */}
+        {/* Row 6: Work Experience Section */}
         <div className="w-full mt-10 md:mt-12">
           <h2 className="text-2xl font-headline font-semibold text-foreground mb-6 text-center md:text-left">
-            My Data Science Journey
+            Work Experience
           </h2>
-          <div className="bg-card border border-border rounded-xl p-6 md:p-8 shadow-xl overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_2fr] gap-y-8 md:gap-y-12 md:gap-x-4 items-center">
-
-              {/* Stage 1: Mathematics Node */}
-              <div className="flex justify-center md:justify-self-start">
-                <div className="bg-primary/10 border border-primary/30 p-4 rounded-lg shadow-md w-full max-w-xs text-center">
-                  <h3 className="text-lg font-semibold text-primary">1. Mathematics</h3>
-                  <p className="text-sm text-primary/80 mt-1">Calculus, Linear Algebra, Statistics</p>
+          <div className="space-y-8">
+            {/* Experience 1: Web Developer */}
+            <div className="bg-card border border-border rounded-lg p-6 shadow-md">
+              <div className="flex items-start gap-4">
+                <div className="mt-1 flex-shrink-0">
+                  <Code className="w-7 h-7 text-primary" />
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-xl font-semibold text-foreground">Web Developer</h3>
+                  <p className="text-md text-accent mb-1">Tung Tung JSC</p>
+                  <p className="text-sm text-muted-foreground mb-3">Full-time | 2020 – 2022</p>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-1.5 mb-4 text-sm">
+                    <li>Built a scalable design system for consistency and efficiency.</li>
+                    <li>Built a complex rich-text editor based on ProseMirror and Slate for customizable content creation.</li>
+                    <li>Integrated APIs with the Backend Team to enhance functionality.</li>
+                  </ul>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="secondary">React</Badge>
+                    <Badge variant="secondary">Redux</Badge>
+                    <Badge variant="secondary">Storybook</Badge>
+                    <Badge variant="secondary">Lerna</Badge>
+                    <Badge variant="secondary">Agile</Badge>
+                    <Badge variant="secondary">Teamwork</Badge>
+                    <Badge variant="secondary">Research</Badge>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              {/* Arrow Math -> ML */}
-              <div className="flex justify-center items-center">
-                <MoveRight className="w-10 h-10 text-accent md:w-12 md:h-12" />
-              </div>
-
-              {/* Stage 2: Machine Learning Node */}
-              <div className="flex justify-center md:justify-self-end">
-                <div className="bg-primary/10 border border-primary/30 p-4 rounded-lg shadow-md w-full max-w-xs text-center">
-                  <h3 className="text-lg font-semibold text-primary">2. Machine Learning</h3>
-                  <p className="text-sm text-primary/80 mt-1">Algorithms, Model Training</p>
+            {/* Experience 2: Mobile Developer */}
+            <div className="bg-card border border-border rounded-lg p-6 shadow-md">
+              <div className="flex items-start gap-4">
+                <div className="mt-1 flex-shrink-0">
+                  <Code className="w-7 h-7 text-primary" />
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-xl font-semibold text-foreground">Mobile Developer</h3>
+                  <p className="text-md text-accent mb-1">Tung Tung JSC</p>
+                  <p className="text-sm text-muted-foreground mb-3">Full-time | 2019 – 2020</p>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-1.5 mb-4 text-sm">
+                    <li>Rebuilt the app with React Native for better UX and performance.</li>
+                    <li>Integrated MoMo and in-app purchases for seamless payments.</li>
+                    <li>Optimized deployment for staging and production.</li>
+                    <li>Published on App Store and Google Play, ensuring compliance.</li>
+                  </ul>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="secondary">React Native</Badge>
+                    <Badge variant="secondary">Redux</Badge>
+                    <Badge variant="secondary">MoMo Payment API</Badge>
+                    <Badge variant="secondary">App Store</Badge>
+                    <Badge variant="secondary">Google Play Store</Badge>
+                    <Badge variant="secondary">App Center</Badge>
+                    <Badge variant="secondary">Agile</Badge>
+                    <Badge variant="secondary">Teamwork</Badge>
+                    <Badge variant="secondary">Research</Badge>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              {/* Connecting Arrow for ML -> DL */}
-              {/* Mobile: simple down arrow */}
-              <div className="flex justify-center items-center md:hidden">
-                <MoveDown className="w-10 h-10 text-accent" />
-              </div>
-              {/* Desktop: This spans the middle column of the top item row, to point to the start of next item row */}
-              {/* This element will be in the grid, effectively between rows, under the ML->DL arrow space */}
-              <div className="hidden md:flex md:col-start-3 md:row-start-2 justify-center items-center py-4"> {/* Adjusted to be in its own "row" segment of the grid */}
-                <div className="flex flex-col items-center">
-                    <div className="w-px h-6 bg-accent"></div> {/* Vertical line segment */}
-                    <MoveLeft className="w-8 h-8 text-accent transform -rotate-0" /> {/* Arrow pointing left */}
-                    <div className="w-px h-6 bg-accent"></div> {/* Vertical line segment */}
+            {/* Experience 3: UI/UX Designer */}
+            <div className="bg-card border border-border rounded-lg p-6 shadow-md">
+              <div className="flex items-start gap-4">
+                <div className="mt-1 flex-shrink-0">
+                  <Palette className="w-7 h-7 text-primary" />
                 </div>
-              </div>
-              {/* Empty spacers for desktop grid alignment for the arrow above */}
-               <div className="hidden md:block md:row-start-2 md:col-start-1"></div>
-               <div className="hidden md:block md:row-start-2 md:col-start-2"></div>
-
-
-              {/* Stage 3: Deep Learning Node */}
-              <div className="md:row-start-3 flex justify-center md:justify-self-start">
-                <div className="bg-primary/10 border border-primary/30 p-4 rounded-lg shadow-md w-full max-w-xs text-center">
-                  <h3 className="text-lg font-semibold text-primary">3. Deep Learning</h3>
-                  <p className="text-sm text-primary/80 mt-1">Neural Networks, CNNs, RNNs</p>
-                </div>
-              </div>
-
-              {/* Arrow DL -> GenAI */}
-              <div className="md:row-start-3 flex justify-center items-center">
-                <MoveRight className="w-10 h-10 text-accent md:w-12 md:h-12" />
-              </div>
-
-              {/* Stage 4: Generative AI Node */}
-              <div className="md:row-start-3 flex justify-center md:justify-self-end">
-                <div className="bg-primary/10 border border-primary/30 p-4 rounded-lg shadow-md w-full max-w-xs text-center">
-                  <h3 className="text-lg font-semibold text-primary">4. Generative AI</h3>
-                  <p className="text-sm text-primary/80 mt-1">GANs, VAEs, LLMs</p>
+                <div className="flex-grow">
+                  <h3 className="text-xl font-semibold text-foreground">UI/UX Designer</h3>
+                  <p className="text-md text-accent mb-1">Tung Tung JSC</p>
+                  <p className="text-sm text-muted-foreground mb-3">Full-time | 2018 – 2019</p>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-1.5 mb-4 text-sm">
+                    <li>Designed a Landing Page for enterprise clients.</li>
+                    <li>Redesigned the Online Quiz Platform for a modern look on web and mobile.</li>
+                    <li>Redesigned the Pricing interface for individual customers.</li>
+                    <li>Enhanced UX by improving usability, navigation, and user flow.</li>
+                  </ul>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="secondary">UI/UX Design</Badge>
+                    <Badge variant="secondary">Sketch</Badge>
+                  </div>
                 </div>
               </div>
             </div>
@@ -282,4 +301,3 @@ export default function HeroSection({
     </section>
   );
 }
-
