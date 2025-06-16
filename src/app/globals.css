@@ -5,9 +5,9 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    /* For Firefox - thin scrollbar with themed thumb and transparent track */
+    /* For Firefox - thin scrollbar with themed thumb and black track */
     scrollbar-width: thin;
-    scrollbar-color: hsl(var(--border)) transparent;
+    scrollbar-color: hsl(var(--border)) black;
   }
   :root {
     --background: 225 100% 97%; /* #F0F4FF */
@@ -102,7 +102,7 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: transparent; /* Make the track transparent */
+    background: black; /* Make the track black */
   }
 
   ::-webkit-scrollbar-thumb {
