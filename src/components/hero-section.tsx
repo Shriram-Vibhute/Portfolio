@@ -71,7 +71,7 @@ export default function HeroSection({
 
           {/* Right Part: Image */}
           <div className="w-full max-w-xs sm:max-w-sm md:max-w-none md:w-auto order-1 md:order-2 flex justify-center md:justify-end shrink-0">
-            <div className="relative w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-48 lg:h-48">
+            <div className="relative w-[200px] h-[200px]">
               <Image
                 src={profileImageUrl}
                 alt={profileImageAlt}
