@@ -4,9 +4,10 @@
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Code2, GitFork, Mail, Download, Linkedin, Twitter, Palette } from 'lucide-react';
+import { Code2, GitFork, Mail, Download } from 'lucide-react';
 import BentoGridDemo from '@/components/bento-grid-demo';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 interface HeroSectionProps {
   badgeText: string;
@@ -34,7 +35,7 @@ export default function HeroSection({
   profileImageAlt,
 }: HeroSectionProps) {
   return (
-    <section className="min-h-screen w-full flex items-center justify-center bg-background p-4 sm:p-8 selection:bg-accent selection:text-accent-foreground">
+    <section className="min-h-screen w-full flex items-center justify-center bg-transparent p-4 sm:p-8">
       <div className="max-w-3xl w-full mx-auto flex flex-col items-center md:items-start gap-8 md:gap-10">
 
         {/* Row 1: Name/Greeting/Badge/Availability + Image */}
@@ -80,7 +81,7 @@ export default function HeroSection({
                 alt={profileImageAlt}
                 layout="fill"
                 objectFit="cover"
-                className="rounded-full shadow-2xl border-4 border-background"
+                className="rounded-full shadow-2xl border-4 border-background dark:border-zinc-800"
                 data-ai-hint="profile portrait"
                 priority
               />
@@ -96,19 +97,27 @@ export default function HeroSection({
         {/* Buttons after Intro Paragraph */}
         <div className="w-full flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4 mt-6 md:mt-8">
           <Button
-            className="button-custom-style"
+            className={cn(
+              "button-custom-style",
+              "bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30",
+              "backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg"
+            )}
             asChild
           >
             <a href="mailto:shriram.vibhute@example.com"> 
-              <Mail className="mr-2 h-4 w-4" /> Mail Me
+              <Mail className="mr-2 h-4 w-4" /> Mail
             </a>
           </Button>
           <Button
-            className="button-custom-style"
+            className={cn(
+              "button-custom-style",
+              "bg-zinc-900/70 dark:bg-zinc-800/60 text-primary-foreground hover:bg-zinc-900/80 dark:hover:bg-zinc-800/70",
+              "backdrop-blur-sm border border-white/20 dark:border-white/10 shadow-lg"
+            )}
             asChild
           >
             <a href="/resume.pdf" download> 
-              <Download className="mr-2 h-4 w-4" /> Download Resume
+              <Download className="mr-2 h-4 w-4" /> Resume
             </a>
           </Button>
         </div>
