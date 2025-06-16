@@ -4,9 +4,9 @@
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Code2, GitFork, Mail, Download } from 'lucide-react'; // Added Mail and Download
+import { Code2, GitFork, Mail, Download, Linkedin, Twitter, Palette } from 'lucide-react';
 import BentoGridDemo from '@/components/bento-grid-demo';
-import { Button } from '@/components/ui/button'; // Added Button import
+import { Button } from '@/components/ui/button';
 
 interface HeroSectionProps {
   badgeText: string;
@@ -96,18 +96,18 @@ export default function HeroSection({
         {/* Buttons after Intro Paragraph */}
         <div className="w-full flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4 mt-6 md:mt-8">
           <Button
-            className="bg-white text-gray-900 hover:bg-gray-200 shadow-md"
+            className="button-custom-style"
             asChild
           >
-            <a href="mailto:shriram.vibhute@example.com"> {/* Replace with actual email */}
+            <a href="mailto:shriram.vibhute@example.com"> 
               <Mail className="mr-2 h-4 w-4" /> Mail Me
             </a>
           </Button>
           <Button
-            className="bg-gray-900 text-white hover:bg-gray-700 shadow-md"
+            className="button-custom-style"
             asChild
           >
-            <a href="/resume.pdf" download> {/* Place resume.pdf in /public folder */}
+            <a href="/resume.pdf" download> 
               <Download className="mr-2 h-4 w-4" /> Download Resume
             </a>
           </Button>
@@ -228,7 +228,7 @@ export default function HeroSection({
           </div>
         </div>
         
-        {/* Row 6: Experience Section */}
+        {/* Experience Section */}
         <div className="w-full mt-10 md:mt-12">
           <h2 className="text-2xl font-headline font-semibold text-foreground mb-8 text-center md:text-left">
             Experience
@@ -270,8 +270,8 @@ export default function HeroSection({
           <BentoGridDemo />
         </div>
         
-        {/* Row 7: Blogs Section */}
-        <div className="w-full mt-10 md:mt-12 pb-20"> {/* Increased pb for more space at bottom */}
+        {/* Blogs Section */}
+        <div className="w-full mt-10 md:mt-12 pb-24"> {/* Increased pb for more space */}
           <h2 className="text-2xl font-headline font-semibold text-foreground mb-6 text-center md:text-left">
             Blogs
           </h2>
@@ -315,4 +315,3 @@ export default function HeroSection({
     </section>
   );
 }
-
