@@ -4,8 +4,9 @@
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Code2, GitFork } from 'lucide-react';
+import { Code2, GitFork, Mail, Download } from 'lucide-react'; // Added Mail and Download
 import BentoGridDemo from '@/components/bento-grid-demo';
+import { Button } from '@/components/ui/button'; // Added Button import
 
 interface HeroSectionProps {
   badgeText: string;
@@ -91,6 +92,26 @@ export default function HeroSection({
         <p className="font-body text-xl text-muted-foreground leading-relaxed hero-intro-text-animation w-full text-center md:text-left">
           {introParagraph}
         </p>
+
+        {/* Buttons after Intro Paragraph */}
+        <div className="w-full flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4 mt-6 md:mt-8">
+          <Button
+            className="bg-white text-gray-900 hover:bg-gray-200 shadow-md"
+            asChild
+          >
+            <a href="mailto:shriram.vibhute@example.com"> {/* Replace with actual email */}
+              <Mail className="mr-2 h-4 w-4" /> Mail Me
+            </a>
+          </Button>
+          <Button
+            className="bg-gray-900 text-white hover:bg-gray-700 shadow-md"
+            asChild
+          >
+            <a href="/resume.pdf" download> {/* Place resume.pdf in /public folder */}
+              <Download className="mr-2 h-4 w-4" /> Download Resume
+            </a>
+          </Button>
+        </div>
 
         {/* Row 3: Skills Section (Wider) */}
         <div className="w-full mt-10 md:mt-12">
@@ -250,7 +271,7 @@ export default function HeroSection({
         </div>
         
         {/* Row 7: Blogs Section */}
-        <div className="w-full mt-10 md:mt-12 pb-10"> {/* Added pb-10 for bottom padding */}
+        <div className="w-full mt-10 md:mt-12 pb-20"> {/* Increased pb for more space at bottom */}
           <h2 className="text-2xl font-headline font-semibold text-foreground mb-6 text-center md:text-left">
             Blogs
           </h2>
@@ -294,3 +315,4 @@ export default function HeroSection({
     </section>
   );
 }
+
