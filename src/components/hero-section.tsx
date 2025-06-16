@@ -35,7 +35,7 @@ export default function HeroSection({
       <div className="max-w-5xl w-full mx-auto flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
         {/* Text Content Column */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-5 md:w-3/5 lg:w-1/2">
-          <Badge variant="outline" className="text-sm py-1 px-3 border-primary text-primary bg-primary/10">
+          <Badge variant="outline" className="text-sm py-1 px-3 border-accent text-accent bg-accent/10">
             {badgeText}
           </Badge>
 
@@ -65,14 +65,14 @@ export default function HeroSection({
             <span>{availabilityText}</span>
           </div>
 
-          <p className="font-body text-base sm:text-lg text-foreground/70 leading-relaxed">
+          <p className="font-body text-base sm:text-lg text-foreground/70 leading-relaxed hero-intro-text-animation">
             {introParagraph}
           </p>
         </div>
 
         {/* Image Column */}
         <div className="md:w-2/5 lg:w-1/2 flex justify-center md:justify-start mt-8 md:mt-0">
-          <div className="relative w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-48 lg:h-48">
+          <div className="relative w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40">
             <Image
               src={profileImageUrl}
               alt={profileImageAlt}

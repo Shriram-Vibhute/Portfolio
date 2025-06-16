@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center">
       <HeroSection
-        badgeText="Full Stack Developer"
+        badgeText="Machine Learning Engineer"
         greeting="Hello, I'm"
         namePart1="Shriram"
         namePart2="Vibhute"
