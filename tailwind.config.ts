@@ -10,9 +10,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Space Grotesk', 'sans-serif'],
-        code: ['monospace'],
+        body: ['Fira Code', 'monospace'],
+        headline: ['Fira Code', 'monospace'],
+        code: ['Fira Code', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -88,7 +88,7 @@ export default {
             height: '0',
           },
         },
-        fadeInTextHero: { // Renamed to avoid conflict if user adds own keyframes
+        fadeInTextHero: { 
           '0%': { opacity: '0', transform: 'translateY(10px)' },
           '100%': { opacity: '1', transform: 'translateY(0px)' },
         },
