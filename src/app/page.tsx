@@ -14,11 +14,7 @@ export default function Home() {
         namePart2Color="text-yellow-500"
         availabilityText="Available for new projects"
         introParagraph="I'm a Full Stack web developer and Open Source Contributor, with a focus on JavaScript, React, and UI/UX design. Enthusiastic about Three.js, driven by a keen eye for design."
-        primaryButtonText="Let's work together"
-        primaryButtonLink="mailto:ramkrishna.swarnkar@example.com"
-        secondaryButtonText="Message on"
-        secondaryButtonLink="https://linkedin.com/in/ramkrishnaswarnkar" // Replace with actual LinkedIn profile
-        profileImageUrl="https://placehold.co/288x288.png" // Updated to smaller placeholder
+        profileImageUrl="https://placehold.co/288x288.png"
         profileImageAlt="Ramkrishna Swarnkar Profile Picture"
       />
       <FloatingDockDemo />

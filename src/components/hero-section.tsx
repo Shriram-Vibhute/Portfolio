@@ -2,9 +2,7 @@
 "use client";
 
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Linkedin } from 'lucide-react';
 
 interface HeroSectionProps {
   badgeText: string;
@@ -15,10 +13,6 @@ interface HeroSectionProps {
   namePart2Color?: string;
   availabilityText: string;
   introParagraph: string;
-  primaryButtonText: string;
-  primaryButtonLink: string;
-  secondaryButtonText: string;
-  secondaryButtonLink: string;
   profileImageUrl: string;
   profileImageAlt: string;
 }
@@ -32,10 +26,6 @@ export default function HeroSection({
   namePart2Color = 'text-orange-500',
   availabilityText,
   introParagraph,
-  primaryButtonText,
-  primaryButtonLink,
-  secondaryButtonText,
-  secondaryButtonLink,
   profileImageUrl,
   profileImageAlt,
 }: HeroSectionProps) {
@@ -63,30 +53,6 @@ export default function HeroSection({
           <p className="font-body text-base sm:text-lg text-foreground/70 leading-relaxed">
             {introParagraph}
           </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4 w-full sm:w-auto">
-            <Button
-              size="lg"
-              asChild
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-base px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
-            >
-              <a href={primaryButtonLink}>
-                {primaryButtonText}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              asChild
-              className="text-foreground/80 hover:text-accent hover:bg-accent/10 font-medium text-base px-6 py-3 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 w-full sm:w-auto"
-            >
-              <a href={secondaryButtonLink} target="_blank" rel="noopener noreferrer">
-                {secondaryButtonText}
-                <Linkedin className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
-          </div>
         </div>
 
         {/* Image Column */}
