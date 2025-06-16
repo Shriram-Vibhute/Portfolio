@@ -49,8 +49,8 @@ export default function HeroSection({
             </div>
             
             <h1 className="font-headline text-foreground">
-              <div className="text-5xl">{greeting}</div>
-              <div className="text-4xl sm:text-5xl md:text-6xl" style={{ whiteSpace: 'nowrap' }}>
+              <div className="text-[2.9rem]">{greeting}</div>
+              <div className="text-[2.9rem]" style={{ whiteSpace: 'nowrap' }}>
                 <span className="font-bold bg-gradient-to-r from-pink-400 via-purple-400 via-yellow-300 to-cyan-400 bg-clip-text text-transparent">
                   {namePart1} {namePart2}
                 </span>
