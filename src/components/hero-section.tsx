@@ -87,7 +87,7 @@ export default function HeroSection({
 
         {/* Combined Intro and Buttons Section */}
         <div className="w-full flex flex-col items-center md:items-start">
-          <p className="font-body text-xl text-muted-foreground leading-relaxed hero-intro-text-animation w-full text-center md:text-left mb-6">
+          <p className="font-body text-base text-muted-foreground leading-relaxed hero-intro-text-animation w-full text-center md:text-left mb-6">
             {introParagraph}
           </p>
           <div className="w-full flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4">
@@ -320,5 +320,7 @@ export default function HeroSection({
     </section>
   );
 }
+
+    
 
     
