@@ -1,3 +1,4 @@
+
 "use client";
 import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
@@ -39,7 +40,7 @@ export default function FloatingDockDemo() {
       title: "Aceternity UI",
       icon: (
         <Image
-          src="https://assets.aceternity.com/logo-dark.png"
+          src="https://assets.aceternity.com/logo-light.png"
           width={20}
           height={20}
           alt="Aceternity Logo"
@@ -74,10 +75,11 @@ export default function FloatingDockDemo() {
     <div className="fixed inset-x-0 bottom-0 z-50 flex justify-center p-4 pointer-events-none">
       <div className="pointer-events-auto">
         <FloatingDock
-          mobileClassName="translate-y-0" // Adjusted from translate-y-20
+          mobileClassName="translate-y-0" 
           items={links}
         />
       </div>
     </div>
   );
 }
+
