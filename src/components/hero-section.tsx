@@ -12,9 +12,7 @@ interface HeroSectionProps {
   badgeText: string;
   greeting: string;
   namePart1: string;
-  namePart1Color?: string;
   namePart2: string;
-  namePart2Color?: string;
   availabilityText: string;
   introParagraph: string;
   profileImageUrl: string;
@@ -25,9 +23,7 @@ export default function HeroSection({
   badgeText,
   greeting,
   namePart1,
-  namePart1Color = 'text-pink-500',
   namePart2,
-  namePart2Color = 'text-yellow-500',
   availabilityText,
   introParagraph,
   profileImageUrl,
@@ -48,8 +44,9 @@ export default function HeroSection({
             <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-foreground">
               <div>{greeting}</div>
               <div style={{ whiteSpace: 'nowrap' }}>
-                <span className={namePart1Color}>{namePart1}</span>{' '}
-                <span className={namePart2Color}>{namePart2}</span>
+                <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-purple-400 bg-clip-text text-transparent">
+                  {namePart1} {namePart2}
+                </span>
                 <motion.span
                   className="ml-1 inline-block"
                   aria-label="waving hand"
