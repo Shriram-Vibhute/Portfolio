@@ -1,7 +1,6 @@
 
 "use client";
 
-import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Code2, GitFork, Mail, Download } from 'lucide-react';
@@ -42,10 +41,9 @@ export default function HeroSection({
         <div className="w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-8 md:gap-12">
           {/* Left Part: Text (Badge, Greeting, Name, Availability) */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-5 order-2 md:order-1 md:flex-grow">
-            <Badge className="bg-transparent text-cyan-500 dark:text-cyan-400 shadow-lg text-sm py-1 px-3 relative overflow-hidden">
+            <div className="text-sm text-cyan-500 dark:text-cyan-400 inline-block py-1 px-3 border-b-2 border-cyan-500 dark:border-cyan-400">
               {badgeText}
-              <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-cyan-500 to-teal-500 -z-10"></div>
-            </Badge>
+            </div>
 
             <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-foreground">
               <div>{greeting}</div>
@@ -129,18 +127,18 @@ export default function HeroSection({
             Technical Skills
           </h2>
           <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-            <Badge variant="secondary">Python</Badge>
-            <Badge variant="secondary">JavaScript</Badge>
-            <Badge variant="secondary">TypeScript</Badge>
-            <Badge variant="secondary">React</Badge>
-            <Badge variant="secondary">Next.js</Badge>
-            <Badge variant="secondary">Node.js</Badge>
-            <Badge variant="secondary">TensorFlow</Badge>
-            <Badge variant="secondary">PyTorch</Badge>
-            <Badge variant="secondary">Scikit-learn</Badge>
-            <Badge variant="secondary">Genkit</Badge>
-            <Badge variant="secondary">Tailwind CSS</Badge>
-            <Badge variant="secondary">Docker</Badge>
+            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">Python</span>
+            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">JavaScript</span>
+            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">TypeScript</span>
+            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">React</span>
+            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">Next.js</span>
+            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">Node.js</span>
+            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">TensorFlow</span>
+            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">PyTorch</span>
+            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">Scikit-learn</span>
+            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">Genkit</span>
+            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">Tailwind CSS</span>
+            <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">Docker</span>
           </div>
         </div>
 
@@ -166,9 +164,9 @@ export default function HeroSection({
                 A cutting-edge solution for an interesting problem, leveraging modern technologies to deliver performance.
               </p>
               <div className="flex flex-wrap gap-1">
-                <Badge variant="secondary" className="text-xs">Next.js</Badge>
-                <Badge variant="secondary" className="text-xs">TypeScript</Badge>
-                <Badge variant="secondary" className="text-xs">Tailwind</Badge>
+                <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">Next.js</span>
+                <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">TypeScript</span>
+                <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">Tailwind</span>
               </div>
             </div>
 
@@ -188,9 +186,9 @@ export default function HeroSection({
                 An innovative platform designed to streamline user workflows and enhance productivity through AI.
               </p>
               <div className="flex flex-wrap gap-1">
-                <Badge variant="secondary" className="text-xs">React</Badge>
-                <Badge variant="secondary" className="text-xs">Genkit</Badge>
-                <Badge variant="secondary" className="text-xs">Firebase</Badge>
+                <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">React</span>
+                <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">Genkit</span>
+                <span className="inline-flex items-center rounded-full border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">Firebase</span>
               </div>
             </div>
           </div>
@@ -325,3 +323,5 @@ export default function HeroSection({
     </section>
   );
 }
+
+    
