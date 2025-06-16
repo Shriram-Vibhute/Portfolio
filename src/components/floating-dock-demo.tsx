@@ -5,12 +5,9 @@ import { FloatingDock } from "@/components/ui/floating-dock";
 import {
   IconBrandGithub,
   IconBrandX,
-  IconExchange,
   IconHome,
-  IconNewSection,
-  IconTerminal2,
 } from "@tabler/icons-react";
-import Image from 'next/image';
+import { LinkedinIcon, FileText, Trophy } from "lucide-react";
 
 export default function FloatingDockDemo() {
   const links = [
@@ -21,41 +18,20 @@ export default function FloatingDockDemo() {
       ),
       href: "#",
     },
-
     {
-      title: "Products",
+      title: "GitHub",
       icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
     },
     {
-      title: "Components",
+      title: "LinkedIn",
       icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <LinkedinIcon className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
     },
-    {
-      title: "Aceternity UI",
-      icon: (
-        <Image
-          src="https://assets.aceternity.com/logo-light.png"
-          width={20}
-          height={20}
-          alt="Aceternity Logo"
-        />
-      ),
-      href: "#",
-    },
-    {
-      title: "Changelog",
-      icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-
     {
       title: "Twitter",
       icon: (
@@ -64,9 +40,16 @@ export default function FloatingDockDemo() {
       href: "#",
     },
     {
-      title: "GitHub",
+      title: "Kaggle",
       icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <Trophy className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "Resume",
+      icon: (
+        <FileText className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
     },
@@ -82,4 +65,3 @@ export default function FloatingDockDemo() {
     </div>
   );
 }
-
