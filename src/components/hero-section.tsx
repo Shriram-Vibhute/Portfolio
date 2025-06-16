@@ -36,8 +36,9 @@ export default function HeroSection({
         <div className="w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-8 md:gap-12">
           {/* Left Part: Text (Badge, Greeting, Name, Availability) */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-5 order-2 md:order-1 md:flex-grow">
-            <div className="inline-block text-cyan-500 dark:text-cyan-400 border-b-2 border-cyan-500 dark:border-cyan-400 text-sm py-1 px-3 pb-1">
+            <div className="inline-block text-white text-sm py-1 px-3 relative pb-1">
               {badgeText}
+              <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-pink-400 via-purple-400 via-yellow-300 to-cyan-400"></span>
             </div>
             
             <h1 className="font-headline text-foreground">
