@@ -87,10 +87,10 @@ export default function HeroSection({
           </div>
         </div>
 
-        {/* Combined Intro and Buttons Section */}
-        <div className="w-full flex flex-col items-center md:items-start">
+        {/* Combined Keywords, Intro, and Buttons Section */}
+        <div className="w-full flex flex-col items-center md:items-start space-y-4">
           {/* Keywords Section */}
-          <div className="w-full flex flex-wrap justify-center md:justify-start items-center gap-x-4 gap-y-2 my-6">
+          <div className="w-full flex flex-wrap justify-center md:justify-start items-center gap-x-4 gap-y-2">
             {keywords.map((keyword) => (
               <span 
                 key={keyword} 
@@ -101,7 +101,7 @@ export default function HeroSection({
             ))}
           </div>
 
-          <p className="font-body text-base text-muted-foreground leading-relaxed hero-intro-text-animation w-full text-center md:text-left mb-6">
+          <p className="font-body text-base text-muted-foreground leading-relaxed hero-intro-text-animation w-full text-center md:text-left">
             {introParagraph}
           </p>
           <div className="w-full flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4">
@@ -109,7 +109,7 @@ export default function HeroSection({
               className={cn(
                 "button-custom-style",
                 "bg-white text-black hover:bg-gray-100",
-                "border border-gray-300 shadow-lg"
+                "border border-gray-300 shadow-lg" 
               )}
               asChild
             >
@@ -408,4 +408,3 @@ export default function HeroSection({
     </section>
   );
 }
-
