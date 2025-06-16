@@ -39,10 +39,12 @@ export default function HeroSection({
           </Badge>
 
           <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-foreground">
-            {greeting}{' '}
-            <span className={namePart1Color}>{namePart1}</span>{' '}
-            <span className={namePart2Color}>{namePart2}</span>
-            <span role="img" aria-label="waving hand" className="ml-2 inline-block">👋</span>
+            <div>{greeting}</div>
+            <div>
+              <span className={namePart1Color}>{namePart1}</span>{' '}
+              <span className={namePart2Color}>{namePart2}</span>
+              <span role="img" aria-label="waving hand" className="ml-2 inline-block">👋</span>
+            </div>
           </h1>
 
           <div className="flex items-center space-x-2 text-foreground/80">
