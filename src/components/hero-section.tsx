@@ -80,7 +80,7 @@ export default function HeroSection({
               height={192}
               className="rounded-full object-cover shadow-xl"
               priority
-              data-ai-hint="man sunglasses"
+              data-ai-hint="anime people"
             />
           </div>
         </div>
