@@ -28,6 +28,8 @@ export default function HeroSection({
   profileImageUrl,
   profileImageAlt,
 }: HeroSectionProps) {
+  const keywords = ["Data Science", "Machine Learning", "Deep Learning", "MLOps"];
+
   return (
     <section className="min-h-screen w-full flex items-center justify-center bg-transparent p-4 sm:p-8">
       <div className="max-w-3xl w-full mx-auto flex flex-col items-center md:items-start gap-8 md:gap-10">
@@ -87,6 +89,16 @@ export default function HeroSection({
 
         {/* Combined Intro and Buttons Section */}
         <div className="w-full flex flex-col items-center md:items-start">
+          {/* Keywords Section */}
+          <div className="w-full flex flex-wrap justify-around items-center gap-x-4 gap-y-2 my-6 text-sm text-foreground/80">
+            {keywords.map((keyword) => (
+              <span key={keyword} className="relative group cursor-default py-1 whitespace-nowrap">
+                {keyword}
+                <span className="absolute bottom-0 left-0 w-full h-[1px] bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-center"></span>
+              </span>
+            ))}
+          </div>
+
           <p className="font-body text-base text-muted-foreground leading-relaxed hero-intro-text-animation w-full text-center md:text-left mb-6">
             {introParagraph}
           </p>
@@ -394,4 +406,3 @@ export default function HeroSection({
     </section>
   );
 }
-
