@@ -94,7 +94,7 @@ export default function HeroSection({
             {keywords.map((keyword) => (
               <span 
                 key={keyword} 
-                className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors"
+                className="inline-flex items-center justify-center rounded-md text-[0.70rem] font-light py-[0.3rem] px-[0.9rem] bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors"
               >
                 {keyword}
               </span>
@@ -408,3 +408,4 @@ export default function HeroSection({
     </section>
   );
 }
+
