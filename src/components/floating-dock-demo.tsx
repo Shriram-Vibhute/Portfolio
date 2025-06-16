@@ -15,14 +15,19 @@ export default function FloatingDockDemo() {
       title: "Portfolio Hero", // Tooltip for the logo
       icon: (
         <svg
-          viewBox="0 0 24 24"
-          fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className="h-full w-full text-neutral-500 dark:text-neutral-300 group-hover:text-primary transition-colors duration-200"
           aria-hidden="true"
         >
-          {/* Simple shield with a dot logo */}
-          <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91c4.59-1.15 8-5.86 8-10.91V5l-8-3zm0 2.24L17.67 6.5V11.09c0 3.94-2.53 7.52-5.67 8.65a7.962 7.962 0 01-5.67-8.65V6.5L12 4.24zM12 11a1 1 0 100-2 1 1 0 000 2z" />
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
         </svg>
       ),
       href: "#", // Logo links to the top of the page
