@@ -4,7 +4,7 @@
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Code2, GitFork, Mail, Download } from 'lucide-react';
+import { Code2, GitFork, Mail, Download, Linkedin, Twitter } from 'lucide-react';
 import BentoGridDemo from '@/components/bento-grid-demo';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -42,7 +42,7 @@ export default function HeroSection({
         <div className="w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-8 md:gap-12">
           {/* Left Part: Text (Badge, Greeting, Name, Availability) */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-5 order-2 md:order-1 md:flex-grow">
-            <Badge className="bg-white text-purple-400 dark:text-purple-300 shadow-md text-sm py-1 px-3">
+            <Badge className="bg-white text-purple-600 dark:text-purple-400 shadow-lg text-sm py-1 px-3">
               {badgeText}
             </Badge>
 
@@ -324,3 +324,4 @@ export default function HeroSection({
     </section>
   );
 }
+
