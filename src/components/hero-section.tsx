@@ -90,11 +90,13 @@ export default function HeroSection({
         {/* Combined Intro and Buttons Section */}
         <div className="w-full flex flex-col items-center md:items-start">
           {/* Keywords Section */}
-          <div className="w-full flex flex-wrap justify-around items-center gap-x-4 gap-y-2 my-6 text-sm text-foreground/80">
+          <div className="w-full flex flex-wrap justify-center md:justify-start items-center gap-x-4 gap-y-2 my-6">
             {keywords.map((keyword) => (
-              <span key={keyword} className="relative group cursor-default py-1 whitespace-nowrap">
+              <span 
+                key={keyword} 
+                className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors"
+              >
                 {keyword}
-                <span className="absolute bottom-0 left-0 w-full h-[1px] bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-center"></span>
               </span>
             ))}
           </div>
@@ -406,3 +408,4 @@ export default function HeroSection({
     </section>
   );
 }
+
