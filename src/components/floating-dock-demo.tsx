@@ -72,6 +72,28 @@ export default function FloatingDockDemo() {
       ),
       href: "#",
     },
+    {
+      title: "Website",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="h-full w-full text-neutral-500 dark:text-neutral-300"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+          <path d="M2 12h20" />
+        </svg>
+      ),
+      href: "#",
+    },
   ];
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 flex justify-center p-4 pointer-events-none">
