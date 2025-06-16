@@ -110,6 +110,58 @@ export default function HeroSection({
             <Badge variant="secondary">Docker</Badge>
           </div>
         </div>
+
+        {/* Row 4: Projects Section (Wider) */}
+        <div className="w-full mt-10 md:mt-12">
+          <h2 className="text-2xl font-headline font-semibold text-foreground mb-6 text-center md:text-left">
+            Projects
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Project Card 1 */}
+            <div className="bg-card border border-border rounded-lg p-4 shadow-md flex flex-col">
+              <div className="relative w-full h-40 mb-3 rounded-md overflow-hidden">
+                <Image 
+                  src="https://placehold.co/600x400.png" 
+                  alt="Project 1 Placeholder" 
+                  layout="fill" 
+                  objectFit="cover"
+                  data-ai-hint="abstract tech"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-1">Project Alpha</h3>
+              <p className="text-sm text-muted-foreground mb-3 flex-grow">
+                A cutting-edge solution for an interesting problem, leveraging modern technologies to deliver performance.
+              </p>
+              <div className="flex flex-wrap gap-1">
+                <Badge variant="secondary" className="text-xs">Next.js</Badge>
+                <Badge variant="secondary" className="text-xs">TypeScript</Badge>
+                <Badge variant="secondary" className="text-xs">Tailwind</Badge>
+              </div>
+            </div>
+
+            {/* Project Card 2 */}
+            <div className="bg-card border border-border rounded-lg p-4 shadow-md flex flex-col">
+              <div className="relative w-full h-40 mb-3 rounded-md overflow-hidden">
+                <Image 
+                  src="https://placehold.co/600x400.png" 
+                  alt="Project 2 Placeholder" 
+                  layout="fill" 
+                  objectFit="cover"
+                  data-ai-hint="modern workspace"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-1">Service Beta</h3>
+              <p className="text-sm text-muted-foreground mb-3 flex-grow">
+                An innovative platform designed to streamline user workflows and enhance productivity through AI.
+              </p>
+              <div className="flex flex-wrap gap-1">
+                <Badge variant="secondary" className="text-xs">React</Badge>
+                <Badge variant="secondary" className="text-xs">Genkit</Badge>
+                <Badge variant="secondary" className="text-xs">Firebase</Badge>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
