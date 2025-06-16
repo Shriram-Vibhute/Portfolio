@@ -36,13 +36,13 @@ export default function HeroSection({
         <div className="w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-8 md:gap-12">
           {/* Left Part: Text (Badge, Greeting, Name, Availability) */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-5 order-2 md:order-1 md:flex-grow">
-            <div className="text-sm text-cyan-500 dark:text-cyan-400 inline-block py-1 px-3 border-b-2 border-cyan-500 dark:border-cyan-400">
+            <div className="inline-block py-1 px-3 text-sm text-cyan-500 dark:text-cyan-400 border-b-2 border-cyan-500 dark:border-cyan-400">
               {badgeText}
             </div>
 
-            <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl text-foreground">
-              <div>{greeting}</div>
-              <div style={{ whiteSpace: 'nowrap' }}>
+            <h1 className="font-headline text-foreground">
+              <div className="text-5xl">{greeting}</div>
+              <div className="text-4xl sm:text-5xl md:text-6xl" style={{ whiteSpace: 'nowrap' }}>
                 <span className="font-bold bg-gradient-to-r from-pink-400 via-purple-400 via-yellow-300 to-cyan-400 bg-clip-text text-transparent">
                   {namePart1} {namePart2}
                 </span>
@@ -393,3 +393,4 @@ export default function HeroSection({
     </section>
   );
 }
+
