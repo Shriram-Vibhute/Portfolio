@@ -7,7 +7,7 @@ import {
   IconBrandX,
   IconHome,
 } from "@tabler/icons-react";
-import { LinkedinIcon, FileText, Trophy } from "lucide-react";
+import { LinkedinIcon, FileText } from "lucide-react";
 
 export default function FloatingDockDemo() {
   const links = [
@@ -42,7 +42,9 @@ export default function FloatingDockDemo() {
     {
       title: "Kaggle",
       icon: (
-        <Trophy className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <span className="font-bold text-xl flex items-center justify-center h-full w-full text-neutral-500 dark:text-neutral-300">
+          K
+        </span>
       ),
       href: "#",
     },
