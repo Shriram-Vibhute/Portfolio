@@ -92,11 +92,10 @@ export default function HeroSection({
           </p>
           <div className="w-full flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4">
             <Button
-              size="sm"
               className={cn(
+                "button-custom-style",
                 "bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30",
-                "backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg",
-                "transition-all duration-250 hover:-translate-y-[1px] active:translate-y-0"
+                "backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg"
               )}
               asChild
             >
@@ -395,3 +394,4 @@ export default function HeroSection({
     </section>
   );
 }
+
