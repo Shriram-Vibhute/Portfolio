@@ -1,4 +1,5 @@
 import HeroSection from '@/components/hero-section';
+import FloatingDockDemo from '@/components/floating-dock-demo';
 
 export default function Home() {
   const socialLinks = [
@@ -8,7 +9,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex flex-col items-center justify-center">
+    <main className="flex flex-col items-center justify-center min-h-screen">
       <HeroSection
         name="Jamie Developer"
         title="Innovative Full-Stack Engineer & Creative Thinker"
@@ -17,6 +18,7 @@ export default function Home() {
         socialLinks={socialLinks}
         contactLink="mailto:jamie.developer@example.com"
       />
+      <FloatingDockDemo />
     </main>
   );
 }
