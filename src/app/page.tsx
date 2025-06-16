@@ -18,7 +18,7 @@ export default function Home() {
         primaryButtonLink="mailto:ramkrishna.swarnkar@example.com"
         secondaryButtonText="Message on"
         secondaryButtonLink="https://linkedin.com/in/ramkrishnaswarnkar" // Replace with actual LinkedIn profile
-        profileImageUrl="https://placehold.co/384x384.png" // Replace with actual image URL
+        profileImageUrl="https://placehold.co/288x288.png" // Updated to smaller placeholder
         profileImageAlt="Ramkrishna Swarnkar Profile Picture"
       />
       <FloatingDockDemo />

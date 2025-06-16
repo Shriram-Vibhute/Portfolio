@@ -10,7 +10,7 @@ interface HeroSectionProps {
   badgeText: string;
   greeting: string;
   namePart1: string;
-  namePart1Color?: string; 
+  namePart1Color?: string;
   namePart2: string;
   namePart2Color?: string;
   availabilityText: string;
@@ -41,7 +41,7 @@ export default function HeroSection({
 }: HeroSectionProps) {
   return (
     <section className="min-h-screen w-full flex items-center justify-center bg-background p-4 sm:p-8 selection:bg-accent selection:text-accent-foreground">
-      <div className="max-w-5xl w-full mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+      <div className="max-w-5xl w-full mx-auto flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
         {/* Text Content Column */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-5 md:w-3/5 lg:w-1/2">
           <Badge variant="outline" className="text-sm py-1 px-3 border-primary text-primary bg-primary/10">
@@ -91,12 +91,12 @@ export default function HeroSection({
 
         {/* Image Column */}
         <div className="md:w-2/5 lg:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
-          <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
+          <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72">
             <Image
               src={profileImageUrl}
               alt={profileImageAlt}
-              width={384}
-              height={384}
+              width={288}
+              height={288}
               className="rounded-lg object-contain shadow-xl"
               priority
               data-ai-hint="pixel art avatar"
