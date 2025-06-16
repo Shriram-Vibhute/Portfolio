@@ -4,7 +4,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Code2, GitFork, Mail, Download } from 'lucide-react';
-import BentoGridDemo from '@/components/bento-grid-demo';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -272,7 +271,41 @@ export default function HeroSection({
           <h2 className="text-2xl font-headline font-semibold text-foreground mb-6 text-center md:text-left">
             Kaggle Notebooks
           </h2>
-          <BentoGridDemo />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Kaggle Notebook Card 1 */}
+            <div className="bg-card border border-border rounded-lg p-4 shadow-md flex flex-col">
+              <div className="relative w-full h-40 mb-3 rounded-md overflow-hidden">
+                <Image 
+                  src="https://placehold.co/600x400.png" 
+                  alt="Kaggle Notebook 1 Placeholder" 
+                  layout="fill" 
+                  objectFit="cover"
+                  data-ai-hint="data science"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-1">Notebook Alpha</h3>
+              <p className="text-sm text-muted-foreground flex-grow">
+                An exploratory data analysis of a complex dataset, revealing key insights and patterns.
+              </p>
+            </div>
+
+            {/* Kaggle Notebook Card 2 */}
+            <div className="bg-card border border-border rounded-lg p-4 shadow-md flex flex-col">
+              <div className="relative w-full h-40 mb-3 rounded-md overflow-hidden">
+                <Image 
+                  src="https://placehold.co/600x400.png" 
+                  alt="Kaggle Notebook 2 Placeholder" 
+                  layout="fill" 
+                  objectFit="cover"
+                  data-ai-hint="machine learning"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-1">Notebook Beta</h3>
+              <p className="text-sm text-muted-foreground flex-grow">
+                Implementation of a machine learning model for predictive analytics, with performance evaluation.
+              </p>
+            </div>
+          </div>
         </div>
         
         {/* Blogs Section */}
@@ -324,4 +357,5 @@ export default function HeroSection({
     
 
     
+
 
