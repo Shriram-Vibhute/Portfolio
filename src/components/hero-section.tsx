@@ -92,7 +92,7 @@ export default function HeroSection({
         </div>
 
         {/* Combined Keywords, Intro, and Buttons Section */}
-        <div className="w-full flex flex-col items-center md:items-start space-y-4">
+        <div className="w-full flex flex-col items-center md:items-start space-y-4 -mt-4 md:-mt-6">
           {/* Keywords Section */}
           <div className="w-full flex flex-wrap justify-center md:justify-start items-center gap-x-4 gap-y-2">
             {keywords.map((keyword) => (
