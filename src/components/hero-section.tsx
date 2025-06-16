@@ -65,7 +65,7 @@ export default function HeroSection({
           </p>
 
           {/* Skills Section */}
-          <div className="mt-6 md:mt-8 w-full">
+          <div className="mt-10 md:mt-12 w-full">
             <h2 className="text-2xl font-headline font-semibold text-foreground mb-4 text-center md:text-left">
               Technical Skills
             </h2>
