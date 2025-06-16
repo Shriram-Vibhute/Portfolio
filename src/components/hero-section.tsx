@@ -30,7 +30,7 @@ export default function HeroSection({
       <div className="max-w-5xl w-full mx-auto flex flex-col items-center justify-center gap-6 md:gap-8">
         {/* Text Content Column */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-5 md:w-full">
-          <Badge variant="secondary" className="text-sm">
+          <Badge variant="secondary" className="text-sm py-1 px-3">
             {badgeText}
           </Badge>
 
@@ -63,6 +63,28 @@ export default function HeroSection({
           <p className="font-body text-xl text-muted-foreground leading-relaxed hero-intro-text-animation">
             {introParagraph}
           </p>
+
+          {/* Skills Section */}
+          <div className="mt-6 md:mt-8 w-full">
+            <h2 className="text-2xl font-headline font-semibold text-foreground mb-4 text-center md:text-left">
+              My Toolkit
+            </h2>
+            <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+              <Badge variant="secondary">Python</Badge>
+              <Badge variant="secondary">JavaScript</Badge>
+              <Badge variant="secondary">TypeScript</Badge>
+              <Badge variant="secondary">React</Badge>
+              <Badge variant="secondary">Next.js</Badge>
+              <Badge variant="secondary">Node.js</Badge>
+              <Badge variant="secondary">TensorFlow</Badge>
+              <Badge variant="secondary">PyTorch</Badge>
+              <Badge variant="secondary">Scikit-learn</Badge>
+              <Badge variant="secondary">Genkit</Badge>
+              <Badge variant="secondary">Tailwind CSS</Badge>
+              <Badge variant="secondary">Docker</Badge>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
