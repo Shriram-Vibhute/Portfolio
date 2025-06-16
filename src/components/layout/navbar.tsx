@@ -14,13 +14,9 @@ export default function Navbar() {
 
   useEffect(() => {
     setIsMounted(true);
-    // Attempt to read saved theme preference, otherwise use system preference or default to dark
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       setDarkMode(savedTheme === 'dark');
-    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      // If system preference is light and no saved theme, set to light.
-      // setDarkMode(false); // Keep dark as default for this app based on request
     }
   }, []);
 
@@ -46,17 +42,17 @@ export default function Navbar() {
   ];
 
   if (!isMounted) {
-    return <div className="h-14"></div>; // Placeholder to prevent layout shift during mount
+    return <div className="h-14"></div>;
   }
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-      <div className="container flex h-14 max-w-screen-2xl items-center px-4 md:px-8">
-        {/* Logo and Desktop Nav */}
+      <div className="container flex h-14 max-w-screen-xl items-center px-4 md:px-8"> {/* Changed max-w-screen-2xl to max-w-screen-xl */}
+        {/* Desktop Logo and Nav */}
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7 text-foreground">
-              <path d="M6.09375 3.75L2.0625 12L6.09375 20.25H9.9375L13.9688 12L9.9375 3.75H6.09375ZM11.0312 3.75L15.0625 12L11.0312 20.25H14.875L18.9062 12L14.875 3.75H11.0312Z" />
+              <path d="M12 2L2 7V17L12 22L22 17V7L12 2ZM4 8.5L12 13L20 8.5V15.5L12 20L4 15.5V8.5Z" />
             </svg>
             <span className="font-bold text-lg text-foreground">Aceternity UI</span>
             <Badge variant="default" className="bg-primary text-primary-foreground h-5 text-xs">pro</Badge>
@@ -74,7 +70,7 @@ export default function Navbar() {
           </nav>
         </div>
 
-        {/* Mobile Nav Trigger */}
+        {/* Mobile Nav Trigger & Mobile Logo */}
         <div className="flex flex-1 items-center justify-start space-x-2 md:hidden">
            <Sheet>
             <SheetTrigger asChild>
@@ -86,7 +82,7 @@ export default function Navbar() {
             <SheetContent side="left" className="pr-0 bg-background text-foreground w-[280px] sm:w-[320px]">
               <Link href="/" className="mb-6 flex items-center space-x-2 pl-5 pt-2">
                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7 text-primary">
-                    <path d="M6.09375 3.75L2.0625 12L6.09375 20.25H9.9375L13.9688 12L9.9375 3.75H6.09375ZM11.0312 3.75L15.0625 12L11.0312 20.25H14.875L18.9062 12L14.875 3.75H11.0312Z" />
+                    <path d="M12 2L2 7V17L12 22L22 17V7L12 2ZM4 8.5L12 13L20 8.5V15.5L12 20L4 15.5V8.5Z" />
                 </svg>
                 <span className="font-bold text-lg text-primary">Aceternity UI</span>
                  <Badge variant="default" className="bg-primary text-primary-foreground h-5 text-xs">pro</Badge>
@@ -113,7 +109,7 @@ export default function Navbar() {
           </Sheet>
            <Link href="/" className="flex items-center space-x-2 md:hidden -ml-2">
              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7 text-foreground">
-               <path d="M6.09375 3.75L2.0625 12L6.09375 20.25H9.9375L13.9688 12L9.9375 3.75H6.09375ZM11.0312 3.75L15.0625 12L11.0312 20.25H14.875L18.9062 12L14.875 3.75H11.0312Z" />
+               <path d="M12 2L2 7V17L12 22L22 17V7L12 2ZM4 8.5L12 13L20 8.5V15.5L12 20L4 15.5V8.5Z" />
             </svg>
             <span className="font-bold text-lg text-foreground">Aceternity UI</span>
            </Link>
