@@ -24,7 +24,7 @@ export default function RootLayout({
         {/* Dot pattern layer */}
         <div
           className={cn(
-            "absolute inset-0 -z-20",
+            "absolute inset-0 -z-20", // Corrected z-index for dots
             "[background-size:20px_20px]",
             "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]", // Light mode dots
             "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]" // Dark mode dots
@@ -33,7 +33,7 @@ export default function RootLayout({
         {/* Radial gradient mask layer to fade dots at edges */}
         <div
           className={cn(
-            "pointer-events-none absolute inset-0 -z-10",
+            "pointer-events-none absolute inset-0 -z-10", // Corrected z-index for mask
             "bg-background", // Use theme's background for the mask's solid areas
             "[mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
           )}
