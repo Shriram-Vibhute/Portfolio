@@ -7,7 +7,7 @@ import {
   IconBrandX,
   IconHome,
 } from "@tabler/icons-react";
-import { LinkedinIcon, FileText } from "lucide-react";
+import { LinkedinIcon, FileText, Mail } from "lucide-react";
 
 export default function FloatingDockDemo() {
   const links = [
@@ -71,6 +71,13 @@ export default function FloatingDockDemo() {
         <FileText className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
+    },
+    {
+      title: "Mail",
+      icon: (
+        <Mail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "mailto:your-email@example.com", // Replace with actual email
     },
     {
       title: "Website",
