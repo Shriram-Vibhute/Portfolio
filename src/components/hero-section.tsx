@@ -29,6 +29,10 @@ export default function HeroSection({
   profileImageAlt,
 }: HeroSectionProps) {
   const keywords = ["Data Science", "Machine Learning", "Deep Learning", "MLOps"];
+  const technicalSkills = [
+    "Python", "JavaScript", "TypeScript", "React", "Next.js", "Node.js", 
+    "TensorFlow", "PyTorch", "Scikit-learn", "Genkit", "Tailwind CSS", "Docker"
+  ];
 
   return (
     <section className="min-h-screen w-full flex items-center justify-center bg-transparent p-4 sm:p-8">
@@ -138,18 +142,14 @@ export default function HeroSection({
             Technical Skills
           </h2>
           <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">Python</span>
-            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">JavaScript</span>
-            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">TypeScript</span>
-            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">React</span>
-            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">Next.js</span>
-            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">Node.js</span>
-            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">TensorFlow</span>
-            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">PyTorch</span>
-            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">Scikit-learn</span>
-            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">Genkit</span>
-            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">Tailwind CSS</span>
-            <span className="inline-flex items-center justify-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors">Docker</span>
+            {technicalSkills.map((skill) => (
+               <span 
+                key={skill} 
+                className="inline-flex items-center justify-center rounded-md text-[0.70rem] font-light py-[0.3rem] px-[0.9rem] bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30 backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg transition-colors"
+              >
+                {skill}
+              </span>
+            ))}
           </div>
         </div>
 
@@ -408,4 +408,3 @@ export default function HeroSection({
     </section>
   );
 }
-
