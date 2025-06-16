@@ -3,7 +3,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Code2, GitFork, Mail, Download } from 'lucide-react';
+import { Code2, GitFork, Mail, Download, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -231,6 +231,46 @@ export default function HeroSection({
             </div>
           </div>
         </div>
+
+        {/* Education Section */}
+        <div className="w-full mt-10 md:mt-12">
+          <h2 className="text-2xl font-headline font-semibold text-foreground mb-8 text-center md:text-left">
+            Education
+          </h2>
+          <div className="space-y-6">
+            {/* Education Item 1 */}
+            <div className="bg-card border border-border rounded-xl p-5 shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-start gap-5 cursor-pointer">
+              <div className="flex-shrink-0 bg-primary/10 text-primary p-3 rounded-lg">
+                <GraduationCap className="h-7 w-7" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-foreground mb-1">Master of Science in Data Science</h3>
+                <p className="text-sm text-muted-foreground">
+                  Stanford University | 2020 - 2022
+                </p>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Specialized in Machine Learning and Statistical Modeling.
+                </p>
+              </div>
+            </div>
+
+            {/* Education Item 2 */}
+            <div className="bg-card border border-border rounded-xl p-5 shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-start gap-5 cursor-pointer">
+              <div className="flex-shrink-0 bg-primary/10 text-primary p-3 rounded-lg">
+                <GraduationCap className="h-7 w-7" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-foreground mb-1">Bachelor of Engineering in Computer Science</h3>
+                <p className="text-sm text-muted-foreground">
+                  MIT (Massachusetts Institute of Technology) | 2016 - 2020
+                </p>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Graduated with honors, focus on AI and Software Development.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         
         {/* Experience Section */}
         <div className="w-full mt-10 md:mt-12">
@@ -353,9 +393,3 @@ export default function HeroSection({
     </section>
   );
 }
-
-    
-
-    
-
-
