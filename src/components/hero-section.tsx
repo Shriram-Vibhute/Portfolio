@@ -27,10 +27,10 @@ export default function HeroSection({
 }: HeroSectionProps) {
   return (
     <section className="min-h-screen w-full flex items-center justify-center bg-background p-4 sm:p-8 selection:bg-accent selection:text-accent-foreground">
-      <div className="max-w-5xl w-full mx-auto flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
+      <div className="max-w-5xl w-full mx-auto flex flex-col items-center justify-center gap-6 md:gap-8">
         {/* Text Content Column */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-5 md:w-full">
-          <Badge variant="outline" className="text-sm py-1 px-3 border-accent text-accent bg-accent/10">
+          <Badge variant="secondary" className="text-sm">
             {badgeText}
           </Badge>
 
