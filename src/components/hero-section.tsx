@@ -67,7 +67,7 @@ export default function HeroSection({
           {/* Skills Section */}
           <div className="mt-6 md:mt-8 w-full">
             <h2 className="text-2xl font-headline font-semibold text-foreground mb-4 text-center md:text-left">
-              My Toolkit
+              Technical Skills
             </h2>
             <div className="flex flex-wrap gap-2 justify-center md:justify-start">
               <Badge variant="secondary">Python</Badge>
