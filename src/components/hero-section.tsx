@@ -1,7 +1,6 @@
 
 "use client";
 
-import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
 
@@ -14,8 +13,6 @@ interface HeroSectionProps {
   namePart2Color?: string;
   availabilityText: string;
   introParagraph: string;
-  profileImageUrl: string;
-  profileImageAlt: string;
 }
 
 export default function HeroSection({
@@ -27,14 +24,12 @@ export default function HeroSection({
   namePart2Color = 'text-yellow-500',
   availabilityText,
   introParagraph,
-  profileImageUrl,
-  profileImageAlt,
 }: HeroSectionProps) {
   return (
     <section className="min-h-screen w-full flex items-center justify-center bg-background p-4 sm:p-8 selection:bg-accent selection:text-accent-foreground">
       <div className="max-w-5xl w-full mx-auto flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
         {/* Text Content Column */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-5 md:w-3/5 lg:w-1/2">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-5 md:w-full">
           <Badge variant="outline" className="text-sm py-1 px-3 border-accent text-accent bg-accent/10">
             {badgeText}
           </Badge>
@@ -69,23 +64,7 @@ export default function HeroSection({
             {introParagraph}
           </p>
         </div>
-
-        {/* Image Column */}
-        <div className="md:w-2/5 lg:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
-          <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32">
-            <Image
-              src={profileImageUrl}
-              alt={profileImageAlt}
-              width={128}
-              height={128}
-              className="rounded-full object-cover shadow-xl"
-              priority
-              data-ai-hint="anime people"
-            />
-          </div>
-        </div>
       </div>
     </section>
   );
 }
-

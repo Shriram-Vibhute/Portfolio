@@ -14,8 +14,6 @@ export default function Home() {
         namePart2Color="text-yellow-500"
         availabilityText="Available for new projects"
         introParagraph="From uncovering insights with Data Science and Machine Learning to building intelligent and scaleble applications with Deep Learning and MLOps."
-        profileImageUrl="https://storage.googleapis.com/aide-mode-images/1f72920b-562c-4449-8b71-797820a7516a.jpeg"
-        profileImageAlt="Shriram Vibhute Profile Picture"
       />
       <FloatingDockDemo />
     </main>
