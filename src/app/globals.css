@@ -5,6 +5,9 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* For Firefox - thin scrollbar with themed thumb and transparent track */
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
   }
   :root {
     --background: 225 100% 97%; /* #F0F4FF */
@@ -90,6 +93,25 @@
     --sidebar-accent-foreground: 180 100% 98%;
     --sidebar-border: 0 0% 12%;
     --sidebar-ring: 217 91% 60%;
+  }
+
+  /* Custom Scrollbar Styles for Webkit-based browsers */
+  ::-webkit-scrollbar {
+    width: 6px; /* Width of the vertical scrollbar */
+    height: 6px; /* Height of the horizontal scrollbar */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent; /* Make the track transparent */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--border)); /* Use a subtle color from the theme */
+    border-radius: 10px; /* Rounded corners for the thumb */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--muted-foreground)); /* Darken thumb on hover */
   }
 }
 
