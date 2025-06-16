@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Code2, GitFork, Linkedin, Twitter, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import BentoGridDemo from '@/components/bento-grid-demo';
 
 interface HeroSectionProps {
   badgeText: string;
@@ -240,6 +241,14 @@ export default function HeroSection({
             </div>
           </div>
         </div>
+
+        {/* Kaggle Notebooks Section */}
+        <div className="w-full mt-10 md:mt-12">
+          <h2 className="text-2xl font-headline font-semibold text-foreground mb-6 text-center md:text-left">
+            Kaggle Notebooks
+          </h2>
+          <BentoGridDemo />
+        </div>
         
         {/* Row 7: Blogs Section */}
         <div className="w-full mt-10 md:mt-12">
@@ -314,4 +323,3 @@ export default function HeroSection({
     </section>
   );
 }
-
