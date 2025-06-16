@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: 'Portfolio Hero',
@@ -19,7 +20,24 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased">
+      <body className="font-body antialiased bg-background relative selection:bg-accent selection:text-accent-foreground">
+        {/* Dot pattern layer */}
+        <div
+          className={cn(
+            "absolute inset-0 -z-20",
+            "[background-size:20px_20px]",
+            "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]", // Light mode dots
+            "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]" // Dark mode dots
+          )}
+        />
+        {/* Radial gradient mask layer to fade dots at edges */}
+        <div
+          className={cn(
+            "pointer-events-none absolute inset-0 -z-10",
+            "bg-background", // Use theme's background for the mask's solid areas
+            "[mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
+          )}
+        />
         {children}
         <Toaster />
       </body>

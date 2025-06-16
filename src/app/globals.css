@@ -121,6 +121,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    @apply selection:bg-accent selection:text-accent-foreground;
   }
 }
 
@@ -140,3 +141,4 @@
     }
   }
 }
+
