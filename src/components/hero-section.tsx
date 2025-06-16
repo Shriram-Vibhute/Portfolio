@@ -3,6 +3,8 @@
 
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
+import { motion } from 'framer-motion';
+import { Hand } from 'lucide-react';
 
 interface HeroSectionProps {
   badgeText: string;
@@ -43,7 +45,19 @@ export default function HeroSection({
             <div>
               <span className={namePart1Color}>{namePart1}</span>{' '}
               <span className={namePart2Color}>{namePart2}</span>
-              <span role="img" aria-label="waving hand" className="ml-2 inline-block">👋</span>
+              <motion.span
+                className="ml-2 inline-block"
+                aria-label="waving hand"
+                animate={{ rotate: [0, 15, -10, 15, 0, 0] }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatDelay: 3.5,
+                  ease: "easeInOut",
+                }}
+              >
+                <Hand className="inline-block h-[0.8em] w-[0.8em] align-middle" />
+              </motion.span>
             </div>
           </h1>
 
