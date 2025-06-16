@@ -30,8 +30,9 @@ export default function HeroSection({
 }: HeroSectionProps) {
   const keywords = ["Data Science", "Machine Learning", "Deep Learning", "MLOps"];
   const technicalSkills = [
-    "Python", "JavaScript", "TypeScript", "React", "Next.js", "Node.js", 
-    "TensorFlow", "PyTorch", "Scikit-learn", "Genkit", "Tailwind CSS", "Docker"
+    "Python", "SQL", "Scikit-Learn", "Keras", "Tensorflow", "LangChain", 
+    "Pandas", "Numpy", "Matplotlib", "Seaborn", "Git", "GitHub Actions", 
+    "Docker", "DVC", "MLFlow"
   ];
 
   return (
