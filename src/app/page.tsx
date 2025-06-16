@@ -1,6 +1,5 @@
 
 import HeroSection from '@/components/hero-section';
-import FloatingDockDemo from '@/components/floating-dock-demo';
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
         profileImageUrl="https://placehold.co/288x288.png"
         profileImageAlt="Shriram Vibhute Profile Picture"
       />
-      <FloatingDockDemo />
     </main>
   );
 }
