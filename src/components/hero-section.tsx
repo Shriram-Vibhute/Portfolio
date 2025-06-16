@@ -4,7 +4,7 @@
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Code2, GitFork, Mail, Download } from 'lucide-react';
+import { Code2, GitFork, Mail, Download, Linkedin, Twitter } from 'lucide-react'; // Linkedin and Twitter might be unused if contact section was removed
 import BentoGridDemo from '@/components/bento-grid-demo';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -89,37 +89,37 @@ export default function HeroSection({
           </div>
         </div>
 
-        {/* Row 2: Intro Paragraph (Wider) */}
-        <p className="font-body text-xl text-muted-foreground leading-relaxed hero-intro-text-animation w-full text-center md:text-left">
-          {introParagraph}
-        </p>
-
-        {/* Buttons after Intro Paragraph */}
-        <div className="w-full flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4 mt-6 md:mt-8">
-          <Button
-            className={cn(
-              "button-custom-style",
-              "bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30",
-              "backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg"
-            )}
-            asChild
-          >
-            <a href="mailto:shriram.vibhute@example.com"> 
-              <Mail className="mr-2 h-4 w-4" /> Mail
-            </a>
-          </Button>
-          <Button
-            className={cn(
-              "button-custom-style",
-              "bg-zinc-900/70 dark:bg-zinc-800/60 text-primary-foreground hover:bg-zinc-900/80 dark:hover:bg-zinc-800/70",
-              "backdrop-blur-sm border border-white/20 dark:border-white/10 shadow-lg"
-            )}
-            asChild
-          >
-            <a href="/resume.pdf" download> 
-              <Download className="mr-2 h-4 w-4" /> Resume
-            </a>
-          </Button>
+        {/* Combined Intro and Buttons Section */}
+        <div className="w-full flex flex-col items-center md:items-start">
+          <p className="font-body text-xl text-muted-foreground leading-relaxed hero-intro-text-animation w-full text-center md:text-left mb-6">
+            {introParagraph}
+          </p>
+          <div className="w-full flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4">
+            <Button
+              className={cn(
+                "button-custom-style",
+                "bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30",
+                "backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg"
+              )}
+              asChild
+            >
+              <a href="mailto:shriram.vibhute@example.com"> 
+                <Mail className="mr-2 h-4 w-4" /> Mail
+              </a>
+            </Button>
+            <Button
+              className={cn(
+                "button-custom-style",
+                "bg-zinc-900/70 dark:bg-zinc-800/60 text-primary-foreground hover:bg-zinc-900/80 dark:hover:bg-zinc-800/70",
+                "backdrop-blur-sm border border-white/20 dark:border-white/10 shadow-lg"
+              )}
+              asChild
+            >
+              <a href="/resume.pdf" download> 
+                <Download className="mr-2 h-4 w-4" /> Resume
+              </a>
+            </Button>
+          </div>
         </div>
 
         {/* Row 3: Skills Section (Wider) */}
@@ -280,7 +280,7 @@ export default function HeroSection({
         </div>
         
         {/* Blogs Section */}
-        <div className="w-full mt-10 md:mt-12 pb-24"> {/* Increased pb for more space */}
+        <div className="w-full mt-10 md:mt-12 pb-24"> {/* Increased pb for more space before floating dock */}
           <h2 className="text-2xl font-headline font-semibold text-foreground mb-6 text-center md:text-left">
             Blogs
           </h2>
