@@ -94,8 +94,8 @@ export default function HeroSection({
             <Button
               className={cn(
                 "button-custom-style",
-                "bg-white/30 dark:bg-white/20 text-foreground hover:bg-white/40 dark:hover:bg-white/30",
-                "backdrop-blur-sm border border-white/40 dark:border-white/30 shadow-lg"
+                "bg-white text-black hover:bg-gray-100",
+                "border border-gray-300 shadow-lg"
               )}
               asChild
             >
