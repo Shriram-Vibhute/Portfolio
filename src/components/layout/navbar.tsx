@@ -27,8 +27,8 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-      <div className="container mx-auto flex h-14 max-w-screen-xl items-center justify-between px-4 md:justify-center md:px-8">
+    <nav className="sticky top-0 z-50 w-full py-3">
+      <div className="mx-auto flex h-14 max-w-fit items-center justify-between rounded-lg border border-border bg-background/95 px-4 shadow-md backdrop-blur supports-[backdrop-filter]:bg-background/80 md:justify-center">
         
         <div className="md:hidden">
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -84,4 +84,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
