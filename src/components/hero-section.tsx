@@ -4,7 +4,6 @@
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
-import { Hand } from 'lucide-react';
 
 interface HeroSectionProps {
   badgeText: string;
@@ -56,7 +55,7 @@ export default function HeroSection({
                   ease: "easeInOut",
                 }}
               >
-                <Hand className="inline-block h-[0.8em] w-[0.8em] align-middle" />
+                👋🏻
               </motion.span>
             </div>
           </h1>
