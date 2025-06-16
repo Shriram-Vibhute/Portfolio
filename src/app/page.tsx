@@ -4,7 +4,7 @@ import FloatingDockDemo from "@/components/floating-dock-demo";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center">
+    <main className="flex flex-col items-center justify-center pt-16">
       <HeroSection
         badgeText="Machine Learning Engineer"
         greeting="Hello, I'm"
