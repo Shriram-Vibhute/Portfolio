@@ -11,7 +11,7 @@ export default {
     extend: {
       fontFamily: {
         body: ['Open Sans', 'sans-serif'],
-        headline: ['Cinzel', 'serif'],
+        headline: ['Montserrat', 'sans-serif'],
         code: ['Open Sans', 'sans-serif'],
       },
       colors: {
