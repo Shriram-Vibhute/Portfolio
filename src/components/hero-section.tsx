@@ -32,7 +32,7 @@ export default function HeroSection({
 }: HeroSectionProps) {
   return (
     <section className="min-h-screen w-full flex items-center justify-center bg-background p-4 sm:p-8 selection:bg-accent selection:text-accent-foreground">
-      <div className="max-w-[50rem] w-full mx-auto flex flex-col items-center md:items-start gap-8 md:gap-10">
+      <div className="max-w-3xl w-full mx-auto flex flex-col items-center md:items-start gap-8 md:gap-10">
 
         {/* Row 1: Name/Greeting/Badge/Availability + Image */}
         <div className="w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-8 md:gap-12">
