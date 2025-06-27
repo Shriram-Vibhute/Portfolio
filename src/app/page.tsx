@@ -2,6 +2,7 @@ import { About } from "@/components/sections/about";
 import { Hero } from "@/components/sections/hero";
 import { FadeIn } from "@/components/fade-in";
 import { Footer } from "@/components/footer";
+import { Skills } from "@/components/sections/skills";
 
 export default function Home() {
   return (
@@ -12,6 +13,9 @@ export default function Home() {
         </FadeIn>
         <FadeIn>
           <About />
+        </FadeIn>
+        <FadeIn>
+          <Skills />
         </FadeIn>
       </main>
       <Footer />
