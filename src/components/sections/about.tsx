@@ -3,7 +3,7 @@ export function About() {
     <section id="about" className="w-full py-8">
       <div className="w-full max-w-[50%] mx-auto px-4 md:px-6">
         <div className="space-y-4">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+          <h2 className="text-[1.7rem] font-bold tracking-tighter">
             About
           </h2>
           <p className="text-custom md:text-lg/relaxed">
