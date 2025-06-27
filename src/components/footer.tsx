@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 export function Footer() {
   return (
     <footer className="w-full py-8">
-      <div className="w-full max-w-[65%] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 px-4 md:px-6">
+      <div className="w-full max-w-[50%] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 px-4 md:px-6">
         <p className="text-sm text-muted-foreground text-center sm:text-left">
           © {new Date().getFullYear()} MirrorFolio. All rights reserved.
         </p>
