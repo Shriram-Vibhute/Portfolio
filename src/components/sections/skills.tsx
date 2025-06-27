@@ -23,7 +23,11 @@ export function Skills() {
           </h2>
           <div className="flex flex-wrap gap-2">
             {skills.map((skill) => (
-              <Badge key={skill} variant="default" className="text-sm font-normal">
+              <Badge
+                key={skill}
+                variant="default"
+                className="rounded-md bg-black text-white hover:bg-gray-800 text-sm font-normal"
+              >
                 {skill}
               </Badge>
             ))}
