@@ -4,14 +4,14 @@ import { Github, Linkedin, Twitter, Mail, Phone, Globe } from "lucide-react";
 
 export function Hero() {
   return (
-    <section id="hero" className="w-full py-12 md:py-24 lg:py-32">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="hero" className="w-full py-12 md:py-16 lg:py-20">
+      <div className="w-full max-w-[65%] mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-3 items-center gap-8 lg:gap-12">
           <div className="md:col-span-2 space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
               Debarghya Das
             </h1>
-            <p className="max-w-2xl text-muted-foreground md:text-lg">
+            <p className="text-muted-foreground md:text-lg">
               Experienced software engineer with a strong background in computer science and a focus on machine learning, web development, and open-source contributions. Adept at leading teams and delivering high-impact projects.
             </p>
             <p className="text-sm text-muted-foreground">Ithaca, NY</p>

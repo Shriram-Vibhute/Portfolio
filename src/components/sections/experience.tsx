@@ -38,21 +38,21 @@ const experienceData = [
 
 export function Experience() {
   return (
-    <section id="experience" className="w-full py-12 md:py-24 lg:py-32 bg-white/30 dark:bg-black/30">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="experience" className="w-full py-12 md:py-16 lg:py-20 bg-white/30 dark:bg-black/30">
+      <div className="w-full max-w-[65%] mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center space-y-8 text-center">
           <div className="space-y-4">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Experience
             </h2>
-            <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               A timeline of my professional journey and key accomplishments in the tech industry.
             </p>
           </div>
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-1">
           {experienceData.map((exp, index) => (
-            <Card key={index} className="w-full max-w-3xl mx-auto shadow-md hover:shadow-xl transition-shadow duration-300">
+            <Card key={index} className="w-full shadow-md hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <div className="flex flex-col sm:flex-row justify-between sm:items-center">
                   <CardTitle>{exp.role}</CardTitle>
