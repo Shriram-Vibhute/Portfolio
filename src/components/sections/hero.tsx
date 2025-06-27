@@ -11,7 +11,7 @@ export function Hero() {
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
               Debarghya Das
             </h1>
-            <p className="text-muted-foreground md:text-lg">
+            <p className="text-custom md:text-lg">
               Experienced software engineer with a strong background in computer science and a focus on machine learning, web development, and open-source contributions. Adept at leading teams and delivering high-impact projects.
             </p>
             <p className="text-sm text-muted-foreground">Ithaca, NY</p>
