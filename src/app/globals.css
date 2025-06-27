@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Source Code Pro", monospace;
 }
 
 @layer base {
@@ -20,6 +20,7 @@ body {
     --secondary-foreground: 234 18% 23%;
     --muted: 240 5% 90%;
     --muted-foreground: 240 5% 60%;
+    --custom-text: 0 0% 38%;
     --accent: 247 15% 55%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
@@ -55,6 +56,7 @@ body {
     --secondary-foreground: 240 14% 96%;
     --muted: 234 18% 25%;
     --muted-foreground: 240 5% 70%;
+    --custom-text: 0 0% 70%;
     --accent: 247 15% 65%;
     --accent-foreground: 234 18% 10%;
     --destructive: 0 62.8% 30.6%;
