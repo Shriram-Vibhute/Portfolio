@@ -1,17 +1,15 @@
 const educations = [
   {
-    institution: "Cornell University",
-    degree: "Master of Science in Computer Science",
-    duration: "2019 - 2021",
-    description:
-      "Specialized in Machine Learning and Artificial Intelligence. Thesis on 'Deep Learning for Natural Language Understanding'.",
+    institution: "Pimpri Chinchwad College Of Engineering",
+    degree: "Bachelor of Technology - BTech, Mechanical Engineering",
+    duration: "Dec 2020 - May 2024",
+    description: "",
   },
   {
-    institution: "Jadavpur University",
-    degree: "Bachelor of Engineering in Computer Science",
-    duration: "2015 - 2019",
-    description:
-      "Graduated with First Class Honours. Actively involved in the university's coding club and competitive programming.",
+    institution: "Pimpri Chinchwad College Of Engineering",
+    degree: "Minors Software Development, Information Technology",
+    duration: "Jun 2022 - May 2024",
+    description: "",
   },
 ];
 
@@ -23,7 +21,7 @@ export function Education() {
           <h2 className="text-[1.7rem] font-bold tracking-tighter">Education</h2>
           <div className="space-y-8">
             {educations.map((edu) => (
-              <div key={edu.institution}>
+              <div key={edu.degree}>
                 <div className="flex justify-between items-baseline">
                   <h3 className="text-xl font-bold">{edu.institution}</h3>
                   <p className="text-sm text-muted-foreground">
