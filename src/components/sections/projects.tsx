@@ -24,7 +24,8 @@ const projects = [
     description:
       "Built a chrome plugin which analyse and classify current youtube video's comments.",
     image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx5b3V0dWJlfGVufDB8fHx8MTc1MTEwNzkwNHww&ixlib=rb-4.1.0&q=80&w=1080",
-    tags: ["React", "Node.js", "D3.js"],
+    link: "#",
+    liveLink: "#",
     aiHint: "youtube logo",
   },
 ];
@@ -47,7 +48,7 @@ export function Projects() {
                     height={400}
                     className="rounded-t-lg object-cover"
                   />
-                  <CardTitle className="pt-4 text-xl font-semibold tracking-tight">{project.title}</CardTitle>
+                  <CardTitle className="pt-4 font-semibold tracking-tight text-xl">{project.title}</CardTitle>
                   <CardDescription>{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
