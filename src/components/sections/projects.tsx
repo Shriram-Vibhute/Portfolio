@@ -6,7 +6,6 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
 
@@ -23,10 +22,9 @@ const projects = [
     title: "Comments Sentiment Analysis",
     description:
       "Built a chrome plugin which analyse and classify current youtube video's comments.",
-    image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx5b3V0dWJlfGVufDB8fHx8MTc1MTEwNzkwNHww&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "https://drive.google.com/uc?export=view&id=1ya67wIF3eFrA3hlYwfj3D4VI4yFqSEPf",
     link: "https://github.com/Shriram-Vibhute/WhatsApp-Chat-Analyzer",
     liveLink: "#",
-    aiHint: "youtube logo",
   },
 ];
 
@@ -52,32 +50,22 @@ export function Projects() {
                   <CardDescription>{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  {project.link || project.liveLink ? (
-                    <div className="flex gap-2">
-                      {project.link && (
-                        <Button asChild size="icon" className="bg-[#2f2f2f] hover:bg-[#2f2f2f]/90">
-                          <a href={project.link} target="_blank" rel="noopener noreferrer">
-                            <Github className="h-4 w-4" />
-                          </a>
-                        </Button>
-                      )}
-                      {project.liveLink && (
-                         <Button asChild size="icon" variant="secondary">
-                           <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                             <ExternalLink className="h-4 w-4" />
-                           </a>
-                         </Button>
-                      )}
-                    </div>
-                  ) : (
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags?.map((tag) => (
-                        <Badge key={tag} variant="secondary">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                  )}
+                  <div className="flex gap-2">
+                    {project.link && (
+                      <Button asChild size="icon" className="bg-[#2f2f2f] hover:bg-[#2f2f2f]/90">
+                        <a href={project.link} target="_blank" rel="noopener noreferrer">
+                          <Github className="h-4 w-4" />
+                        </a>
+                      </Button>
+                    )}
+                    {project.liveLink && (
+                       <Button asChild size="icon" variant="secondary">
+                         <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                           <ExternalLink className="h-4 w-4" />
+                         </a>
+                       </Button>
+                    )}
+                  </div>
                 </CardContent>
               </Card>
             ))}
