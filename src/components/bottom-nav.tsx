@@ -4,7 +4,7 @@ import {
   Github,
   Linkedin,
   Twitter,
-  TrendingUp,
+  Code,
   FileText,
   Mail,
 } from "lucide-react";
@@ -37,7 +37,7 @@ const navLinks = [
   },
   {
     href: "https://www.kaggle.com/shriramvibhute",
-    icon: TrendingUp,
+    icon: Code,
     tooltip: "Kaggle",
     target: "_blank",
   },
@@ -59,7 +59,7 @@ export function BottomNav() {
   return (
     <TooltipProvider>
       <nav className="fixed bottom-4 left-1/2 z-50 -translate-x-1/2">
-        <div className="flex items-center gap-1 rounded-full bg-black/50 backdrop-blur-md p-2 border border-gray-200/20 shadow-lg">
+        <div className="flex items-center gap-1 rounded-lg bg-background p-1 border shadow-lg">
           {navLinks.map((link) => (
             <Tooltip key={link.tooltip}>
               <TooltipTrigger asChild>
@@ -67,7 +67,7 @@ export function BottomNav() {
                   asChild
                   variant="ghost"
                   size="icon"
-                  className="rounded-full text-white hover:bg-white/10 hover:text-white"
+                  className="rounded-full text-foreground hover:bg-accent hover:text-accent-foreground"
                 >
                   <a
                     href={link.href}
