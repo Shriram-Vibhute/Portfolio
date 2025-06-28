@@ -17,9 +17,9 @@ const projects = [
     tags: ["Python", "Dask", "Streamlit", "Docker", "AWS", "DVC"],
   },
   {
-    title: "Project Beta",
+    title: "Comments Sentiment Analysis",
     description:
-      "A scalable web application for real-time data visualization and analysis.",
+      "Built a chrome plugin which analyse and classify current youtube video's comments.",
     image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx5b3V0dWJlfGVufDB8fHx8MTc1MTEwNzkwNHww&ixlib=rb-4.1.0&q=80&w=1080",
     tags: ["React", "Node.js", "D3.js"],
     aiHint: "youtube logo",
