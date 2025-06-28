@@ -12,7 +12,7 @@ export function Hero() {
               Debarghya Das
             </h1>
             <p className="text-custom md:text-lg">
-              Experienced software engineer with a strong background in computer science and a focus on machine learning, web development, and open-source contributions. Adept at leading teams and delivering high-impact projects.
+              From uncovering insights with Data Science to building intelligent and scalable applications with Machine Learning, Deep Learning and MLOps.
             </p>
             <p className="text-sm text-muted-foreground">Ithaca, NY</p>
             <div className="flex gap-2">
