@@ -37,16 +37,17 @@ export function Projects() {
           <div className="grid md:grid-cols-2 gap-4">
             {projects.map((project: {title: string, description: string, image: string, link?: string, liveLink?: string, tags?: string[], aiHint?: string}) => (
               <Card key={project.title}>
-                <CardHeader>
+                <div className="aspect-video w-full relative overflow-hidden rounded-t-lg">
                   <Image
                     src={project.image}
                     alt={project.title}
                     data-ai-hint={project.aiHint}
-                    width={600}
-                    height={200}
-                    className="rounded-t-lg object-cover"
+                    fill
+                    className="object-cover"
                   />
-                  <CardTitle className="pt-4 font-semibold tracking-tight text-xl">{project.title}</CardTitle>
+                </div>
+                <CardHeader>
+                  <CardTitle className="font-semibold tracking-tight text-xl">{project.title}</CardTitle>
                   <CardDescription>{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
