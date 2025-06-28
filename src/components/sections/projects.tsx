@@ -7,6 +7,8 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Github } from "lucide-react";
 
 const projects = [
   {
@@ -14,7 +16,7 @@ const projects = [
     description:
       "Built a songs hybrid recommender system using machine learning and MLOps.",
     image: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzcG90aWZ5fGVufDB8fHx8MTc1MTEwNzM2OHww&ixlib=rb-4.1.0&q=80&w=1080",
-    tags: ["Python", "Dask", "Streamlit", "Docker", "AWS", "DVC"],
+    link: "https://github.com/Shriram-Vibhute/Hybrid-Recommendor-System",
   },
   {
     title: "Comments Sentiment Analysis",
@@ -33,7 +35,7 @@ export function Projects() {
         <div className="space-y-4">
           <h2 className="text-[1.7rem] font-bold tracking-tighter">Projects</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            {projects.map((project) => (
+            {projects.map((project: {title: string, description: string, image: string, link?: string, tags?: string[], aiHint?: string}) => (
               <Card key={project.title}>
                 <CardHeader>
                   <Image
@@ -48,13 +50,21 @@ export function Projects() {
                   <CardDescription>{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
+                  {project.link ? (
+                    <Button asChild>
+                      <a href={project.link} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-2 h-4 w-4" /> View on GitHub
+                      </a>
+                    </Button>
+                  ) : (
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags?.map((tag) => (
+                        <Badge key={tag} variant="secondary">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}
