@@ -1,16 +1,24 @@
 import { Badge } from "@/components/ui/badge";
 
 const skills = [
-  "Java",
   "Python",
-  "JavaScript",
-  "C++",
-  "Machine Learning",
-  "Web Development",
-  "Backbone.js",
-  "Scala",
-  "PHP",
-  "Team Leadership",
+  "C/C++",
+  "SQL",
+  "Scikit-learn",
+  "Pandas",
+  "NumPy",
+  "Matplotlib",
+  "Seaborn",
+  "Tensorflow",
+  "Keras",
+  "Pytorch",
+  "AWS (Amazon Web Services)",
+  "DVC (Data Version Control)",
+  "MLflow",
+  "Docker (Basics)",
+  "CI/CD (Continuous Integration/Continuous Delivery)",
+  "GitHub Actions",
+  "Git",
 ];
 
 export function Skills() {
