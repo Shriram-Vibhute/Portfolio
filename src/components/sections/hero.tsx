@@ -35,7 +35,7 @@ export function Hero() {
           </div>
           <div className="flex justify-center md:justify-end">
             <Image
-              src="https://media.licdn.com/dms/image/v2/D4D35AQHhKZKBdH0fnA/profile-framedphoto-shrink_200_200/B4DZdKpFTzHkAY-/0/1749303973456?e=1751713200&v=beta&t=mC8KTGeZ1JYlGi5MxJawDH5zUSBKRcsbNLNSdyEC6gQ"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWB3_SkdZF4r3WpTeyHkrdkejmfaOnKPO7GszJN-v-b8lmPYrI8ho7yBA&usqp=CAE&s"
               alt="Shriram"
               width={150}
               height={150}
