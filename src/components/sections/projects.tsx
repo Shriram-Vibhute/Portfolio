@@ -17,14 +17,16 @@ const projects = [
     image: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzcG90aWZ5fGVufDB8fHx8MTc1MTEwNzM2OHww&ixlib=rb-4.1.0&q=80&w=1080",
     link: "https://github.com/Shriram-Vibhute/Hybrid-Recommendor-System",
     liveLink: "#",
+    aiHint: "abstract data",
   },
   {
     title: "Comments Sentiment Analysis",
     description:
       "Built a chrome plugin which analyse and classify current youtube video's comments.",
-    image: "https://drive.google.com/uc?export=view&id=1ya67wIF3eFrA3hlYwfj3D4VI4yFqSEPf",
+    image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx5b3V0dWJlfGVufDB8fHx8MTc1MTEwNzkwNHww&ixlib=rb-4.1.0&q=80&w=1080",
     link: "https://github.com/Shriram-Vibhute/WhatsApp-Chat-Analyzer",
     liveLink: "#",
+    aiHint: "dashboard chart",
   },
 ];
 
