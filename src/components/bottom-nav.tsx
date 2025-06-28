@@ -24,13 +24,13 @@ const navLinks = [
     target: "_blank",
   },
   {
-    href: "https://www.linkedin.com/in/shriram-vibhute/",
+    href: "https://www.linkedin.com/in/shriramvibhute/",
     icon: Linkedin,
     tooltip: "LinkedIn",
     target: "_blank",
   },
   {
-    href: "https://twitter.com/shriram_vibhute",
+    href: "https://x.com/im_forge_10",
     icon: Twitter,
     tooltip: "Twitter",
     target: "_blank",
@@ -42,7 +42,7 @@ const navLinks = [
     target: "_blank",
   },
   {
-    href: "https://drive.google.com/file/d/18Tht4yotbYSNPVrTTXaHR1dzCbsOrvFO/view?usp=drive_link",
+    href: "https://drive.google.com/file/d/18Tht4yotbYSNPVrTTXaHR1dzCbsOrvFO/view",
     icon: FileText,
     tooltip: "Resume",
     target: "_blank",
