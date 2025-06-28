@@ -32,7 +32,7 @@ const certifications = [
 
 export function Education() {
   return (
-    <section id="education" className="w-full py-8">
+    <section id="education" className="w-full pt-8 pb-24">
       <div className="w-full max-w-4xl mx-auto px-4 md:px-6">
         <div className="space-y-4">
           <h2 className="text-[1.7rem] font-bold tracking-tighter">Education & Certifications</h2>
