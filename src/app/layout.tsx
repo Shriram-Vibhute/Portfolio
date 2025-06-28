@@ -4,7 +4,7 @@ import { BottomNav } from '@/components/bottom-nav';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'MirrorFolio | Personal Portfolio',
+  title: "Shriram's Portfolio",
   description: 'A personal portfolio website built with Next.js and Firebase Studio.',
   icons: {
     icon: 'https://drive.google.com/uc?export=view&id=1ya67wIF3eFrA3hlYwfj3D4VI4yFqSEPf',
