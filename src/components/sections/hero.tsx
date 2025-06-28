@@ -19,7 +19,7 @@ export function Hero() {
             <p className="text-custom md:text-lg">
               From uncovering insights with Data Science to building intelligent and scalable applications with Machine Learning, Deep Learning and MLOps.
             </p>
-            <p className="text-sm text-muted-foreground">Ithaca, NY</p>
+            <p className="text-sm text-muted-foreground">Maharashtra, India</p>
             <div className="flex gap-2">
               <Button variant="outline" size="icon" asChild>
                 <a href="#" aria-label="Website">
