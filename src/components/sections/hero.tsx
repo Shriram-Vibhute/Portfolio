@@ -35,9 +35,8 @@ export function Hero() {
           </div>
           <div className="flex justify-center md:justify-end">
             <Image
-              src="https://placehold.co/150x150.png"
+              src="https://media.licdn.com/dms/image/v2/D4D35AQHhKZKBdH0fnA/profile-framedphoto-shrink_200_200/B4DZdKpFTzHkAY-/0/1749303973456?e=1751713200&v=beta&t=mC8KTGeZ1JYlGi5MxJawDH5zUSBKRcsbNLNSdyEC6gQ"
               alt="Shriram"
-              data-ai-hint="anime character"
               width={150}
               height={150}
               className="rounded-full object-cover aspect-square"
