@@ -4,6 +4,8 @@ const skills = [
   "Python",
   "C/C++",
   "SQL",
+  "Machine Learning",
+  "Deep Learning",
   "Scikit-learn",
   "Pandas",
   "NumPy",
@@ -16,7 +18,6 @@ const skills = [
   "DVC (Data Version Control)",
   "MLflow",
   "Docker (Basics)",
-  "CI/CD (Continuous Integration/Continuous Delivery)",
   "GitHub Actions",
   "Git",
 ];
