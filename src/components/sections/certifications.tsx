@@ -2,7 +2,8 @@ import Image from "next/image";
 
 const certifications = [
   {
-    title: "Data Science Mentorship Program 2.0, CampusX",
+    title: "Data Science Mentorship Program 2.0",
+    institution: "CampusX",
     duration: "2024 - 2025",
     logo: "https://media.licdn.com/dms/image/v2/D560BAQHv4tJL2rlC9w/company-logo_200_200/company-logo_200_200/0/1704532900716/campusx_official_logo?e=2147483647&v=beta&t=uzBlM-y9qmF_9YKsBrVrASraHD5zgB2OaolwZHMwjrk",
     description: [
@@ -34,8 +35,11 @@ export function Certifications() {
                     />
                   )}
                   <div className="flex-grow">
-                    <div className="flex justify-between items-center">
-                      <p className="font-semibold text-foreground">{cert.title}</p>
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <p className="font-semibold text-foreground">{cert.title}</p>
+                        <p className="text-md font-medium text-muted-foreground">{cert.institution}</p>
+                      </div>
                       <p className="text-sm text-muted-foreground">
                         {cert.duration}
                       </p>
