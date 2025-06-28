@@ -34,7 +34,7 @@ export function Skills() {
               <Badge
                 key={skill}
                 variant="default"
-                className="rounded-md bg-black text-white hover:bg-gray-800 text-sm font-normal"
+                className="rounded-md bg-[#2f2f2f] text-white hover:bg-[#2f2f2f]/90 text-sm font-normal"
               >
                 {skill}
               </Badge>
