@@ -38,7 +38,7 @@ export function Education() {
                   )}
                   <div className="flex-grow">
                     <div className="flex justify-between items-baseline">
-                      <h3 className="text-xl font-bold">{edu.institution}</h3>
+                      <h3 className="text-[1.1rem] font-bold">{edu.institution}</h3>
                       <p className="text-sm text-muted-foreground">
                         {edu.duration}
                       </p>
