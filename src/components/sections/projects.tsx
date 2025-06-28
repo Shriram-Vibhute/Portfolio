@@ -12,9 +12,9 @@ const projects = [
   {
     title: "Spotify - Hybrid Recommendation System",
     description:
-      "A machine learning model to predict stock market trends with high accuracy.",
+      "Built a scalable hybrid recommender system processing 10M user records with Dask, combining content-based and collaborative filtering. Deployed an interactive Streamlit app on AWS with a CI/CD pipeline, using Docker for containerization and DVC for data versioning.",
     image: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzcG90aWZ5fGVufDB8fHx8MTc1MTEwNzM2OHww&ixlib=rb-4.1.0&q=80&w=1080",
-    tags: ["Machine Learning", "Python", "TensorFlow"],
+    tags: ["Python", "Dask", "Streamlit", "Docker", "AWS", "DVC"],
   },
   {
     title: "Project Beta",
