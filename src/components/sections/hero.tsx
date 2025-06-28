@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Download, Mail } from "lucide-react";
+import { ExternalLink, Mail } from "lucide-react";
 
 export function Hero() {
   return (
@@ -22,8 +22,8 @@ export function Hero() {
             <p className="text-sm text-muted-foreground">Maharashtra, India</p>
             <div className="flex gap-4">
               <Button asChild className="bg-[#2f2f2f] hover:bg-[#2f2f2f]/90">
-                <a href="https://drive.google.com/uc?export=download&id=18Tht4yotbYSNPVrTTXaHR1dzCbsOrvFO" download>
-                  <Download className="mr-2 h-4 w-4" /> Download Resume
+                <a href="https://drive.google.com/file/d/18Tht4yotbYSNPVrTTXaHR1dzCbsOrvFO/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="mr-2 h-4 w-4" /> View Resume
                 </a>
               </Button>
               <Button variant="secondary" asChild>
