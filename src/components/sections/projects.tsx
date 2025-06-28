@@ -30,10 +30,10 @@ const projects = [
 export function Projects() {
   return (
     <section id="projects" className="w-full py-8">
-      <div className="w-full max-w-[50%] mx-auto px-4 md:px-6">
+      <div className="w-full max-w-4xl mx-auto px-4 md:px-6">
         <div className="space-y-4">
           <h2 className="text-[1.7rem] font-bold tracking-tighter">Projects</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-4">
             {projects.map((project) => (
               <Card key={project.title}>
                 <CardHeader>
