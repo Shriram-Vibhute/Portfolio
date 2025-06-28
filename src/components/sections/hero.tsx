@@ -9,8 +9,8 @@ export function Hero() {
         <div className="grid md:grid-cols-3 items-center gap-8 lg:gap-12">
           <div className="md:col-span-2 space-y-4">
             <div>
-              <p className="text-lg text-primary font-semibold tracking-wider mb-2">
-                MACHINE LEARNING ENGINEER
+              <p className="text-lg text-custom border-b pb-2 mb-4">
+                Machine Learning Engineer
               </p>
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                 Debarghya Das
