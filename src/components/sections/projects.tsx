@@ -54,16 +54,18 @@ export function Projects() {
                 <CardContent>
                   <div className="flex gap-2">
                     {project.link && (
-                      <Button asChild size="icon" className="bg-[#2f2f2f] hover:bg-[#2f2f2f]/90">
+                      <Button asChild size="sm" className="bg-[#2f2f2f] hover:bg-[#2f2f2f]/90">
                         <a href={project.link} target="_blank" rel="noopener noreferrer">
                           <Github className="h-4 w-4" />
+                          GitHub
                         </a>
                       </Button>
                     )}
                     {project.liveLink && (
-                       <Button asChild size="icon" variant="secondary">
+                       <Button asChild size="sm" variant="secondary">
                          <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
                            <ExternalLink className="h-4 w-4" />
+                           Live
                          </a>
                        </Button>
                     )}
