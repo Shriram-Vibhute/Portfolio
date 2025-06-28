@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/badge";
 
 const projects = [
   {
-    title: "Spotify - Hybrid Recommendation System",
+    title: "Hybrid Recommendation System",
     description:
       "Built a songs hybrid recommender system using machine learning and MLOps.",
     image: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzcG90aWZ5fGVufDB8fHx8MTc1MTEwNzM2OHww&ixlib=rb-4.1.0&q=80&w=1080",
@@ -44,7 +44,7 @@ export function Projects() {
                     height={400}
                     className="rounded-t-lg object-cover"
                   />
-                  <CardTitle className="pt-4 text-xl">{project.title}</CardTitle>
+                  <CardTitle className="pt-4 text-xl font-semibold tracking-tight">{project.title}</CardTitle>
                   <CardDescription>{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
