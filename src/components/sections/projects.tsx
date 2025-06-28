@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/badge";
 
 const projects = [
   {
-    title: "Project Alpha",
+    title: "Spotify - Hybrid Recommendation System",
     description:
       "A machine learning model to predict stock market trends with high accuracy.",
     image: "https://placehold.co/600x400.png",
