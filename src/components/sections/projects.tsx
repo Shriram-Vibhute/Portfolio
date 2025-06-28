@@ -51,9 +51,9 @@ export function Projects() {
                 </CardHeader>
                 <CardContent>
                   {project.link ? (
-                    <Button asChild>
+                    <Button asChild className="bg-[#2f2f2f] hover:bg-[#2f2f2f]/90">
                       <a href={project.link} target="_blank" rel="noopener noreferrer">
-                        <Github className="mr-2 h-4 w-4" /> View on GitHub
+                        <Github className="mr-2 h-4 w-4" /> GitHub
                       </a>
                     </Button>
                   ) : (
