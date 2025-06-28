@@ -22,12 +22,12 @@ export function Hero() {
             <p className="text-sm text-muted-foreground">Maharashtra, India</p>
             <div className="flex gap-4">
               <Button asChild className="bg-[#2f2f2f] hover:bg-[#2f2f2f]/90">
-                <a href="/resume.pdf" download>
+                <a href="https://drive.google.com/uc?export=download&id=18Tht4yotbYSNPVrTTXaHR1dzCbsOrvFO" download>
                   <Download className="mr-2 h-4 w-4" /> Download Resume
                 </a>
               </Button>
               <Button variant="secondary" asChild>
-                <a href="mailto:example@example.com">
+                <a href="mailto:shriram.vibhute08@gmail.com">
                   <Mail className="mr-2 h-4 w-4" /> Contact Me
                 </a>
               </Button>

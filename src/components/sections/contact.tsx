@@ -14,7 +14,7 @@ export function Contact() {
             opportunities to be part of an ambitious vision.
           </p>
           <Button asChild>
-            <a href="mailto:example@example.com">
+            <a href="mailto:shriram.vibhute08@gmail.com">
               <Mail className="mr-2 h-4 w-4" /> Say Hello
             </a>
           </Button>
