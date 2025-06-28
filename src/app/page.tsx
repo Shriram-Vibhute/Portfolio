@@ -2,6 +2,11 @@ import { About } from "@/components/sections/about";
 import { Hero } from "@/components/sections/hero";
 import { FadeIn } from "@/components/fade-in";
 import { Skills } from "@/components/sections/skills";
+import { Projects } from "@/components/sections/projects";
+import { Experience } from "@/components/sections/experience";
+import { Education } from "@/components/sections/education";
+import { Certifications } from "@/components/sections/certifications";
+import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
   return (
@@ -15,6 +20,21 @@ export default function Home() {
         </FadeIn>
         <FadeIn>
           <Skills />
+        </FadeIn>
+        <FadeIn>
+          <Projects />
+        </FadeIn>
+        <FadeIn>
+          <Experience />
+        </FadeIn>
+        <FadeIn>
+          <Education />
+        </FadeIn>
+        <FadeIn>
+          <Certifications />
+        </FadeIn>
+        <FadeIn>
+          <Contact />
         </FadeIn>
       </main>
     </div>
