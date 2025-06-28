@@ -21,7 +21,7 @@ export function Hero() {
             </p>
             <p className="text-sm text-muted-foreground">Maharashtra, India</p>
             <div className="flex gap-4">
-              <Button asChild>
+              <Button asChild className="bg-[#2f2f2f] hover:bg-[#2f2f2f]/90">
                 <a href="/resume.pdf" download>
                   <Download className="mr-2 h-4 w-4" /> Download Resume
                 </a>
