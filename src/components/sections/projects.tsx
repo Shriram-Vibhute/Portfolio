@@ -17,6 +17,7 @@ const projects = [
       "Built a songs hybrid recommender system using machine learning and MLOps.",
     image: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzcG90aWZ5fGVufDB8fHx8MTc1MTEwNzM2OHww&ixlib=rb-4.1.0&q=80&w=1080",
     link: "https://github.com/Shriram-Vibhute/Hybrid-Recommendor-System",
+    liveLink: "#",
   },
   {
     title: "Comments Sentiment Analysis",
@@ -35,7 +36,7 @@ export function Projects() {
         <div className="space-y-4">
           <h2 className="text-[1.7rem] font-bold tracking-tighter">Projects</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            {projects.map((project: {title: string, description: string, image: string, link?: string, tags?: string[], aiHint?: string}) => (
+            {projects.map((project: {title: string, description: string, image: string, link?: string, liveLink?: string, tags?: string[], aiHint?: string}) => (
               <Card key={project.title}>
                 <CardHeader>
                   <Image
@@ -50,13 +51,23 @@ export function Projects() {
                   <CardDescription>{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  {project.link ? (
-                    <Button asChild className="bg-[#2f2f2f] hover:bg-[#2f2f2f]/90">
-                      <a href={project.link} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4" />
-                        <ExternalLink className="h-4 w-4" />
-                      </a>
-                    </Button>
+                  {project.link || project.liveLink ? (
+                    <div className="flex gap-2">
+                      {project.link && (
+                        <Button asChild size="icon" className="bg-[#2f2f2f] hover:bg-[#2f2f2f]/90">
+                          <a href={project.link} target="_blank" rel="noopener noreferrer">
+                            <Github className="h-4 w-4" />
+                          </a>
+                        </Button>
+                      )}
+                      {project.liveLink && (
+                         <Button asChild size="icon" variant="secondary">
+                           <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                             <ExternalLink className="h-4 w-4" />
+                           </a>
+                         </Button>
+                      )}
+                    </div>
                   ) : (
                     <div className="flex flex-wrap gap-2">
                       {project.tags?.map((tag) => (
