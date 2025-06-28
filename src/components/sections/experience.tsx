@@ -1,17 +1,13 @@
 const experiences = [
   {
-    company: "Google",
-    role: "Software Engineer",
-    duration: "2021 - Present",
-    description:
-      "Worked on large-scale distributed systems and developed new features for Google's core products. Mentored junior engineers and contributed to internal tooling.",
-  },
-  {
-    company: "Facebook",
-    role: "Software Engineering Intern",
-    duration: "Summer 2020",
-    description:
-      "Developed and shipped a new feature for the Facebook mobile app, improving user engagement by 5%. Worked with a cross-functional team of engineers, designers, and product managers.",
+    company: "Kaggle",
+    role: "Contributor",
+    duration: "",
+    description: [
+      "Built more than 15 Notebooks covering various deep learning and machine learning projects and concepts. Got more than 50 upvotes for them.",
+      "Created 5 plus Datasets related to different domain like movies, chat and others.",
+      "Made a Project of Next Word Prediction using Bidirectional LSTM.",
+    ],
   },
 ];
 
@@ -28,12 +24,22 @@ export function Experience() {
               <div key={exp.company}>
                 <div className="flex justify-between items-baseline">
                   <h3 className="text-xl font-bold">{exp.role}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {exp.duration}
-                  </p>
+                  {exp.duration && (
+                    <p className="text-sm text-muted-foreground">
+                      {exp.duration}
+                    </p>
+                  )}
                 </div>
                 <p className="text-md font-medium">{exp.company}</p>
-                <p className="text-custom mt-2">{exp.description}</p>
+                {Array.isArray(exp.description) ? (
+                  <ul className="list-disc list-inside space-y-1 text-custom mt-2">
+                    {exp.description.map((point, index) => (
+                      <li key={index}>{point}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-custom mt-2">{exp.description}</p>
+                )}
               </div>
             ))}
           </div>
