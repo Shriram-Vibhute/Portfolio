@@ -24,7 +24,7 @@ const skills = [
 export function Skills() {
   return (
     <section id="skills" className="w-full py-8">
-      <div className="w-full max-w-[50%] mx-auto px-4 md:px-6">
+      <div className="w-full max-w-4xl mx-auto px-4 md:px-6">
         <div className="space-y-4">
           <h2 className="text-[1.7rem] font-bold tracking-tighter">
             Skills

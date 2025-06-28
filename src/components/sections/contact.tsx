@@ -4,7 +4,7 @@ import { Mail } from "lucide-react";
 export function Contact() {
   return (
     <section id="contact" className="w-full py-8">
-      <div className="w-full max-w-[50%] mx-auto px-4 md:px-6 text-center">
+      <div className="w-full max-w-4xl mx-auto px-4 md:px-6 text-center">
         <div className="space-y-4">
           <h2 className="text-[1.7rem] font-bold tracking-tighter">
             Get In Touch

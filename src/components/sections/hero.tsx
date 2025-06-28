@@ -5,7 +5,7 @@ import { Download, Mail } from "lucide-react";
 export function Hero() {
   return (
     <section id="hero" className="w-full py-8 mt-16">
-      <div className="w-full max-w-[50%] mx-auto px-4 md:px-6">
+      <div className="w-full max-w-4xl mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-3 items-center gap-0">
           <div className="md:col-span-2 space-y-4">
             <div>
