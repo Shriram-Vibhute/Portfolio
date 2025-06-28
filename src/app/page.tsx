@@ -11,7 +11,7 @@ import { Contact } from "@/components/sections/contact";
 export default function Home() {
   return (
     <div className="flex flex-col min-h-svh">
-      <main className="flex-grow">
+      <main className="flex-grow bg-white">
         <FadeIn>
           <Hero />
         </FadeIn>
