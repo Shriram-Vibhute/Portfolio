@@ -1,7 +1,6 @@
 import { About } from "@/components/sections/about";
 import { Hero } from "@/components/sections/hero";
 import { FadeIn } from "@/components/fade-in";
-import { Footer } from "@/components/footer";
 import { Skills } from "@/components/sections/skills";
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
           <Skills />
         </FadeIn>
       </main>
-      <Footer />
     </div>
   );
 }
