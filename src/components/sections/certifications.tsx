@@ -34,7 +34,7 @@ export function Certifications() {
                     />
                   )}
                   <div className="flex-grow">
-                    <div className="flex justify-between items-baseline">
+                    <div className="flex justify-between items-center">
                       <p className="font-semibold text-foreground">{cert.title}</p>
                       <p className="text-sm text-muted-foreground">
                         {cert.duration}
