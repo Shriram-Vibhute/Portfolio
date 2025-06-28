@@ -7,18 +7,12 @@ export function About() {
             About
           </h2>
           <p className="text-custom md:text-lg/relaxed">
-            I am an aspiring data scientist with a strong interest in machine
-            learning, deep learning, and MLOps. My work centers around
-            extracting insights from data, building predictive models, and
-            deploying scalable machine learning systems. My expertise centers
-            on Machine Learning, including both supervised and unsupervised
-            learning. I also possess a strong foundation in Deep Learning. As
-            an MLOps enthusiast, I'm passionate about the entire lifecycle of
-            machine learning models, from development to their seamless
-            integration and deployment into real-world systems. I am eager to
-            contribute to impactful projects, collaborate with forward-thinking
-            teams, and continuously grow in the fields of Machine Learning and
-            Artificial Intelligence.
+            I am an Aspiring data scientist with a strong foundation in machine
+            learning, deep learning, and MLOps. Skilled in building predictive
+            models, extracting data insights, and deploying scalable ML
+            systems. Passionate about the full machine learning lifecycle—from
+            development to real-world integration—and eager to contribute to
+            impactful projects and collaborate with innovative teams.
           </p>
         </div>
       </div>
