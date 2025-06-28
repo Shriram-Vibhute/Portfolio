@@ -7,7 +7,18 @@ export function About() {
             About
           </h2>
           <p className="text-custom md:text-lg/relaxed">
-            Experienced software engineer with a Master's in Computer Science from Cornell University. Specialized in machine learning, web development, and open-source contributions. Proven track record of leading and delivering high-impact projects at top tech companies and research institutions.
+            I am an aspiring data scientist with a strong interest in machine
+            learning, deep learning, and MLOps. My work centers around
+            extracting insights from data, building predictive models, and
+            deploying scalable machine learning systems. My expertise centers
+            on Machine Learning, including both supervised and unsupervised
+            learning. I also possess a strong foundation in Deep Learning. As
+            an MLOps enthusiast, I'm passionate about the entire lifecycle of
+            machine learning models, from development to their seamless
+            integration and deployment into real-world systems. I am eager to
+            contribute to impactful projects, collaborate with forward-thinking
+            teams, and continuously grow in the fields of Machine Learning and
+            Artificial Intelligence.
           </p>
         </div>
       </div>
