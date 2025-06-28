@@ -13,7 +13,7 @@ export function Hero() {
                 Machine Learning Engineer
               </p>
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                Debarghya Das
+                I'm Shriram 👋🏻
               </h1>
             </div>
             <p className="text-custom md:text-lg">
@@ -56,7 +56,7 @@ export function Hero() {
           <div className="flex justify-center md:justify-end">
             <Image
               src="https://placehold.co/150x150.png"
-              alt="Debarghya Das"
+              alt="Shriram"
               data-ai-hint="anime character"
               width={150}
               height={150}
