@@ -67,7 +67,7 @@ export function BottomNav() {
                   asChild
                   variant="ghost"
                   size="icon"
-                  className="rounded-full text-foreground hover:bg-accent hover:text-accent-foreground"
+                  className="rounded-full text-foreground"
                 >
                   <a
                     href={link.href}
