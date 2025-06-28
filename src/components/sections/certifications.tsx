@@ -23,7 +23,7 @@ export function Certifications() {
           <div className="space-y-6">
             {certifications.map((cert) => (
               <div key={cert.title}>
-                <div className="flex items-center gap-4">
+                <div className="flex items-start gap-4">
                   {cert.logo && (
                     <Image
                       src={cert.logo}
