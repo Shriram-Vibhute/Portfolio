@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Twitter, Mail, Phone, Globe } from "lucide-react";
+import { Download, Mail } from "lucide-react";
 
 export function Hero() {
   return (
@@ -20,35 +20,15 @@ export function Hero() {
               From uncovering insights with Data Science to building intelligent and scalable applications with Machine Learning, Deep Learning and MLOps.
             </p>
             <p className="text-sm text-muted-foreground">Maharashtra, India</p>
-            <div className="flex gap-2">
-              <Button variant="outline" size="icon" asChild>
-                <a href="#" aria-label="Website">
-                  <Globe className="h-5 w-5" />
+            <div className="flex gap-4">
+              <Button asChild>
+                <a href="/resume.pdf" download>
+                  <Download className="mr-2 h-4 w-4" /> Download Resume
                 </a>
               </Button>
-              <Button variant="outline" size="icon" asChild>
-                <a href="mailto:example@example.com" aria-label="Email">
-                  <Mail className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <a href="tel:+1234567890" aria-label="Phone">
-                  <Phone className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <Github className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                  <Twitter className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                  <Linkedin className="h-5 w-5" />
+              <Button variant="secondary" asChild>
+                <a href="mailto:example@example.com">
+                  <Mail className="mr-2 h-4 w-4" /> Contact Me
                 </a>
               </Button>
             </div>
