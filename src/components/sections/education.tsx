@@ -63,41 +63,37 @@ export function Education() {
               </div>
             ))}
             
-            <div className="pt-4 space-y-6">
-              {certifications.map((cert) => (
-                <div key={cert.title}>
-                  <div className="flex items-start gap-4">
-                    {cert.logo && (
-                      <Image
-                        src={cert.logo}
-                        alt={`${cert.title} logo`}
-                        width={40}
-                        height={40}
-                        className="rounded-full object-cover"
-                      />
-                    )}
-                    <div className="flex-grow">
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <p className="font-semibold text-foreground">{cert.title}</p>
-                          <p className="text-md font-medium text-muted-foreground">{cert.institution}</p>
-                        </div>
-                        <p className="text-sm text-muted-foreground">
-                          {cert.duration}
-                        </p>
-                      </div>
-                      {cert.description.length > 0 && (
-                        <ul className="list-disc list-inside space-y-1 text-custom mt-2">
-                          {cert.description.map((point, index) => (
-                            <li key={index}>{point}</li>
-                          ))}
-                        </ul>
-                      )}
+            {certifications.map((cert) => (
+              <div key={cert.title}>
+                <div className="flex items-start gap-4">
+                  {cert.logo && (
+                    <Image
+                      src={cert.logo}
+                      alt={`${cert.title} logo`}
+                      width={40}
+                      height={40}
+                      className="rounded-full object-cover"
+                    />
+                  )}
+                  <div className="flex-grow">
+                    <div className="flex justify-between items-baseline">
+                      <h3 className="text-[1.1rem] font-bold">{cert.title}</h3>
+                      <p className="text-sm text-muted-foreground">
+                        {cert.duration}
+                      </p>
                     </div>
+                    <p className="text-md font-medium">{cert.institution}</p>
+                    {cert.description.length > 0 && (
+                      <ul className="list-disc list-inside space-y-1 text-custom mt-2">
+                        {cert.description.map((point, index) => (
+                          <li key={index}>{point}</li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
