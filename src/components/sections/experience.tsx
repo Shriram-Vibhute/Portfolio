@@ -23,7 +23,7 @@ export function Experience() {
             {experiences.map((exp) => (
               <div key={exp.company}>
                 <div className="flex justify-between items-baseline">
-                  <h3 className="text-xl font-bold">{exp.role}</h3>
+                  <h3 className="text-[1.1rem] font-bold">{exp.role}</h3>
                   {exp.duration && (
                     <p className="text-sm text-muted-foreground">
                       {exp.duration}
