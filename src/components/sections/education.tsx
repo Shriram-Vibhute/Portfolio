@@ -21,7 +21,7 @@ const certifications = [
   {
     title: "Data Science Mentorship Program 2.0",
     institution: "CampusX",
-    duration: "2024 - 2025",
+    duration: "Sept 2024 - Present",
     logo: "https://media.licdn.com/dms/image/v2/D560BAQHv4tJL2rlC9w/company-logo_200_200/company-logo_200_200/0/1704532900716/campusx_official_logo?e=2147483647&v=beta&t=uzBlM-y9qmF_9YKsBrVrASraHD5zgB2OaolwZHMwjrk",
     description: [
       "Acquired strong foundations in programming, data analysis, and machine learning, covering both supervised and unsupervised learning, model evaluation, and feature engineering through hands-on projects.",
