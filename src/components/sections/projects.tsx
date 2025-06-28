@@ -45,7 +45,7 @@ export function Projects() {
                     alt={project.title}
                     data-ai-hint={project.aiHint}
                     width={600}
-                    height={400}
+                    height={200}
                     className="rounded-t-lg object-cover"
                   />
                   <CardTitle className="pt-4 font-semibold tracking-tight text-xl">{project.title}</CardTitle>
