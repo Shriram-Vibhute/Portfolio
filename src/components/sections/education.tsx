@@ -57,7 +57,7 @@ export function Education() {
                       </p>
                     </div>
                     <p className="text-md font-medium">{edu.degree}</p>
-                    <p className="text-custom mt-2">{edu.description}</p>
+                    <p className="text-muted-foreground mt-2">{edu.description}</p>
                   </div>
                 </div>
               </div>
@@ -84,7 +84,7 @@ export function Education() {
                     </div>
                     <p className="text-md font-medium">{cert.institution}</p>
                     {cert.description.length > 0 && (
-                      <ul className="list-disc list-inside space-y-1 text-custom mt-2">
+                      <ul className="list-disc list-inside space-y-1 text-muted-foreground mt-2">
                         {cert.description.map((point, index) => (
                           <li key={index}>{point}</li>
                         ))}

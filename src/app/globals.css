@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: "Source Code Pro", monospace;
-  cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNC42ODE4MiAzLjY4MTgyTDI0LjMxODIgMTIuMDQ1NUwxNC41IDE1LjIyNzNMMTAuMzE4MiAyNS4wNDU1TDQuNjgxODIgMy42ODE4MloiIGZpbGw9ImJsYWNrIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==') 5 4, auto;
-}
-
 @layer base {
   :root {
     --background: 240 14% 96%;
@@ -21,7 +16,6 @@ body {
     --secondary-foreground: 234 18% 23%;
     --muted: 240 5% 90%;
     --muted-foreground: 240 5% 60%;
-    --custom-text: 0 0% 38%;
     --accent: 247 15% 55%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
@@ -57,7 +51,6 @@ body {
     --secondary-foreground: 240 14% 96%;
     --muted: 234 18% 25%;
     --muted-foreground: 240 5% 70%;
-    --custom-text: 0 0% 70%;
     --accent: 247 15% 65%;
     --accent-foreground: 234 18% 10%;
     --destructive: 0 62.8% 30.6%;

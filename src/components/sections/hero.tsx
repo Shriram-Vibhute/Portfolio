@@ -9,14 +9,14 @@ export function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-8 md:gap-0">
           <div className="md:col-span-2 space-y-4 order-2 md:order-1 text-center md:text-left">
             <div>
-              <p className="text-lg text-custom border-b pb-2 mb-4">
+              <p className="text-lg text-muted-foreground border-b pb-2 mb-4">
                 Machine Learning Engineer
               </p>
               <h1 className="text-4xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none">
                 I'm Shriram 👋🏻
               </h1>
             </div>
-            <p className="text-custom md:text-lg">
+            <p className="text-muted-foreground md:text-lg">
               From uncovering insights with Data Science to building intelligent and scalable applications with Machine Learning, Deep Learning and MLOps.
             </p>
             <p className="text-sm text-muted-foreground">Maharashtra, India</p>

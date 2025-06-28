@@ -32,13 +32,13 @@ export function Experience() {
                 </div>
                 <p className="text-md font-medium">{exp.company}</p>
                 {Array.isArray(exp.description) ? (
-                  <ul className="list-disc list-inside space-y-1 text-custom mt-2">
+                  <ul className="list-disc list-inside space-y-1 text-muted-foreground mt-2">
                     {exp.description.map((point, index) => (
                       <li key={index}>{point}</li>
                     ))}
                   </ul>
                 ) : (
-                  <p className="text-custom mt-2">{exp.description}</p>
+                  <p className="text-muted-foreground mt-2">{exp.description}</p>
                 )}
               </div>
             ))}

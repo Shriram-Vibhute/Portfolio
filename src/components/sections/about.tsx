@@ -6,7 +6,7 @@ export function About() {
           <h2 className="text-[1.7rem] font-bold tracking-tighter">
             About
           </h2>
-          <p className="text-custom md:text-lg/relaxed">
+          <p className="text-muted-foreground md:text-lg/relaxed">
             I am an Aspiring data scientist with a strong foundation in machine
             learning, deep learning, and MLOps. Skilled in building predictive
             models, extracting data insights, and deploying scalable ML
