@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Github } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
@@ -53,7 +53,8 @@ export function Projects() {
                   {project.link ? (
                     <Button asChild className="bg-[#2f2f2f] hover:bg-[#2f2f2f]/90">
                       <a href={project.link} target="_blank" rel="noopener noreferrer">
-                        <Github className="mr-2 h-4 w-4" /> GitHub
+                        <Github className="h-4 w-4" />
+                        <ExternalLink className="h-4 w-4" />
                       </a>
                     </Button>
                   ) : (
