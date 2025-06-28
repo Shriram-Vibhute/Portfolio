@@ -8,9 +8,14 @@ export function Hero() {
       <div className="w-full max-w-[50%] mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-3 items-center gap-8 lg:gap-12">
           <div className="md:col-span-2 space-y-4">
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-              Debarghya Das
-            </h1>
+            <div>
+              <p className="text-lg text-primary font-semibold tracking-wider">
+                MACHINE LEARNING ENGINEER
+              </p>
+              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                Debarghya Das
+              </h1>
+            </div>
             <p className="text-custom md:text-lg">
               From uncovering insights with Data Science to building intelligent and scalable applications with Machine Learning, Deep Learning and MLOps.
             </p>
