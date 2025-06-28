@@ -44,7 +44,7 @@ export function Projects() {
                     height={400}
                     className="rounded-t-lg object-cover"
                   />
-                  <CardTitle className="pt-4">{project.title}</CardTitle>
+                  <CardTitle className="pt-4 text-xl">{project.title}</CardTitle>
                   <CardDescription>{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
