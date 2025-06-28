@@ -12,7 +12,7 @@ export function Hero() {
               <p className="text-lg text-custom border-b pb-2 mb-4">
                 Machine Learning Engineer
               </p>
-              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+              <h1 className="text-4xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none">
                 I'm Shriram 👋🏻
               </h1>
             </div>
