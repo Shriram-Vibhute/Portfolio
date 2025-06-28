@@ -9,7 +9,7 @@ import { Education } from "@/components/sections/education";
 export default function Home() {
   return (
     <div className="flex flex-col min-h-svh">
-      <main className="flex-grow bg-white">
+      <main className="flex-grow bg-background text-foreground">
         <FadeIn>
           <Hero />
         </FadeIn>
