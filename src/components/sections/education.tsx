@@ -2,14 +2,14 @@ import Image from "next/image";
 
 const educations = [
   {
-    institution: "Pimpri Chinchwad Education Trust'S. Pimpri Chinchwad College Of Engineering",
+    institution: "Pimpri Chinchwad College Of Engineering, Pune",
     degree: "Bachelor of Technology - BTech, Mechanical Engineering",
     duration: "Dec 2020 - May 2024",
     description: "",
     logo: "https://upload.wikimedia.org/wikipedia/commons/0/00/PCCOE-Logo-24.png",
   },
   {
-    institution: "Pimpri Chinchwad Education Trust'S. Pimpri Chinchwad College Of Engineering",
+    institution: "Pimpri Chinchwad College Of Engineering, Pune",
     degree: "Minors Software Development, Information Technology",
     duration: "Jun 2022 - May 2024",
     description: "",
